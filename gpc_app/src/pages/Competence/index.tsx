@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import { Box } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
+import Bar from "../../components/Bar";
 
 export default function Tipografy() {
   return (
@@ -8,7 +9,7 @@ export default function Tipografy() {
       <Header />
       <Box display="flex" flexDirection="row">
         <Side_menu />
-        Este aqui é o página da Tipografia
+        <Bar bg="#FB970D" path="./public/icon_skill.png" title="Tipologias" />
       </Box>
     </Box>
   );

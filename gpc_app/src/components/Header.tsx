@@ -39,7 +39,7 @@ export default function Header() {
     setAnchorEl(null);
   };
   return (
-    <Box display="flex" sx={{ bgcolor: "#0082fb" }}>
+    <Box display="flex" sx={{ bgcolor: "#252728" }}>
       <Box flex="1">
         <IconButton size="large" edge="start" color="default" aria-label="menu">
           <MenuIcon sx={{ color: "white", width: "50px", marginLeft: 2 }} />

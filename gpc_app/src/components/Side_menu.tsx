@@ -9,10 +9,10 @@ export const linkStyle = {
   color: "white",
 };
 
-const BootstrapButton = styled(Button)({
+export const BootstrapButton = styled(Button)({
   marginLeft: 18,
   textDecoration: "none",
-  backgroundColor: "#1f93f9",
+  backgroundColor: "#373738",
   color: "#ffffff",
   fontWeight: "normal",
   fontFamily: [
@@ -25,14 +25,14 @@ const BootstrapButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(","),
   "&:hover": {
-    backgroundColor: "#2e9eff",
+    backgroundColor: "#474748",
   },
   "&:active": {
     backgroundColor: "#f7f7f7",
   },
 });
 
-const AvatarButton = styled(Avatar)({
+export const AvatarButton = styled(Avatar)({
   width: 30,
   height: 30,
   marginRight: 6,
@@ -46,11 +46,11 @@ export default function Side_menu() {
       flexDirection="column"
       alignItems="flex-start"
       sx={{
-        bgcolor: "#1f93f9",
+        bgcolor: "#373738",
         height: "94.9vh",
         width: "15vw",
-        minWidth: "220px",
-        maxWidth: "240px",
+        minWidth: "15vw",
+        maxWidth: "20vw",
       }}
     >
       <Box flex="0.8">
