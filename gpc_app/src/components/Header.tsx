@@ -3,6 +3,13 @@ import { Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Admin from "@mui/icons-material/AdminPanelSettings";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
+
+export const linkStyle = {
+  margin: "0",
+  textDecoration: "none",
+  color: "black",
+};
 
 const Adbutton = styled(Button)({
   textTransform: "none",
@@ -59,7 +66,9 @@ export default function Header() {
             "aria-labelledby": "basic-button",
           }}
         >
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          <Link to="/login" style={linkStyle}>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
+          </Link>
         </Menu>
       </Box>
     </Box>

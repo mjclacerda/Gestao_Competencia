@@ -2,9 +2,7 @@ import { Box, Avatar, TextField, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const BootstrapButton = styled(Button)({
-  marginLeft: 380,
-  marginTop: 40,
-  marginBottom: 40,
+  color: "#ffffff",
   backgroundColor: "#fd7b30",
   borderColor: "#fd7b30",
   fontFamily: [
@@ -17,12 +15,12 @@ const BootstrapButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(","),
   "&:hover": {
-    backgroundColor: "#0d8df6",
-    borderColor: "#0d8df6",
+    backgroundColor: "#e2702e",
+    borderColor: "#e2702e",
   },
   "&:active": {
-    backgroundColor: "#20b102",
-    borderColor: "#20b102",
+    backgroundColor: "#ffffffd2",
+    borderColor: "#ffffffd2",
   },
 });
 
@@ -73,58 +71,52 @@ export default function login_form() {
         </Box>
         <Box
           flex="0.40"
+          flexDirection="column"
           sx={{
-            width: 450,
+            maxWidth: 450,
+            minWidth: 250,
             marginTop: 25,
             borderRadius: 4,
             marginRight: 15,
             marginLeft: 20,
           }}
         >
-          <Typography
-            variant="h5"
-            gutterBottom
-            marginBottom="50px"
-            align="center"
-            marginTop="60px"
-          >
-            LOGIN
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <TextField
-              required
-              id="name"
-              label="username"
-              variant="filled"
+          <Box>
+            <Typography variant="h5" gutterBottom align="center">
+              LOGIN
+            </Typography>
+            <Box
               sx={{
-                marginLeft: 15,
-                marginRight: 15,
-                marginBottom: "20px",
-                backgroundColor: "white",
-                borderRadius: "6px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 3,
+                marginTop: 7,
+                marginBottom: 7,
               }}
-            />
-            <TextField
-              required
-              id="password"
-              label="password"
-              variant="filled"
-              sx={{
-                marginLeft: 15,
-                marginRight: 15,
-                backgroundColor: "white",
-                borderRadius: "6px",
-              }}
-            />
+            >
+              <TextField
+                required
+                id="name"
+                label="username"
+                variant="filled"
+                sx={{
+                  backgroundColor: "white",
+                  borderRadius: "6px",
+                }}
+              />
+              <TextField
+                required
+                id="password"
+                label="password"
+                variant="filled"
+                sx={{
+                  backgroundColor: "white",
+                  borderRadius: "6px",
+                }}
+              />
+            </Box>
+            <BootstrapButton>Entrar</BootstrapButton>
           </Box>
-          <BootstrapButton variant="contained" disableRipple>
-            Entrar
-          </BootstrapButton>
         </Box>
       </Box>
       <Box display="flex" flexDirection="row" sx={{ bgcolor: "#e1e5e9" }}>

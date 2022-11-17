@@ -41,6 +41,7 @@ export default function Side_menu_user() {
         height: "94.9vh",
         width: "15vw",
         minWidth: "220px",
+        maxWidth: "220px",
       }}
     >
       <BootstrapButton>
