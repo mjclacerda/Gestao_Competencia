@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledBox = styled.div`
-  display: flex;
+  display: block;
   max-width: 88%;
   max-height: 30px;
 `;
@@ -9,12 +9,12 @@ const StyledBox = styled.div`
 const Simplebar = styled.div`
   //Estas configurações estão de acordo com o Side_menu
   display: flex;
+  box-sizing: content-box;
   background: #cfcfcf;
   border: none;
   color: white;
-  width: 85vw;
-  min-width: "80vw";
-  max-width: "85vw";
+  width: 87vw;
+  min-width: 80vw;
   min-height: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif;
   font-size: 16px;

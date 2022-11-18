@@ -9,7 +9,12 @@ export default function Dashboard() {
       <Header />
       <Box display="flex" flexDirection="row">
         <Side_menu />
-        <Bar bg="#1EFFFF" path="./public/icon_speed.png" title="Dashboard" />
+        <Box display="flex" flexDirection="column">
+          <Bar bg="#1EFFFF" path="./public/icon_speed.png" title="Dashboard" />
+          <h1 style={{ position: "absolute", top: "50%", left: "50%" }}>
+            Aqui ficará o dashboard
+          </h1>
+        </Box>
       </Box>
     </Box>
   );

@@ -45,7 +45,7 @@ export default function login_form() {
       <Box
         display="flex"
         sx={{
-          backgroundImage: "url(/Challenge.jpg)",
+          backgroundImage: "url(/Challenge_5.jpg)",
         }}
       >
         <Box flex="0.70" height="850px">
@@ -119,7 +119,7 @@ export default function login_form() {
           </Box>
         </Box>
       </Box>
-      <Box display="flex" flexDirection="row" sx={{ bgcolor: "#e1e5e9" }}>
+      <Box display="flex" flexDirection="row" sx={{ bgcolor: "#d9d9d9" }}>
         <Box flex="0.25"></Box>
         <Box display="flex" flexDirection="column" sx={{ marginBottom: 10 }}>
           <Avatar

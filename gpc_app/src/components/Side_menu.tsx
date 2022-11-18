@@ -1,4 +1,3 @@
-import { NoEncryption } from "@mui/icons-material";
 import { Box, Button, Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
@@ -11,6 +10,7 @@ export const linkStyle = {
 
 export const BootstrapButton = styled(Button)({
   marginLeft: 18,
+  marginRight: 5,
   textDecoration: "none",
   backgroundColor: "#373738",
   color: "#ffffff",
@@ -49,8 +49,8 @@ export default function Side_menu() {
         bgcolor: "#373738",
         height: "94.9vh",
         width: "15vw",
-        minWidth: "15vw",
-        maxWidth: "20vw",
+        minWidth: "200px",
+        maxWidth: "335px",
       }}
     >
       <Box flex="0.8">
