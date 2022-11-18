@@ -1,0 +1,5 @@
+#webapp para Gestão por Competência
+Este projeto está sendo desenvolvido para a obtenção de título de pós-graduação em Desenvolvimento FullStack, pelo IGTI/XP Educação.
+A Gestão por Competências é uma metodologia utilizada em Recursos Humanos para a gestão e o desenvolvimento das habilidades técnicas e comportamentais dos profissionais, que vem ganhando espaço no setor público e privado há alguns anos.
+Ocorre que a adoção dessa metodologia perpassa por um conjunto de atividades bastante complexas e que exigem grandes esforços por parte das equipes de gestão de pessoas, especialmente pelo fato de não existirem ferramentas tecnológicas específicas no mercado com essa finalidade.
+A presente aplicação web se propõe a oferecer o suporte necessário para a gestão de pessoas por competência, por intermédio do controle e monitoramento da lacunas de competência - com o uso de dashboards e relatórios - e da realização do "Inventário de lacunas de competências" - com a aplicação de pesquisa junto aos profissionais.
