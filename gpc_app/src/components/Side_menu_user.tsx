@@ -1,8 +1,12 @@
 import { Box, Button, Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
+import { linkStyle, AvatarButton } from "./Side_menu";
 
 const BootstrapButton = styled(Button)({
   marginLeft: 18,
+  marginRight: 5,
+  textDecoration: "none",
   backgroundColor: "#1f93f9",
   color: "#ffffff",
   fontWeight: "normal",
@@ -16,18 +20,11 @@ const BootstrapButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(","),
   "&:hover": {
-    backgroundColor: "#2e9eff",
+    backgroundColor: "#1f99f9",
   },
   "&:active": {
     backgroundColor: "#f7f7f7",
   },
-});
-
-const AvatarButton = styled(Avatar)({
-  width: 30,
-  height: 30,
-  marginRight: 6,
-  variant: "square",
 });
 
 export default function Side_menu_user() {
@@ -38,24 +35,29 @@ export default function Side_menu_user() {
       alignItems="flex-start"
       sx={{
         bgcolor: "#1f93f9",
-        height: "94.9vh",
+        height: "95vh",
         width: "15vw",
         minWidth: "220px",
-        maxWidth: "220px",
       }}
     >
-      <BootstrapButton>
-        <AvatarButton alt="pesquisa" src="/icon_pesq.png" />
-        Pesquisas
-      </BootstrapButton>
-      <BootstrapButton>
-        <AvatarButton alt="report" src="/icon_report.png" />
-        Relatórios
-      </BootstrapButton>
-      <BootstrapButton>
-        <AvatarButton alt="competence" src="/icon_skill.png" />
-        Competências
-      </BootstrapButton>
+      <Link to="/pesquisa" style={linkStyle}>
+        <BootstrapButton>
+          <AvatarButton alt="pesquisa" src="/icon_pesq.png" />
+          Pesquisas
+        </BootstrapButton>
+      </Link>
+      <Link to="/relatorio" style={linkStyle}>
+        <BootstrapButton>
+          <AvatarButton alt="report" src="/icon_report.png" />
+          Relatórios
+        </BootstrapButton>
+      </Link>
+      <Link to="/tipologia" style={linkStyle}>
+        <BootstrapButton>
+          <AvatarButton alt="competence" src="/icon_skill.png" />
+          Competências
+        </BootstrapButton>
+      </Link>
     </Box>
   );
 }

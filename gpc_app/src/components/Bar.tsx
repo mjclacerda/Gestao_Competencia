@@ -1,32 +1,4 @@
-import styled from "styled-components";
-
-const StyledBox = styled.div`
-  display: block;
-  max-width: 88%;
-  max-height: 30px;
-`;
-
-const Simplebar = styled.div`
-  //Estas configurações estão de acordo com o Side_menu
-  display: flex;
-  box-sizing: content-box;
-  background: #cfcfcf;
-  border: none;
-  color: white;
-  width: 87vw;
-  min-width: 80vw;
-  min-height: 35px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif;
-  font-size: 16px;
-  align-items: center;
-`;
-
-const Avatar = styled.img`
-  width: 25px;
-  height: 25px;
-  margin-left: 4px;
-  margin-right: 4px;
-`;
+import { StyledHead, Simplebar, StyledAvatar } from "../components/Component";
 
 interface IBar {
   bg?: string;
@@ -36,11 +8,11 @@ interface IBar {
 
 export default function Bar({ bg, path, title }: IBar) {
   return (
-    <StyledBox>
+    <StyledHead>
       <Simplebar style={{ background: bg }}>
-        <Avatar alt={title} src={path} />
+        <StyledAvatar alt={title} src={path} />
         {title}
       </Simplebar>
-    </StyledBox>
+    </StyledHead>
   );
 }

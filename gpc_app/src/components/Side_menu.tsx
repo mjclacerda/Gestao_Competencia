@@ -43,14 +43,14 @@ export default function Side_menu() {
   return (
     <Box
       display="flex"
+      flex="1"
       flexDirection="column"
       alignItems="flex-start"
       sx={{
         bgcolor: "#373738",
-        height: "94.9vh",
+        height: "95vh",
         width: "15vw",
         minWidth: "200px",
-        maxWidth: "335px",
       }}
     >
       <Box flex="0.8">

@@ -3,6 +3,14 @@ import { Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import UserIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
+import Styled from "styled-components";
+
+const StyledHeader = Styled.head`
+  display: flex;
+  background-color: #0082fb;
+  height: 5vh;
+  width: 100vw;
+`;
 
 const Adbutton = styled(Button)({
   textTransform: "none",
@@ -33,7 +41,7 @@ export default function Header_user() {
     setAnchorEl(null);
   };
   return (
-    <Box display="flex" sx={{ bgcolor: "#0082fb" }}>
+    <StyledHeader>
       <Box flex="1">
         <IconButton size="large" edge="start" color="default" aria-label="menu">
           <MenuIcon sx={{ color: "white", width: "50px", marginLeft: 2 }} />
@@ -64,6 +72,6 @@ export default function Header_user() {
           <MenuItem onClick={handleClose}>Logout</MenuItem>
         </Menu>
       </Box>
-    </Box>
+    </StyledHeader>
   );
 }

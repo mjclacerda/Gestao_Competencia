@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
+import { Box, Button, IconButton, Menu, MenuItem, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Admin from "@mui/icons-material/AdminPanelSettings";
-import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import { StyledHeader } from "./Component";
 
 export const linkStyle = {
   margin: "0",
@@ -39,7 +39,7 @@ export default function Header() {
     setAnchorEl(null);
   };
   return (
-    <Box display="flex" sx={{ bgcolor: "#252728" }}>
+    <StyledHeader>
       <Box flex="1">
         <IconButton size="large" edge="start" color="default" aria-label="menu">
           <MenuIcon sx={{ color: "white", width: "50px", marginLeft: 2 }} />
@@ -71,6 +71,6 @@ export default function Header() {
           </Link>
         </Menu>
       </Box>
-    </Box>
+    </StyledHeader>
   );
 }

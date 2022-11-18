@@ -1,6 +1,6 @@
-import Header from "../../components/Header";
+import Header from "../../components/Header_user";
 import { Box } from "@mui/material";
-import Side_menu from "../../components/Side_menu";
+import Side_menu from "../../components/Side_menu_user";
 import Bar from "../../components/Bar";
 
 export default function Typology() {
