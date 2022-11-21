@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 
 const Avatar = styled.img`
@@ -6,16 +7,16 @@ const Avatar = styled.img`
 `;
 
 const SButton = styled.button`
-  width: 150px;
-  height: 140px;
+  width: 250px;
+  height: 200px;
   background: none;
   border: none;
   border-radius: 10px;
   &:hover {
-    background: #f0eeee9d;
+    background: #e0dedcc2;
   }
   &:active {
-    background: #ffffff85;
+    background: #f0eeee9d;
   }
   position: relative;
 `;
@@ -24,15 +25,15 @@ interface IImag {
   bg?: string;
   path?: string;
   title?: string;
-  x: string;
-  y: string;
+  x?: string;
+  y?: string;
 }
 
 export default function ImageButton({ title, path, x, y }: IImag) {
   return (
     <SButton style={{ top: y, left: x }}>
       <Avatar alt={title} src={path} />
-      {title}
+      <Typography style={{ fontSize: 18 }}>{title}</Typography>
     </SButton>
   );
 }

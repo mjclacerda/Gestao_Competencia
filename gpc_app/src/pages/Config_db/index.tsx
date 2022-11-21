@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Box } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
+import { StyledBox } from "../../components/Component";
 
 export default function Config_db() {
   return (
@@ -16,9 +17,9 @@ export default function Config_db() {
               path="./public/icon_conf.png"
               title="Configurações - Conexão do Banco de Dados"
             />
-            <h1 style={{ position: "absolute", top: "50%", left: "50%" }}>
-              Aqui ficarão as configurações do banco de dados
-            </h1>
+            <StyledBox>
+              As configurações do banco de dados ficarão aqui
+            </StyledBox>
           </Box>
         </Box>
       </Box>

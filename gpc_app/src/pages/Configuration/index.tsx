@@ -4,6 +4,7 @@ import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
 import ImageButton from "../../components/ImageButton";
 import { Link } from "react-router-dom";
+import { FlexBox } from "../../components/Component";
 
 export default function Configuration() {
   return (
@@ -12,36 +13,50 @@ export default function Configuration() {
       <Box>
         <Box display="flex" flexDirection="row">
           <Side_menu />
-          <Box display="flex" flexDirection="column">
+          <Box display="flex" flexDirection="column" alignItems="center">
             <Bar
               bg="#b1aeae"
               path="./public/icon_conf.png"
               title="Configurações"
             />
-            <Link to="/config_db">
-              <ImageButton
-                title="Conexão DB"
-                path="./public/database.png"
-                x="25%"
-                y="220%"
-              />
-            </Link>
-            <Link to="/config_tc">
-              <ImageButton
-                title="Tipologias e Competências"
-                path="./public/typology.png"
-                x="50%"
-                y="10%"
-              />
-            </Link>
-            <Link to="/config_inv">
-              <ImageButton
-                title="Inventário de Lacunas de Competências"
-                path="./public/inventory.png"
-                x="75%"
-                y="20%"
-              />
-            </Link>
+            <FlexBox
+              style={{
+                width: "55vw",
+                height: "50vh",
+                position: "relative",
+                top: "20vh",
+                alignItems: "center",
+              }}
+            >
+              <FlexBox style={{ position: "relative", top: "8vh" }}>
+                <Link to="/config_db">
+                  <ImageButton
+                    title="Conexão DB"
+                    path="./public/database.png"
+                  />
+                </Link>
+              </FlexBox>
+              <FlexBox
+                style={{ position: "relative", top: "-8vh", left: "8vw" }}
+              >
+                <Link to="/config_tc">
+                  <ImageButton
+                    title="Tipologias e Competências"
+                    path="./public/typology.png"
+                  />
+                </Link>
+              </FlexBox>
+              <FlexBox
+                style={{ position: "relative", top: "8vh", left: "16vw" }}
+              >
+                <Link to="/config_inv">
+                  <ImageButton
+                    title="Inventário de Lacunas de Competências"
+                    path="./public/inventory.png"
+                  />
+                </Link>
+              </FlexBox>
+            </FlexBox>
           </Box>
         </Box>
       </Box>

@@ -54,7 +54,7 @@ export default function Side_menu() {
       }}
     >
       <Box flex="0.8">
-        <Link to="/" style={linkStyle}>
+        <Link to="/dashboard" style={linkStyle}>
           <BootstrapButton>
             <AvatarButton alt="dashboard" src="/icon_speed.png" />
             Dashboard

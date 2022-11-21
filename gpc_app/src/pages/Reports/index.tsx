@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Box } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
+import { StyledBox } from "../../components/Component";
 
 export default function Report() {
   return (
@@ -15,9 +16,7 @@ export default function Report() {
             path="./public/icon_report.png"
             title="Relatórios"
           />
-          <h1 style={{ position: "absolute", top: "50%", left: "50%" }}>
-            Aqui ficarão os relatório
-          </h1>
+          <StyledBox> Os relatórios ficarão aqui </StyledBox>
         </Box>
       </Box>
     </Box>

@@ -46,13 +46,13 @@ export default function Side_menu_user() {
           Pesquisas
         </BootstrapButton>
       </Link>
-      <Link to="/relatorio" style={linkStyle}>
+      <Link to="/user_relatorio" style={linkStyle}>
         <BootstrapButton>
           <AvatarButton alt="report" src="/icon_report.png" />
           Relatórios
         </BootstrapButton>
       </Link>
-      <Link to="/tipologia" style={linkStyle}>
+      <Link to="/user_tipologia" style={linkStyle}>
         <BootstrapButton>
           <AvatarButton alt="competence" src="/icon_skill.png" />
           Competências

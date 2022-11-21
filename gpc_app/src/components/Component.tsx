@@ -1,4 +1,43 @@
 import styled from "styled-components";
+import { Button, Typography, styled as styledMUI } from "@mui/material";
+
+const BootstrapButton = styledMUI(Button)({
+  color: "#ffffff",
+  backgroundColor: "#fd7b30",
+  borderColor: "#fd7b30",
+  fontFamily: [
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "#e2702e",
+    borderColor: "#e2702e",
+  },
+  "&:active": {
+    backgroundColor: "#ffffffd2",
+    borderColor: "#ffffffd2",
+  },
+});
+
+const Footnote = styledMUI(Typography)({
+  fontSize: 28,
+  borderRadius: 15,
+  fontFamily: [
+    "Garamond",
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+});
 
 const StyledBox = styled.body`
   display: flex;
@@ -41,4 +80,23 @@ const StyledAvatar = styled.img`
   margin: 4px;
 `;
 
-export { StyledAvatar, Simplebar, StyledHead, StyledHeader, StyledBox };
+const BoxColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FlexBox = styled.div`
+  display: flex;
+`;
+
+export {
+  StyledAvatar,
+  Simplebar,
+  StyledHead,
+  StyledHeader,
+  StyledBox,
+  BootstrapButton,
+  Footnote,
+  BoxColumn,
+  FlexBox,
+};

@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Box } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
+import { StyledBox } from "../../components/Component";
 
 export default function Config_inv() {
   return (
@@ -16,9 +17,7 @@ export default function Config_inv() {
               path="./public/icon_conf.png"
               title="Configurações - Inventário"
             />
-            <h1 style={{ position: "absolute", top: "50%", left: "50%" }}>
-              Aqui ficarão as configurações do inventário
-            </h1>
+            <StyledBox> As configurações de inventário ficarão aqui </StyledBox>
           </Box>
         </Box>
       </Box>

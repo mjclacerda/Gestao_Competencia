@@ -1,43 +1,5 @@
-import { Box, Avatar, TextField, Button, Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-
-const BootstrapButton = styled(Button)({
-  color: "#ffffff",
-  backgroundColor: "#fd7b30",
-  borderColor: "#fd7b30",
-  fontFamily: [
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
-  "&:hover": {
-    backgroundColor: "#e2702e",
-    borderColor: "#e2702e",
-  },
-  "&:active": {
-    backgroundColor: "#ffffffd2",
-    borderColor: "#ffffffd2",
-  },
-});
-
-const Footnote = styled(Typography)({
-  fontSize: 28,
-  borderRadius: 15,
-  fontFamily: [
-    "Garamond",
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
-});
+import { Box, Avatar, TextField, Typography } from "@mui/material";
+import { Footnote, BootstrapButton } from "./Component";
 
 export default function login_form() {
   return (

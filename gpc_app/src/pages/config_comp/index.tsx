@@ -4,11 +4,17 @@ import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import Form from "../../components/Form";
-import { BottonLink } from "../../components/BottonList";
+import { BottonList } from "../../components/BottonList";
 
 export default function Config_tc() {
-  //essa variável tem que ser buscada no banco, além disso é preciso capturar o valor do botão para pesquisar as competências relacionadas a tipologia escolhida
-  const tipologias = ["Organizacionais", "Gerenciais", "Comuns", "Específicas"];
+  //essa variável tem que ser buscada no banco, baseado no value do botão da tipologia
+  const gerenciais = [
+    "Foco no Usuário",
+    "Defesa de Direitos",
+    "Gestão Organizacional",
+    "Resolutividade",
+    "Interação Social",
+  ];
 
   return (
     <Box>
@@ -20,7 +26,7 @@ export default function Config_tc() {
             <Bar
               bg="#b0afaf"
               path="./public/icon_conf.png"
-              title="Configurações - Tipologias"
+              title="Configurações - Competências"
             />
             <FlexBox
               style={{
@@ -42,9 +48,9 @@ export default function Config_tc() {
                 }}
               >
                 <Typography style={{ margin: 40, fontSize: 18 }}>
-                  TIPOLOGIAS CADASTRADAS
+                  COMPETÊNCIAS CADASTRADAS
                 </Typography>
-                <BottonLink list={tipologias} />
+                <BottonList list={gerenciais} />
               </FlexBox>
             </FlexBox>
             <FlexBox
@@ -67,11 +73,11 @@ export default function Config_tc() {
                 }}
               >
                 <Typography
-                  sx={{ marginBottom: 3, color: "#fd7b30", fontWeight: "bold" }}
+                  sx={{ marginBottom: 3, color: "#201f1f", fontWeight: "bold" }}
                 >
-                  Cadastrar Tipologia
+                  Cadastrar Competência
                 </Typography>
-                <Form label="Tipologia" />
+                <Form label="Competência" />
               </BoxColumn>
             </FlexBox>
           </Box>

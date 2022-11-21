@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Box } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
+import { StyledBox } from "../../components/Component";
 
 export default function Dashboard() {
   return (
@@ -11,9 +12,7 @@ export default function Dashboard() {
         <Side_menu />
         <Box display="flex" flexDirection="column">
           <Bar bg="#1EFFFF" path="./public/icon_speed.png" title="Dashboard" />
-          <h1 style={{ position: "absolute", top: "50%", left: "50%" }}>
-            Aqui ficará o dashboard
-          </h1>
+          <StyledBox> O Dashboard ficará aqui </StyledBox>
         </Box>
       </Box>
     </Box>
