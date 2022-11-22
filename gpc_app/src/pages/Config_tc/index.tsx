@@ -8,7 +8,45 @@ import { BottonLink } from "../../components/BottonList";
 
 export default function Config_tc() {
   //essa variável tem que ser buscada no banco, além disso é preciso capturar o valor do botão para pesquisar as competências relacionadas a tipologia escolhida
-  const tipologias = ["Organizacionais", "Gerenciais", "Comuns", "Específicas"];
+  const tipologias = [
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+    "Gerenciais",
+    "Comuns",
+    "Específicas",
+    "Organizacionais",
+  ];
 
   return (
     <Box>
