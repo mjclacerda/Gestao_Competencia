@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { BootstrapButton, BoxColumn } from "./Component";
+import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
 
 interface IForm {
   label: string;
@@ -7,36 +7,56 @@ interface IForm {
 
 export default function Form({ label }: IForm) {
   return (
-    <BoxColumn>
-      <TextField
-        hiddenLabel
-        id={label}
-        defaultValue={label}
-        variant="standard"
-        sx={{ minWidth: "30vw" }}
-      />
-      <TextField
-        sx={{
-          minWidth: "30vw",
-          bgcolor: "#f2f2f2",
-          border: "none",
-          borderRadius: 3,
-        }}
-        id="descricao"
-        label="descrição"
-        multiline
-        rows={5}
-      />
-      <BootstrapButton
-        style={{
-          width: "25%",
-          position: "relative",
-          left: "75%",
-          marginTop: 7,
-        }}
-      >
-        Criar
-      </BootstrapButton>
-    </BoxColumn>
+    <FlexBox>
+      <BoxColumn>
+        <TextField
+          hiddenLabel
+          id={label}
+          defaultValue={label}
+          variant="standard"
+          sx={{ minWidth: "30vw" }}
+        />
+        <TextField
+          sx={{
+            minWidth: "30vw",
+            bgcolor: "#f2f2f2",
+            border: "none",
+            borderRadius: 3,
+          }}
+          id="descricao"
+          label="descrição"
+          multiline
+          rows={5}
+        />
+      </BoxColumn>
+      <BoxColumn style={{ marginTop: 30 }}>
+        <BootstrapButton
+          style={{
+            marginLeft: 7,
+            marginBottom: 2,
+            height: 27,
+          }}
+        >
+          Criar
+        </BootstrapButton>
+        <BootstrapButton
+          style={{
+            marginLeft: 7,
+            marginBottom: 2,
+            height: 27,
+          }}
+        >
+          Alterar
+        </BootstrapButton>
+        <BootstrapButton
+          style={{
+            marginLeft: 7,
+            height: 27,
+          }}
+        >
+          Excluir
+        </BootstrapButton>
+      </BoxColumn>
+    </FlexBox>
   );
 }

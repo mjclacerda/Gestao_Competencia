@@ -2,32 +2,39 @@ import Header from "../../components/Header";
 import { Typography } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
-import { BoxColumn, FlexBox, StyledBox } from "../../components/Component";
-import { BottonLinkDesc, BottonListDesc } from "../../components/BottonList";
+import { BoxColumn, FlexBox, FlexSemiBox } from "../../components/Component";
+import { BottonCDesc, BottonTDesc } from "../../components/BottonList";
+
+const style = {
+  flexDirection: "column",
+  alignItems: "center",
+  overflow: "auto",
+  padding: 50,
+};
 
 export default function Typology() {
   //essa variável tem que ser buscada no banco, além disso é preciso capturar o valor do botão para pesquisar as competências relacionadas a tipologia escolhida
   const tipologias = [
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
+    {
+      Tipologia: "Organizacionais",
+      Conceito:
+        "Competência organizacional é a capacidade da empresa de integrar e coordenar seus recursos e processos, de forma estratégica, competitiva e única, de forma que agreguem valor à organização, formando sua identidade e gerando vantagem competitiva sustentável.",
+    },
     {
       Tipologia: "Comuns",
       Conceito:
-        "Promover a justiça, a democracia, a cidadania e a dignidade humana, contribuindo para a transformação dos direitos da sociedade em realidade.",
+        "Competência comum quando atribuída igualmente a mais de um ente, deixando-se o âmbito de atuação de cada um a ser definido pela preponderância do interesse.",
     },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
-    { Tipologia: "Comuns", Conceito: "conceito de comuns" },
+    {
+      Tipologia: "Gerenciais",
+      Conceito:
+        "Competências Gerenciais são conhecimentos, habilidades e atitudes, necessários aos diferentes níveis da organização, que resultam no que os gestores realizam ou produzem no trabalho.",
+    },
+    {
+      Tipologia: "Específicas",
+      Conceito:
+        "Competências específicas são todas as habilidades, conhecimentos, valores e pensamentos necessários para desenvolver adequadamente uma tarefa ou um emprego.",
+    },
   ];
   const competencias = [
     {
@@ -69,30 +76,27 @@ export default function Typology() {
         <Side_menu />
         <BoxColumn>
           <Bar bg="#FB970D" path="./public/icon_skill.png" title="Tipologias" />
-          <FlexBox
+          <FlexSemiBox
             style={{
-              flexDirection: "column",
-              alignItems: "center",
-              width: "83vw",
+              height: "40vh",
+              background: "#eae7e46d",
             }}
           >
-            <Typography style={{ margin: 20, fontSize: 18 }}>
+            <Typography style={{ fontSize: 16, marginBottom: 20 }}>
               TIPOLOGIAS CADASTRADAS
             </Typography>
-            <BottonLinkDesc list={tipologias} />
-          </FlexBox>
-          <FlexBox
+            <BottonTDesc list={tipologias} />
+          </FlexSemiBox>
+          <FlexSemiBox
             style={{
-              flexDirection: "column",
-              alignItems: "center",
-              width: "83vw",
+              height: "51.5vh",
             }}
           >
-            <Typography style={{ margin: 20, fontSize: 18 }}>
-              Competências Relacionadas
+            <Typography style={{ fontSize: 14, marginBottom: 20 }}>
+              COMPETÊNCIAS
             </Typography>
-            <BottonListDesc list={competencias} />
-          </FlexBox>
+            <BottonCDesc list={competencias} />
+          </FlexSemiBox>
         </BoxColumn>
       </FlexBox>
     </BoxColumn>

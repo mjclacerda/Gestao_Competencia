@@ -39,7 +39,7 @@ const Footnote = styledMUI(Typography)({
   ].join(","),
 });
 
-const StyledBox = styled.body`
+const StyledBox = styled.div`
   display: flex;
   height: 91.5vh;
   width: 87vw;
@@ -47,7 +47,7 @@ const StyledBox = styled.body`
 `;
 
 //Cabeçalho principal
-const StyledHeader = styled.head`
+const StyledHeader = styled.div`
   display: flex;
   background-color: #252728;
   height: 5vh;
@@ -55,7 +55,7 @@ const StyledHeader = styled.head`
 `;
 
 //Cabeçalho secundário
-const StyledHead = styled.head`
+const StyledHead = styled.div`
   height: 3.5vh;
   display: flex;
 `;
@@ -89,6 +89,15 @@ const FlexBox = styled.div`
   display: flex;
 `;
 
+const FlexSemiBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 87vw;
+  overflow: auto;
+  padding: 50px;
+`;
+
 export {
   StyledAvatar,
   Simplebar,
@@ -99,4 +108,5 @@ export {
   Footnote,
   BoxColumn,
   FlexBox,
+  FlexSemiBox,
 };

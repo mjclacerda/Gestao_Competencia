@@ -1,10 +1,19 @@
 import Header from "../../components/Header";
-import { Box } from "@mui/material";
+import { Box, InputLabel, MenuItem, FormControl } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
-import { StyledBox } from "../../components/Component";
+import { FlexBox, StyledBox } from "../../components/Component";
+import React from "react";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import SelectInv from "../../components/SelectInv";
 
 export default function Config_inv() {
+  const [ano, setAno] = React.useState("");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAno(event.target.value);
+  };
+
   return (
     <Box>
       <Header />
@@ -17,7 +26,9 @@ export default function Config_inv() {
               path="./public/icon_conf.png"
               title="Configurações - Inventário"
             />
-            <StyledBox> As configurações de inventário ficarão aqui </StyledBox>
+            <StyledBox>
+              <SelectInv ano={ano} handleChange={handleChange} />
+            </StyledBox>
           </Box>
         </Box>
       </Box>
