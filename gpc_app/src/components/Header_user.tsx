@@ -5,9 +5,9 @@ import UserIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
 import Styled from "styled-components";
 
-const StyledHeader = Styled.head`
+const StyledHeader = Styled.div`
   display: flex;
-  background-color: #0082fb;
+  background-color: #252525;
   height: 5vh;
   width: 100vw;
 `;

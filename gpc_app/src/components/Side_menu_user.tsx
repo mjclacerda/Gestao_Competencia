@@ -7,7 +7,7 @@ const BootstrapButton = styled(Button)({
   marginLeft: 18,
   marginRight: 5,
   textDecoration: "none",
-  backgroundColor: "#1f93f9",
+  backgroundColor: "#353535",
   color: "#ffffff",
   fontWeight: "normal",
   fontFamily: [
@@ -20,7 +20,7 @@ const BootstrapButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(","),
   "&:hover": {
-    backgroundColor: "#1f99f9",
+    backgroundColor: "#313131",
   },
   "&:active": {
     backgroundColor: "#f7f7f7",
@@ -34,7 +34,7 @@ export default function Side_menu_user() {
       flexDirection="column"
       alignItems="flex-start"
       sx={{
-        bgcolor: "#1f93f9",
+        bgcolor: "#353535",
         height: "95vh",
         width: "15vw",
         minWidth: "220px",

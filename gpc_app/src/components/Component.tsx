@@ -43,7 +43,7 @@ const StyledBox = styled.div`
   display: flex;
   height: 91.5vh;
   width: 87vw;
-  background-color: #e0dede;
+  background-color: #f2f1f1;
 `;
 
 //Cabeçalho principal
