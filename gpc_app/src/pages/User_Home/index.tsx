@@ -12,7 +12,6 @@ import {
   FlexBox,
   StyledAvatar,
 } from "../../components/Component";
-import { textTransform } from "@mui/system";
 
 export default function Dashboard() {
   return (
@@ -23,63 +22,89 @@ export default function Dashboard() {
         <Box display="flex" flexDirection="column">
           <Bar bg="#2272eb" path="./public/icon_pesq.png" title="Pesquisa" />
           <StyledBox>
-            <FlexBox>
-              <BoxColumn style={{ margin: "6vh", flex: 1 }}>
-                <Typography style={{ marginBottom: "3vh" }}>
-                  Olá, bem vindo ao Sistema Eletrônico de Gestão de Pessoas por
-                  Competências.
+            <BoxColumn>
+              <FlexBox>
+                <FlexBox style={{ flex: 1 }}>
+                  <BoxColumn style={{ margin: "6vh" }}>
+                    <Typography style={{ marginBottom: "3vh" }}>
+                      Olá, bem vindo ao Sistema Eletrônico de Gestão de Pessoas
+                      por Competências.
+                    </Typography>
+                    <Link
+                      key={uuid()}
+                      to={"/self_evaluation"}
+                      style={linkStyle}
+                    >
+                      <BootstrapButton
+                        key={uuid()}
+                        style={{
+                          marginBottom: 10,
+                          fontSize: 16,
+                          background: "#d9d9d9",
+                          color: "#000000",
+                          textTransform: "none",
+                        }}
+                        value="Autoavaliação"
+                      >
+                        Autoavaliação
+                      </BootstrapButton>
+                    </Link>
+                    <Link
+                      key={uuid()}
+                      to={"/boss_evaluation"}
+                      style={linkStyle}
+                    >
+                      <BootstrapButton
+                        key={uuid()}
+                        style={{
+                          marginBottom: 10,
+                          fontSize: 16,
+                          background: "#d9d9d9",
+                          color: "#000000",
+                          textTransform: "none",
+                        }}
+                        value="Avaliação Chefia"
+                      >
+                        Avaliação Chefia
+                      </BootstrapButton>
+                    </Link>
+                    <Link
+                      key={uuid()}
+                      to={"/team_evaluation"}
+                      style={linkStyle}
+                    >
+                      <BootstrapButton
+                        key={uuid()}
+                        style={{
+                          fontSize: 16,
+                          background: "#d9d9d9",
+                          color: "#000000",
+                          textTransform: "none",
+                        }}
+                        value="Avaliação Equipe"
+                      >
+                        Avaliação Equipe
+                      </BootstrapButton>
+                    </Link>
+                  </BoxColumn>
+                </FlexBox>
+                <FlexBox style={{ paddingInline: 250 }}>
+                  <BoxColumn style={{ margin: "6vh", alignItems: "center" }}>
+                    <StyledAvatar
+                      style={{ width: 300, height: 300 }}
+                      alt="brain"
+                      src="./brain.svg"
+                    />
+                    <Typography>SISTEMA DE GESTÃO POR COMPETÊNCIAS</Typography>
+                  </BoxColumn>
+                </FlexBox>
+              </FlexBox>
+              <FlexBox style={{ alignSelf: "center", paddingTop: 100 }}>
+                <Typography style={{ fontWeight: "bold" }}>
+                  Perguntas frequentes:
                 </Typography>
-                <Link key={uuid()} to={"/autoavaliacao"} style={linkStyle}>
-                  <BootstrapButton
-                    key={uuid()}
-                    style={{
-                      marginBottom: 10,
-                      fontSize: 16,
-                      background: "#d9d9d9",
-                      color: "#000000",
-                      textTransform: "none",
-                    }}
-                    value="Autoavaliação"
-                  >
-                    Autoavaliação
-                  </BootstrapButton>
-                </Link>
-                <Link key={uuid()} to={"/avaliacaochefia"} style={linkStyle}>
-                  <BootstrapButton
-                    key={uuid()}
-                    style={{
-                      marginBottom: 10,
-                      fontSize: 16,
-                      background: "#d9d9d9",
-                      color: "#000000",
-                      textTransform: "none",
-                    }}
-                    value="Avaliação Chefia"
-                  >
-                    Avaliação Chefia
-                  </BootstrapButton>
-                </Link>
-                <Link key={uuid()} to={"/avaliacaochefia"} style={linkStyle}>
-                  <BootstrapButton
-                    key={uuid()}
-                    style={{
-                      fontSize: 16,
-                      background: "#d9d9d9",
-                      color: "#000000",
-                      textTransform: "none",
-                    }}
-                    value="Avaliação Equipe"
-                  >
-                    Avaliação Equipe
-                  </BootstrapButton>
-                </Link>
-              </BoxColumn>
-              <StyledAvatar
-                style={{ width: 400, height: 400 }}
-                alt="brain"
-                src="./brain.svg"
-              />
-            </FlexBox>
+              </FlexBox>
+            </BoxColumn>
           </StyledBox>
         </Box>
       </Box>

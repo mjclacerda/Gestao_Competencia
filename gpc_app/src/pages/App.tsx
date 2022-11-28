@@ -11,6 +11,9 @@ import Config_db from "./Config_db";
 import Config_inv from "./Config_inv";
 import Config_tc from "./Config_tc";
 import Config_comp from "./config_comp";
+import Self_Evaluation from "./Self_Evaluation";
+import Boss_Evaluation from "./Boss_Evaluation";
+import Team_Evaluation from "./Team_Evaluation";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path="/pesquisa" element={<User_Home />} />
         <Route path="/user_relatorio" element={<User_Reports />} />
         <Route path="/user_tipologia" element={<User_Competence />} />
+        <Route path="/self_evaluation" element={<Self_Evaluation />} />
+        <Route path="/boss_evaluation" element={<Boss_Evaluation />} />
+        <Route path="/team_evaluation" element={<Team_Evaluation />} />
       </Routes>
     </BrowserRouter>
   );
