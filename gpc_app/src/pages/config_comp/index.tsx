@@ -77,7 +77,7 @@ export default function Config_tc() {
                 >
                   Cadastrar Competência
                 </Typography>
-                <Form label="Competência" />
+                <Form label="Nome da competência" />
               </BoxColumn>
             </FlexBox>
           </Box>

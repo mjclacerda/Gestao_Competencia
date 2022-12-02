@@ -10,11 +10,11 @@ export default function Form({ label }: IForm) {
     <FlexBox>
       <BoxColumn>
         <TextField
+          sx={{ minWidth: "30vw" }}
           hiddenLabel
           id={label}
           defaultValue={label}
           variant="standard"
-          sx={{ minWidth: "30vw" }}
         />
         <TextField
           sx={{

@@ -109,7 +109,7 @@ export default function Config_tc() {
                 >
                   Cadastrar Tipologia
                 </Typography>
-                <Form label="Tipologia" />
+                <Form label="Nome da tipologia" />
               </BoxColumn>
             </FlexBox>
           </Box>
