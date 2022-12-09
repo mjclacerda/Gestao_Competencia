@@ -1,17 +1,17 @@
-import Sequelize from "sequelize";
-import db from "../repositories/db.js";
+import { DataTypes } from "sequelize";
+import db from "../db/db.js";
 
 const formularios = db.define(
   "forms",
   {
     formId: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
     name: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },

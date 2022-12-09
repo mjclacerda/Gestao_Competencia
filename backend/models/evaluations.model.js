@@ -1,5 +1,5 @@
-import Sequelize from "sequelize";
-import db from "../repositories/db.js";
+import { DataTypes } from "sequelize";
+import db from "../db/db.js";
 import Forms from "./forms.model.js";
 import Users from "./users.model.js";
 
@@ -7,21 +7,22 @@ const avaliacoes = db.define(
   "evaluations",
   {
     evaluationId: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
     evaluatorId: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     year: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
-  { underscored: true }
+  { underscored: true },
+  { uniqueKeys: { Items_unique: { fields: ["year", "formId", "userId"] } } }
 );
 
 avaliacoes.belongsTo(Forms, {

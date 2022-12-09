@@ -1,25 +1,25 @@
-import Sequelize from "sequelize";
-import db from "../repositories/db.js";
+import { DataTypes } from "sequelize";
+import db from "../db/db.js";
 
 const tipologias = db.define(
   "typologies",
   {
     typologyId: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
     typology: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     status: {
-      type: Sequelize.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },

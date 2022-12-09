@@ -1,5 +1,5 @@
-import Sequelize from "sequelize";
-import db from "../repositories/db.js";
+import { DataTypes } from "sequelize";
+import db from "../db/db.js";
 import Competences from "./competences.model.js";
 import Evaluations from "./evaluations.model.js";
 
@@ -7,17 +7,17 @@ const questoes = db.define(
   "questions",
   {
     questionId: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
     importance_level: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     domain_level: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
