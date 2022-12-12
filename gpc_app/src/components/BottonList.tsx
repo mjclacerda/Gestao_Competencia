@@ -1,7 +1,7 @@
 import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
 import { Link } from "react-router-dom";
 import { linkStyle } from "./Side_menu";
-import { Paper, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { v4 as uuid } from "uuid";
 
 interface IBottonList {
@@ -10,7 +10,14 @@ interface IBottonList {
 
 interface IBottonDesc {
   list:
-    | Array<{ Tipologia?: string; Competencia: string; Conceito: string }>
+    | Array<{
+        typologyId?: number;
+        typology?: string;
+        competenceId?: number;
+        competence?: string;
+        description: string;
+        status: boolean;
+      }>
     | any;
 }
 
@@ -66,9 +73,10 @@ export function BottonTDesc({ list }: IBottonDesc) {
         <BoxColumn key={uuid()} style={{ width: "18vw", margin: 20 }}>
           <BootstrapButton
             key={uuid()}
+            value={tipo.typologyId}
             style={{ marginBottom: -20, marginLeft: 20, fontSize: 14 }}
           >
-            {tipo.Tipologia}
+            {tipo.typology}
           </BootstrapButton>
           <div
             key={uuid()}
@@ -89,7 +97,7 @@ export function BottonTDesc({ list }: IBottonDesc) {
                 fontSize: 12,
               }}
             >
-              {tipo.Conceito}
+              {tipo.description}
             </Typography>
           </div>
         </BoxColumn>
@@ -111,6 +119,7 @@ export function BottonCDesc({ list }: IBottonDesc) {
         <BoxColumn key={uuid()} style={{ width: "18vw", margin: 20 }}>
           <BootstrapButton
             key={uuid()}
+            value={tipo.competenceId}
             style={{
               marginBottom: -20,
               marginLeft: 20,
@@ -119,7 +128,7 @@ export function BottonCDesc({ list }: IBottonDesc) {
               fontSize: "12px",
             }}
           >
-            {tipo.Competencia}
+            {tipo.competence}
           </BootstrapButton>
           <div
             key={uuid()}
@@ -140,7 +149,7 @@ export function BottonCDesc({ list }: IBottonDesc) {
                 fontSize: 12,
               }}
             >
-              {tipo.Conceito}
+              {tipo.description}
             </Typography>
           </div>
         </BoxColumn>

@@ -7,10 +7,15 @@ import competencesRouter from "./routes/competences.router.js";
 import evaluationsRouter from "./routes/evaluations.router.js";
 import formsRouter from "./routes/forms.router.js";
 import questionRouter from "./routes/question.router.js";
-import users from "./routes/users.router.js";
+import usersRouter from "./routes/users.router.js";
+import compforTypRouter from "./routes/compfortyp.router.js";
+import questionsUserRouter from "./routes/questionsforuser.js";
+import competencesHistoryRouter from "./routes/comphistory.router.js";
+import forms from "./repositories/forms.repository.js";
 
 const app = express();
-//logs
+
+//Configuração de logs do sistema
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({ level, message, label, timestamp }) => {
   return `${timestamp} [${label}] ${level}: ${message}`;
@@ -26,24 +31,40 @@ global.logger = winston.createLogger({
 
 app.use(express.json());
 
-//habilitando o compartilhamento de recurso de origem cruzada
+//Habilitando o compartilhamento de recurso de origem cruzada
 app.use(cors());
 
+//Rotas da API
 app.use("/typologies", typologiesRouter);
 app.use("/competences", competencesRouter);
+app.use("/competencesfortypology", compforTypRouter);
+app.use("/competenceshistory", competencesHistoryRouter);
 app.use("/evaluations", evaluationsRouter);
 app.use("/forms", formsRouter);
-app.use("/question", questionRouter);
-app.use("/users", users);
+app.use("/questions", questionRouter);
+app.use("/questionsuser", questionsUserRouter);
+app.use("/users", usersRouter);
 
-//tratamento de erros
+//Tratamento de erros
 app.use((err, req, res, next) => {
   logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
   res.status(400).send({ error: err.message });
 });
 
+//Sincronização do banco de dados
 await Sequelize.sync();
 
+//Criação dos formulários padrões
+async function verifyForms() {
+  try {
+    await forms.standardForms();
+  } catch (err) {
+    logger.error(`${err.message} - Formulário já criado`);
+  }
+}
+verifyForms();
+
+//Definição da porta da API
 app.listen(3000, () => {
   try {
     logger.info("API Started!");

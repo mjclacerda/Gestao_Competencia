@@ -6,7 +6,7 @@ const router = express.Router();
 router.post("/", CompetenceController.insertCompetence);
 router.get("/", CompetenceController.getCompetences);
 router.get("/:id", CompetenceController.getCompetence);
-router.patch("/inativate", CompetenceController.inativateCompetence);
+router.put("/inativate", CompetenceController.inativateCompetence);
 router.put("/", CompetenceController.updateCompetence);
 
 export default router;

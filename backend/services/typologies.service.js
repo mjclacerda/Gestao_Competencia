@@ -10,8 +10,8 @@ async function insertTypology(typology) {
 
 async function getTypologies() {
   const tipologias = await TypologyRepository.getTypologies();
-  if (tipologias) {
-    return await TypologyRepository.getTypologies();
+  if (tipologias[0]) {
+    return tipologias;
   }
   throw new Error("Não há tipologias ativas cadastradas");
 }
@@ -19,14 +19,16 @@ async function getTypologies() {
 async function getTypology(id) {
   const tipologia = await TypologyRepository.getTypology(id);
   if (tipologia) {
-    return await TypologyRepository.getTypology(id);
+    return tipologia;
   }
   throw new Error("A tipologia procurada não existe ou não está ativa");
 }
 
 async function inativateTypology(typology) {
-  const competencias = await CompetenceRepository.getCompetencesTyp(typology);
-  if (competencias) {
+  const competencias = await CompetenceRepository.getCompetencesTyp(
+    typology.typologyId
+  );
+  if (competencias[0]) {
     throw new Error(
       "A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela."
     );

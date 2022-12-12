@@ -4,7 +4,9 @@ async function insertEvaluation(evaluation) {
   try {
     return await Evaluation.create(evaluation);
   } catch (err) {
-    throw err;
+    throw new Error(
+      "Não foi possível criar esse formulário para este usuário pois ele já foi preenchido"
+    );
   }
 }
 
@@ -18,7 +20,7 @@ async function getEvaluations() {
 
 async function getEvaluation(id) {
   try {
-    return await Evaluation.findByPk(id);
+    return await Evaluation.findByPk(id, { raw: true });
   } catch (err) {
     throw err;
   }

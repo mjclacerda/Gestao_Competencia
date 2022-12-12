@@ -21,6 +21,11 @@ const questoes = db.define(
       allowNull: false,
     },
   },
+  {
+    uniqueKeys: {
+      Items_unique: { fields: ["evaluationId", "competenceId"] },
+    },
+  },
   { underscored: true }
 );
 

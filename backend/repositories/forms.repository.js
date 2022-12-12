@@ -1,6 +1,6 @@
 import Form from "../models/forms.model.js";
 
-async function insertForm(form) {
+async function insertform(form) {
   try {
     return await Form.create(form);
   } catch (err) {
@@ -24,8 +24,16 @@ async function getForm(id) {
   }
 }
 
+//Os três tipos de formulários são criados por padrão
+async function standardForms() {
+  await Form.create({ name: "autoavaliação" });
+  await Form.create({ name: "avaliação chefia" });
+  await Form.create({ name: "avaliação equipe" });
+}
+
 export default {
-  insertForm,
+  insertform,
   getForms,
   getForm,
+  standardForms,
 };

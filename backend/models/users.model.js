@@ -14,6 +14,10 @@ const usuarios = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    matricula: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   { underscored: true }
 );

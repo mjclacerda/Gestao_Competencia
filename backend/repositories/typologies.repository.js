@@ -1,4 +1,5 @@
 import Typology from "../models/typologies.model.js";
+import Competence from "../models/competences.model.js";
 
 async function insertTypology(typology) {
   try {
@@ -7,6 +8,7 @@ async function insertTypology(typology) {
     throw err;
   }
 }
+
 //Na hora de retornar as tipologias, queremos apenas as tipologias que estão ativas.
 async function getTypologies() {
   try {
@@ -23,14 +25,20 @@ async function getTypology(id) {
     throw err;
   }
 }
-//Nenhuma tipologia será deletada, elas serão simplesmente inativadas
+
 async function inativateTypology(typology) {
   try {
-    return await Typology.update(typology, {
-      where: {
-        typologyId: typology.typologyId,
+    await Typology.update(
+      {
+        status: false,
       },
-    });
+      {
+        where: {
+          typologyId: typology.typologyId,
+        },
+      }
+    );
+    return await getTypology(typology.typologyId);
   } catch (err) {
     throw err;
   }
@@ -38,11 +46,17 @@ async function inativateTypology(typology) {
 
 async function updateTypology(typology) {
   try {
-    return await Typology.update(typology, {
-      where: {
-        typologyId: typology.typologyId,
+    await Typology.update(
+      {
+        typology: typology.typology,
+        description: typology.description,
       },
-    });
+      {
+        where: {
+          typologyId: typology.typologyId,
+        },
+      }
+    );
     return await getTypology(typology.typologyId);
   } catch (err) {
     throw err;

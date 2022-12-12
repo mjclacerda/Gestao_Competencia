@@ -18,6 +18,15 @@ async function insertCompetence(req, res, next) {
   }
 }
 
+async function getCompetencesHistory(req, res, next) {
+  try {
+    res.send(await CompetenceService.getCompetencesHistory());
+    logger.info("GET /histórico de competencias");
+  } catch (err) {
+    next(err);
+  }
+}
+
 async function getCompetences(req, res, next) {
   try {
     res.send(await CompetenceService.getCompetences());
@@ -36,17 +45,28 @@ async function getCompetence(req, res, next) {
   }
 }
 
+async function getCompForTypology(req, res, next) {
+  try {
+    res.send(await CompetenceService.getCompForTypology(req.params.id));
+    logger.info("GET /competencias por tipologia/:id");
+  } catch (err) {
+    next(err);
+  }
+}
+
 async function inativateCompetence(req, res, next) {
   try {
     let competencia = req.body;
     if (
-      !competencia.typologyId ||
-      !competencia.typology ||
+      !competencia.competenceId ||
+      !competencia.competence ||
       !competencia.description ||
       !competencia.typologyId ||
       !competencia.status
-    )
-      res.send(await CompetenceService.inativateCompetence(competencia));
+    ) {
+      throw new Error("Há campos obrigatórios não preenchidos");
+    }
+    res.send(await CompetenceService.inativateCompetence(competencia));
     logger.info("PUT /competencia(inativate)");
   } catch (err) {
     next(err);
@@ -57,8 +77,8 @@ async function updateCompetence(req, res, next) {
   try {
     let competencia = req.body;
     if (
-      !competencia.typologyId ||
-      !competencia.typology ||
+      !competencia.competenceId ||
+      !competencia.competence ||
       !competencia.description ||
       !competencia.typologyId ||
       !competencia.status
@@ -74,8 +94,10 @@ async function updateCompetence(req, res, next) {
 
 export default {
   insertCompetence,
+  getCompetencesHistory,
   getCompetences,
   getCompetence,
+  getCompForTypology,
   inativateCompetence,
   updateCompetence,
 };

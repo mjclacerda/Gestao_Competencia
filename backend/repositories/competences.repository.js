@@ -1,4 +1,5 @@
 import Competence from "../models/competences.model.js";
+import Typology from "../models/typologies.model.js";
 
 async function insertCompetence(competence) {
   try {
@@ -8,20 +9,32 @@ async function insertCompetence(competence) {
   }
 }
 
-async function getCompetences() {
+async function getCompetencesHistory() {
   try {
-    return await Competence.findAll();
+    return await Competence.findAll({
+      include: { model: Typology },
+      order: ["competenceId"],
+    });
   } catch (err) {
     throw err;
   }
 }
 
-async function getCompetencesTyp(typology) {
+async function getCompetences() {
   try {
-    return (
-      await Competence.findAll(typology),
-      { where: { typologyId: typology.typologyId } }
-    );
+    return await Competence.findAll({
+      where: { status: true },
+    });
+  } catch (err) {
+    throw err;
+  }
+}
+
+async function getCompetencesTyp(typologyId) {
+  try {
+    return await Competence.findAll({
+      where: { typologyId: typologyId, status: true },
+    });
   } catch (err) {
     throw err;
   }
@@ -35,17 +48,19 @@ async function getCompetence(id) {
   }
 }
 
-async function inativateCompetence(id) {
+async function inativateCompetence(competence) {
   try {
-    return await Competence.update(
-      id,
-      { status: false },
+    await Competence.update(
+      {
+        status: false,
+      },
       {
         where: {
-          typologyId: id,
+          competenceId: competence.competenceId,
         },
       }
     );
+    return await getCompetence(competence.competenceId);
   } catch (err) {
     throw err;
   }
@@ -53,12 +68,19 @@ async function inativateCompetence(id) {
 
 async function updateCompetence(competence) {
   try {
-    return await Competence.update(competence, {
-      where: {
+    await Competence.update(
+      {
+        competence: competence.competence,
+        description: competence.description,
         typologyId: competence.typologyId,
       },
-    });
-    return await getCompetence(competence.typologyId);
+      {
+        where: {
+          competenceId: competence.competenceId,
+        },
+      }
+    );
+    return await getCompetence(competence.competenceId);
   } catch (err) {
     throw err;
   }
@@ -67,6 +89,7 @@ async function updateCompetence(competence) {
 export default {
   insertCompetence,
   getCompetences,
+  getCompetencesHistory,
   getCompetencesTyp,
   getCompetence,
   inativateCompetence,

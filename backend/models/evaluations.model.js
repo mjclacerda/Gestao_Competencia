@@ -21,8 +21,12 @@ const avaliacoes = db.define(
       allowNull: false,
     },
   },
-  { underscored: true },
-  { uniqueKeys: { Items_unique: { fields: ["year", "formId", "userId"] } } }
+  {
+    uniqueKeys: {
+      Items_unique: { fields: ["year", "formId", "userId"] },
+    },
+  },
+  { underscored: true }
 );
 
 avaliacoes.belongsTo(Forms, {

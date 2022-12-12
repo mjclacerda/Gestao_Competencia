@@ -3,7 +3,6 @@ import FormController from "../controllers/forms.controller.js";
 
 const router = express.Router();
 
-router.post("/", FormController.insertForm);
 router.get("/", FormController.getForms);
 router.get("/:id", FormController.getForm);
 

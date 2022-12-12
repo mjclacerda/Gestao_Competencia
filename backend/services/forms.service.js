@@ -1,12 +1,5 @@
 import FormRepository from "../repositories/forms.repository.js";
 
-async function insertForm(form) {
-  if (form) {
-    return await FormRepository.insertForm(form);
-  }
-  throw new Error("Não foi possível criar esses formulário");
-}
-
 async function getForms() {
   const forms = await FormRepository.getForms();
   if (forms) {
@@ -20,11 +13,10 @@ async function getForm(id) {
   if (form) {
     return await FormRepository.getForm(id);
   }
-  throw new Error("A form procurada não existe");
+  throw new Error("O formulário procurado não existe");
 }
 
 export default {
-  insertForm,
   getForms,
   getForm,
 };

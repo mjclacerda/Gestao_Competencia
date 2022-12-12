@@ -36,8 +36,32 @@ async function getQuestion(req, res, next) {
   }
 }
 
+async function getQuestionsUser(req, res, next) {
+  try {
+    res.send(await QuestionService.getQuestionsUser(req.params.id));
+    logger.info("GET /questões por usuário");
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function getQuestionsUserYear(req, res, next) {
+  try {
+    let userquestions = req.body;
+    if (!userquestions.userId || !userquestions.year) {
+      throw new Error("Há campos obrigatórios não preenchidos");
+    }
+    res.send(await QuestionService.getQuestionsUserYear(userquestions));
+    logger.info("GET /questões por usuário e ano");
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   insertQuestion,
+  getQuestionsUserYear,
+  getQuestionsUser,
   getQuestions,
   getQuestion,
 };

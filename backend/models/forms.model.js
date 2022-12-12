@@ -13,6 +13,7 @@ const formularios = db.define(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
   },
   { underscored: true }

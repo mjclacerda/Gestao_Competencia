@@ -1,5 +1,12 @@
 import UserRepository from "../repositories/users.repository.js";
 
+async function insertUser(user) {
+  if (user) {
+    return await UserRepository.insertUser(user);
+  }
+  throw new Error("Não foi possível criar esse usuário");
+}
+
 async function getUsers() {
   const users = await UserRepository.getUsers();
   if (users) {
@@ -17,6 +24,7 @@ async function getUser(id) {
 }
 
 export default {
+  insertUser,
   getUsers,
   getUser,
 };

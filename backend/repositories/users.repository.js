@@ -1,5 +1,13 @@
 import User from "../models/users.model.js";
 
+async function insertUser(user) {
+  try {
+    return await User.create(user);
+  } catch (err) {
+    throw err;
+  }
+}
+
 async function getUsers() {
   try {
     return await User.findAll();
@@ -17,6 +25,7 @@ async function getUser(id) {
 }
 
 export default {
+  insertUser,
   getUsers,
   getUser,
 };

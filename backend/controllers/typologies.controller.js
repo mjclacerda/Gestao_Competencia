@@ -39,9 +39,11 @@ async function inativateTypology(req, res, next) {
       !tipologia.typology ||
       !tipologia.description ||
       !tipologia.status
-    )
-      res.send(await TypologyService.inativateTypology(tipologia));
-    logger.info("PUT /tipologia(inativate)");
+    ) {
+      throw new Error("Há campos obrigatórios não preenchidos");
+    }
+    res.send(await TypologyService.inativateTypology(tipologia));
+    logger.info(`PUT /tipologia(inativate) - ${JSON.stringify(tipologia)}`);
   } catch (err) {
     next(err);
   }
