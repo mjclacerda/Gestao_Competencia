@@ -5,48 +5,18 @@ import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import Form from "../../components/Form";
 import { BottonLink } from "../../components/BottonList";
+import { getTypologies } from "../Backend_Integration";
+import { useEffect, useState } from "react";
 
 export default function Config_tc() {
-  //essa variável tem que ser buscada no banco, além disso é preciso capturar o valor do botão para pesquisar as competências relacionadas a tipologia escolhida
-  const tipologias = [
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-    "Gerenciais",
-    "Comuns",
-    "Específicas",
-    "Organizacionais",
-  ];
+  const [tipologias, setTipologias] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getTypologies();
+      setTipologias(data);
+    })();
+  }, []);
 
   return (
     <Box>

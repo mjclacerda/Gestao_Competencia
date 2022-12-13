@@ -1,4 +1,4 @@
-import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
+import { BootstrapButton, BoxColumn } from "./Component";
 import { Link } from "react-router-dom";
 import { linkStyle } from "./Side_menu";
 import { Typography } from "@mui/material";
@@ -15,23 +15,24 @@ interface IBottonDesc {
         typology?: string;
         competenceId?: number;
         competence?: string;
-        description: string;
-        status: boolean;
+        description?: string;
+        status?: boolean;
       }>
     | any;
+  event?: any;
 }
 
-export function BottonLink({ list }: IBottonList) {
+export function BottonLink({ list }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
-      {list.map((tipo) => (
+      {list.map((tipo: any) => (
         <Link key={uuid()} to={"/config_comp"} style={linkStyle}>
           <BootstrapButton
             key={uuid()}
             style={{ margin: 3, fontSize: 16 }}
-            value={tipo}
+            value={tipo.typologyId}
           >
-            {tipo}
+            {tipo.typology}
           </BootstrapButton>
         </Link>
       ))}
@@ -39,10 +40,10 @@ export function BottonLink({ list }: IBottonList) {
   );
 }
 
-export function BottonList({ list }: IBottonList) {
+export function BottonList({ list }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
-      {list.map((tipo) => (
+      {list.map((tipo: any) => (
         <BootstrapButton
           key={uuid()}
           style={{
@@ -51,16 +52,16 @@ export function BottonList({ list }: IBottonList) {
             color: "black",
             background: "#00EFFF",
           }}
-          value={tipo}
+          value={tipo.competenceId}
         >
-          {tipo}
+          {tipo.competence}
         </BootstrapButton>
       ))}
     </div>
   );
 }
 
-export function BottonTDesc({ list }: IBottonDesc) {
+export function BottonTDesc(props: IBottonDesc) {
   return (
     <div
       key={uuid()}
@@ -69,12 +70,14 @@ export function BottonTDesc({ list }: IBottonDesc) {
         flexWrap: "wrap",
       }}
     >
-      {list.map((tipo: any) => (
+      {props.list.map((tipo: any) => (
         <BoxColumn key={uuid()} style={{ width: "18vw", margin: 20 }}>
           <BootstrapButton
             key={uuid()}
             value={tipo.typologyId}
             style={{ marginBottom: -20, marginLeft: 20, fontSize: 14 }}
+            onClick={props.event}
+            name={tipo.typology}
           >
             {tipo.typology}
           </BootstrapButton>

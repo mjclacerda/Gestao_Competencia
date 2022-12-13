@@ -5,17 +5,18 @@ import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import Form from "../../components/Form";
 import { BottonList } from "../../components/BottonList";
+import { getTypologies, getCompetences } from "../Backend_Integration";
+import { useEffect, useState } from "react";
 
 export default function Config_tc() {
-  //essa variável tem que ser buscada no banco, baseado no value do botão da tipologia
-  const gerenciais = [
-    "Foco no Usuário",
-    "Defesa de Direitos",
-    "Gestão Organizacional",
-    "Resolutividade",
-    "Interação Social",
-  ];
+  const [competencias, setCompetencias] = useState([]);
 
+  useEffect(() => {
+    (async () => {
+      const data = await getCompetences();
+      setCompetencias(data);
+    })();
+  }, []);
   return (
     <Box>
       <Header />
@@ -50,7 +51,7 @@ export default function Config_tc() {
                 <Typography style={{ margin: 40, fontSize: 18 }}>
                   COMPETÊNCIAS CADASTRADAS
                 </Typography>
-                <BottonList list={gerenciais} />
+                <BottonList list={competencias} />
               </FlexBox>
             </FlexBox>
             <FlexBox

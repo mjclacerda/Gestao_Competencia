@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API para Sistema de Gestão por Competências - SGP 1.0",
+    "description": "Essa é uma API desenvolvida especialmente para compor o projeto Sistema de Gestão por Competências,\n oferecendo o suporte necessário para as tarefas de CRUD em um banco de dados local.",
+    "contact": {
+      "email": "mjcl.driver@gmail.com"
+    }
+  },
+  "externalDocs": {
+    "description": "Saiba mais sobre o SGP",
+    "url": "https://github.com/mjclacerda/Gestao_Competencia"
+  },
+  "tags": [
+    {
+      "name": "typologies",
+      "description": "Operações de CRUD das tipologias de competências"
+    },
+    {
+      "name": "competences",
+      "description": "Operações de CRUD das competências"
+    },
+    {
+      "name": "competencesfortypology",
+      "description": "Consulta as competências ativas de uma typologia também ativa"
+    },
+    {
+      "name": "competenceshistory",
+      "description": "Consulta o histórico de competências e suas respectivas tipologias"
+    },
+    {
+      "name": "users",
+      "description": "Consultas de usuários"
+    },
+    {
+      "name": "questionsuser",
+      "description": "Consulta questões relacionada a um usuário"
+    },
+    {
+      "name": "forms",
+      "description": "Consultas de tipos de formulários"
+    },
+    {
+      "name": "evaluations",
+      "description": "Criação de avaliações"
+    },
+    {
+      "name": "questions",
+      "description": "Criação de questões"
+    }
+  ]
+}

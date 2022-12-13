@@ -26,7 +26,7 @@ export function Other_Ask({ list }: ISelf_Ask) {
               fontSize: "16px",
             }}
           >
-            {item.Competencia}
+            {item.competence}
           </BootstrapButton>
           <div
             key={uuid()}
@@ -48,7 +48,7 @@ export function Other_Ask({ list }: ISelf_Ask) {
                 fontSize: 16,
               }}
             >
-              {item.Conceito}
+              {item.description}
             </Typography>
           </div>
           <Typography
@@ -68,8 +68,8 @@ export function Other_Ask({ list }: ISelf_Ask) {
             <FormControl style={{ width: "20vw", marginBottom: "1vh" }}>
               <RadioGroup
                 row
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
+                aria-labelledby={item.competenceId}
+                name="importance_level"
               >
                 <FormControlLabel
                   value="1"
@@ -109,8 +109,8 @@ export function Other_Ask({ list }: ISelf_Ask) {
             <FormControl style={{ width: "20vw" }}>
               <RadioGroup
                 row
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
+                aria-labelledby={item.competenceId}
+                name="domain_level"
               >
                 <FormControlLabel
                   value="1"

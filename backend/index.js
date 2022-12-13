@@ -2,6 +2,8 @@ import express from "express";
 import winston from "winston";
 import cors from "cors";
 import Sequelize from "./db/db.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerFile from "./swagger.json" assert { type: "json" };
 import typologiesRouter from "./routes/typologies.router.js";
 import competencesRouter from "./routes/competences.router.js";
 import evaluationsRouter from "./routes/evaluations.router.js";
@@ -44,6 +46,7 @@ app.use("/forms", formsRouter);
 app.use("/questions", questionRouter);
 app.use("/questionsuser", questionsUserRouter);
 app.use("/users", usersRouter);
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 //Tratamento de erros
 app.use((err, req, res, next) => {

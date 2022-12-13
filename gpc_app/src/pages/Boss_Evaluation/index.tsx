@@ -1,49 +1,21 @@
+import {
+  Box,
+  Typography,
+  FormControl,
+  MenuItem,
+  InputLabel,
+  OutlinedInput,
+  Select,
+} from "@mui/material";
+import { SelectChangeEvent } from "@mui/material/Select";
 import Header from "../../components/Header_user";
-import { Box, Typography } from "@mui/material";
 import Side_menu from "../../components/Side_menu_user";
 import Bar from "../../components/Bar";
 import { BoxColumn, StyledBox } from "../../components/Component";
 import { Other_Ask } from "../../components/Other_Ask";
-import * as React from "react";
-import { Theme, useTheme } from "@mui/material/styles";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-
-const competencias = [
-  {
-    Tipologia: "Gerenciais",
-    Competencia: "Defesa de Direitos",
-    Conceito:
-      "Promover a justiça, a democracia, a cidadania e a dignidade humana, contribuindo para a transformação dos direitos da sociedade em realidade.",
-  },
-  {
-    Tipologia: "Gerenciais",
-    Competencia: "Gestão Organizacional",
-    Conceito:
-      "Gerir pessoas, recursos e serviços por meio de soluções colaborativas e inovadoras alinhadas à estratégia institucional.",
-  },
-  {
-    Tipologia: "Gerenciais",
-    Competencia: "Foco do Usuário",
-    Conceito:
-      "Orientar a atuação institucional com vistas à qualidade dos serviços e à satisfação do usuário.",
-  },
-  {
-    Tipologia: "Gerenciais",
-    Competencia: "Resultividade",
-    Conceito:
-      "Atuar na prevenção e solução das demandas com efetividade, visando a otimização do desempenho institucional.",
-  },
-  {
-    Tipologia: "Gerenciais",
-    Competencia: "Interação Social",
-    Conceito:
-      "Fortalecer o diálogo permanente com a sociedade, ampliando os canais de aproximação com a comunidade.",
-  },
-];
+import { useState, useEffect } from "react";
+import { getCompetences, getUsers } from "../Backend_Integration";
+import { IUser } from "../../components/Interfaces";
 
 //Buscar o nome do avaliado no banco
 const evaluetedname = "Maria Janete Lacerda";
@@ -59,37 +31,30 @@ const MenuProps = {
   },
 };
 
-const bossnames = [
-  "Oliver Hansen",
-  "Van Henry",
-  "April Tucker",
-  "Ralph Hubbard",
-  "Omar Alexander",
-  "Carlos Abbott",
-  "Miriam Wagner",
-  "Bradley Wilkerson",
-  "Virginia Andrews",
-  "Kelly Snyder",
-];
-
-function getStyles(name: string, personName: string[], theme: Theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-
 export default function Boss_Evaluation() {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState<string[]>([]);
+  const [teamName, setTeamName] = useState<string[]>([]);
+  const [competencias, setCompetencias] = useState([]);
+  const [users, setUsers] = useState([]);
 
-  const handleChange = (event: SelectChangeEvent<typeof personName>) => {
+  useEffect(() => {
+    (async () => {
+      const data = await getCompetences();
+      setCompetencias(data);
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getUsers();
+      setUsers(data);
+    })();
+  }, []);
+
+  const handleChange = (event: SelectChangeEvent<typeof teamName>) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
+    setTeamName(
       // On autofill we get a stringified value.
       typeof value === "string" ? value.split(",") : value
     );
@@ -124,19 +89,15 @@ export default function Boss_Evaluation() {
                 <Select
                   labelId="demo-multiple-name-label"
                   id="boss_name"
-                  value={personName}
+                  value={teamName}
                   onChange={handleChange}
                   input={<OutlinedInput label="Membro da Equipe" />}
                   MenuProps={MenuProps}
                   style={{ height: 40, marginBottom: "5vh" }}
                 >
-                  {bossnames.map((name) => (
-                    <MenuItem
-                      key={name}
-                      value={name}
-                      style={getStyles(name, personName, theme)}
-                    >
-                      {name}
+                  {users.map((name: IUser) => (
+                    <MenuItem key={name.name} value={name.name}>
+                      {name.name}
                     </MenuItem>
                   ))}
                 </Select>

@@ -4,7 +4,12 @@ import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox, FlexSemiBox } from "../../components/Component";
 import { BottonCDesc, BottonTDesc } from "../../components/BottonList";
-import { getTypologies, getCompetences } from "../Backend_Integration";
+import {
+  getTypologies,
+  getCompetences,
+  getCompetenceForTypologyId,
+} from "../Backend_Integration";
+import { useEffect, useState } from "react";
 
 const style = {
   flexDirection: "column",
@@ -13,10 +18,36 @@ const style = {
   padding: 50,
 };
 
-const tipologias = await getTypologies();
-const competencias = await getCompetences();
-
 export default function Typology() {
+  const [tipologias, setTipologias] = useState([]);
+  const [competencias, setCompetencias] = useState([]);
+  const [selectedTyp, setSelectedTyp] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      const data = await getTypologies();
+      setTipologias(data);
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getCompetences();
+      setCompetencias(data);
+    })();
+  }, []);
+
+  function ClikTypology(event: any) {
+    const {
+      target: { value, name },
+    } = event;
+    (async () => {
+      const data = await getCompetenceForTypologyId(value);
+      setCompetencias(data);
+      setSelectedTyp(name);
+    })();
+  }
+
   return (
     <BoxColumn>
       <Header />
@@ -33,7 +64,7 @@ export default function Typology() {
             <Typography style={{ fontSize: 16, marginBottom: 20 }}>
               TIPOLOGIAS CADASTRADAS
             </Typography>
-            <BottonTDesc list={tipologias} />
+            <BottonTDesc list={tipologias} event={ClikTypology} />
           </FlexSemiBox>
           <FlexSemiBox
             style={{
@@ -41,7 +72,7 @@ export default function Typology() {
             }}
           >
             <Typography style={{ fontSize: 14, marginBottom: 20 }}>
-              COMPETÊNCIAS
+              COMPETÊNCIAS {selectedTyp.toUpperCase()} CADASTRADAS
             </Typography>
             <BottonCDesc list={competencias} />
           </FlexSemiBox>

@@ -1465,3 +1465,372 @@
 2022-12-12T00:21:29.009Z [gpc-api] info: GET /tipologia
 2022-12-12T00:21:29.013Z [gpc-api] info: GET /competencias
 2022-12-12T00:37:42.759Z [gpc-api] info: API Started!
+2022-12-12T21:10:09.841Z [gpc-api] info: API Started!
+2022-12-12T21:10:09.858Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-12T21:10:26.442Z [gpc-api] info: GET /tipologia
+2022-12-12T21:10:26.451Z [gpc-api] info: GET /competencias
+2022-12-12T21:10:33.246Z [gpc-api] info: GET /tipologia
+2022-12-12T21:10:33.310Z [gpc-api] info: GET /competencias
+2022-12-12T21:21:25.946Z [gpc-api] info: GET /competencias
+2022-12-12T21:21:27.595Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:27.605Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:27.615Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:27.721Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:27.732Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:32.510Z [gpc-api] info: GET /competencias
+2022-12-12T21:21:32.705Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:32.717Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:32.730Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:32.848Z [gpc-api] info: GET /tipologia
+2022-12-12T21:21:32.860Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:15.751Z [gpc-api] info: GET /competencias
+2022-12-12T21:26:15.762Z [gpc-api] info: GET /competencias
+2022-12-12T21:26:17.616Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:17.626Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:17.664Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:17.678Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:23.101Z [gpc-api] info: GET /competencias
+2022-12-12T21:26:23.379Z [gpc-api] info: GET /tipologia
+2022-12-12T21:26:23.385Z [gpc-api] info: GET /tipologia
+2022-12-12T21:28:42.215Z [gpc-api] info: GET /tipologia
+2022-12-12T21:28:42.217Z [gpc-api] info: GET /competencias
+2022-12-12T21:28:42.222Z [gpc-api] info: GET /tipologia
+2022-12-12T21:28:42.224Z [gpc-api] info: GET /competencias
+2022-12-12T21:28:43.549Z [gpc-api] info: GET /tipologia
+2022-12-12T21:28:43.553Z [gpc-api] info: GET /competencias
+2022-12-12T21:28:43.563Z [gpc-api] info: GET /tipologia
+2022-12-12T21:28:43.568Z [gpc-api] info: GET /competencias
+2022-12-12T21:30:23.580Z [gpc-api] info: GET /tipologia
+2022-12-12T21:30:23.582Z [gpc-api] info: GET /competencias
+2022-12-12T21:30:24.587Z [gpc-api] info: GET /tipologia
+2022-12-12T21:30:24.591Z [gpc-api] info: GET /competencias
+2022-12-12T21:47:51.419Z [gpc-api] info: GET /competencias
+2022-12-12T21:47:51.422Z [gpc-api] info: GET /forms
+2022-12-12T21:47:51.427Z [gpc-api] info: GET /competencias
+2022-12-12T21:47:51.467Z [gpc-api] info: GET /forms
+2022-12-12T21:51:51.470Z [gpc-api] info: GET /competencias
+2022-12-12T21:51:51.474Z [gpc-api] info: GET /forms
+2022-12-12T21:51:51.478Z [gpc-api] info: GET /competencias
+2022-12-12T21:51:51.481Z [gpc-api] info: GET /forms
+2022-12-12T21:53:20.090Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:20.094Z [gpc-api] info: GET /forms
+2022-12-12T21:53:20.095Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:20.100Z [gpc-api] info: GET /forms
+2022-12-12T21:53:25.612Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:25.615Z [gpc-api] info: GET /forms
+2022-12-12T21:53:25.621Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:25.627Z [gpc-api] info: GET /forms
+2022-12-12T21:53:56.413Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:56.418Z [gpc-api] info: GET /forms
+2022-12-12T21:53:56.422Z [gpc-api] info: GET /competencias
+2022-12-12T21:53:56.426Z [gpc-api] info: GET /forms
+2022-12-12T21:54:54.366Z [gpc-api] info: GET /competencias
+2022-12-12T21:54:54.369Z [gpc-api] info: GET /forms
+2022-12-12T21:55:17.757Z [gpc-api] info: GET /competencias
+2022-12-12T21:55:17.760Z [gpc-api] info: GET /forms
+2022-12-12T21:55:17.763Z [gpc-api] info: GET /competencias
+2022-12-12T21:55:17.765Z [gpc-api] info: GET /forms
+2022-12-12T21:56:44.508Z [gpc-api] info: GET /competencias
+2022-12-12T21:56:44.512Z [gpc-api] info: GET /forms
+2022-12-12T21:58:28.473Z [gpc-api] info: GET /competencias
+2022-12-12T21:58:28.475Z [gpc-api] info: GET /forms
+2022-12-12T21:59:47.562Z [gpc-api] info: GET /competencias
+2022-12-12T21:59:47.564Z [gpc-api] info: GET /forms
+2022-12-12T21:59:59.532Z [gpc-api] info: GET /competencias
+2022-12-12T21:59:59.533Z [gpc-api] info: GET /forms
+2022-12-12T22:01:42.467Z [gpc-api] info: GET /competencias
+2022-12-12T22:01:42.470Z [gpc-api] info: GET /forms
+2022-12-12T22:01:42.474Z [gpc-api] info: GET /competencias
+2022-12-12T22:01:42.476Z [gpc-api] info: GET /forms
+2022-12-12T22:02:12.274Z [gpc-api] info: GET /competencias
+2022-12-12T22:02:12.281Z [gpc-api] info: GET /forms
+2022-12-12T22:02:41.637Z [gpc-api] info: GET /competencias
+2022-12-12T22:02:41.638Z [gpc-api] info: GET /forms
+2022-12-12T22:03:01.644Z [gpc-api] info: GET /competencias
+2022-12-12T22:03:01.646Z [gpc-api] info: GET /forms
+2022-12-12T22:03:31.516Z [gpc-api] info: GET /competencias
+2022-12-12T22:03:31.520Z [gpc-api] info: GET /forms
+2022-12-12T22:08:02.491Z [gpc-api] info: GET /competencias
+2022-12-12T22:08:02.493Z [gpc-api] info: GET /forms
+2022-12-12T22:08:31.509Z [gpc-api] info: GET /competencias
+2022-12-12T22:08:31.510Z [gpc-api] info: GET /forms
+2022-12-12T22:09:44.673Z [gpc-api] info: GET /competencias
+2022-12-12T22:09:44.675Z [gpc-api] info: GET /forms
+2022-12-12T22:10:16.279Z [gpc-api] info: GET /competencias
+2022-12-12T22:10:16.280Z [gpc-api] info: GET /forms
+2022-12-12T22:10:19.098Z [gpc-api] info: GET /competencias
+2022-12-12T22:10:19.100Z [gpc-api] info: GET /forms
+2022-12-12T22:10:19.104Z [gpc-api] info: GET /competencias
+2022-12-12T22:10:19.106Z [gpc-api] info: GET /forms
+2022-12-12T22:12:55.030Z [gpc-api] info: GET /competencias
+2022-12-12T22:12:55.032Z [gpc-api] info: GET /forms
+2022-12-12T22:14:21.381Z [gpc-api] info: GET /competencias
+2022-12-12T22:14:21.383Z [gpc-api] info: GET /forms
+2022-12-12T22:14:21.384Z [gpc-api] info: GET /competencias
+2022-12-12T22:14:21.386Z [gpc-api] info: GET /forms
+2022-12-12T22:14:21.704Z [gpc-api] info: GET /tipologia
+2022-12-12T22:14:21.705Z [gpc-api] info: GET /competencias
+2022-12-12T22:14:21.707Z [gpc-api] info: GET /tipologia
+2022-12-12T22:14:21.708Z [gpc-api] info: GET /competencias
+2022-12-12T22:14:43.704Z [gpc-api] info: GET /competencias
+2022-12-12T22:14:43.706Z [gpc-api] info: GET /forms
+2022-12-12T22:16:06.396Z [gpc-api] info: GET /competencias
+2022-12-12T22:16:06.398Z [gpc-api] info: GET /forms
+2022-12-12T22:20:21.332Z [gpc-api] info: GET /competencias
+2022-12-12T22:20:21.334Z [gpc-api] info: GET /forms
+2022-12-12T22:20:21.335Z [gpc-api] info: GET /competencias
+2022-12-12T22:20:21.338Z [gpc-api] info: GET /forms
+2022-12-12T22:27:34.872Z [gpc-api] info: GET /competencias
+2022-12-12T22:27:34.873Z [gpc-api] info: GET /forms
+2022-12-12T22:27:34.875Z [gpc-api] info: GET /competencias
+2022-12-12T22:27:34.877Z [gpc-api] info: GET /forms
+2022-12-12T22:28:55.033Z [gpc-api] info: GET /competencias
+2022-12-12T22:28:55.035Z [gpc-api] info: GET /forms
+2022-12-12T22:28:55.037Z [gpc-api] info: GET /competencias
+2022-12-12T22:28:55.040Z [gpc-api] info: GET /forms
+2022-12-12T22:29:58.426Z [gpc-api] info: GET /competencias
+2022-12-12T22:29:58.427Z [gpc-api] info: GET /forms
+2022-12-12T22:29:58.430Z [gpc-api] info: GET /competencias
+2022-12-12T22:29:58.432Z [gpc-api] info: GET /forms
+2022-12-12T22:40:59.618Z [gpc-api] info: GET /competencias
+2022-12-12T22:40:59.621Z [gpc-api] info: GET /forms
+2022-12-12T22:40:59.622Z [gpc-api] info: GET /competencias
+2022-12-12T22:40:59.625Z [gpc-api] info: GET /forms
+2022-12-12T22:44:06.128Z [gpc-api] info: GET /competencias
+2022-12-12T22:44:06.131Z [gpc-api] info: GET /competencias
+2022-12-12T22:44:27.750Z [gpc-api] info: GET /competencias
+2022-12-12T22:45:17.406Z [gpc-api] info: GET /competencias
+2022-12-12T22:45:17.408Z [gpc-api] info: GET /competencias
+2022-12-12T22:46:19.011Z [gpc-api] info: GET /competencias
+2022-12-12T22:49:55.626Z [gpc-api] info: GET /tipologia
+2022-12-12T22:49:55.627Z [gpc-api] info: GET /competencias
+2022-12-12T22:49:55.630Z [gpc-api] info: GET /tipologia
+2022-12-12T22:49:55.631Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:07.951Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:07.952Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:07.954Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:07.955Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:11.368Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:11.369Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:11.374Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:11.375Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:13.187Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:13.189Z [gpc-api] info: GET /forms
+2022-12-12T22:50:13.190Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:13.193Z [gpc-api] info: GET /forms
+2022-12-12T22:50:20.977Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:20.980Z [gpc-api] info: GET /forms
+2022-12-12T22:50:20.983Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:20.985Z [gpc-api] info: GET /forms
+2022-12-12T22:50:26.094Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:26.098Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:37.659Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:37.660Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:37.663Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:37.664Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:42.065Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:42.065Z [gpc-api] info: GET /competencias
+2022-12-12T22:50:42.068Z [gpc-api] info: GET /tipologia
+2022-12-12T22:50:42.069Z [gpc-api] info: GET /competencias
+2022-12-12T22:54:30.168Z [gpc-api] info: GET /tipologia
+2022-12-12T22:54:30.171Z [gpc-api] info: GET /tipologia
+2022-12-12T22:55:27.637Z [gpc-api] info: GET /tipologia
+2022-12-12T22:55:27.640Z [gpc-api] info: GET /tipologia
+2022-12-12T23:02:11.457Z [gpc-api] info: GET /competencias
+2022-12-12T23:02:11.459Z [gpc-api] info: GET /competencias
+2022-12-12T23:02:27.403Z [gpc-api] info: GET /tipologia
+2022-12-12T23:02:27.406Z [gpc-api] info: GET /tipologia
+2022-12-12T23:02:32.730Z [gpc-api] info: GET /competencias
+2022-12-12T23:02:32.733Z [gpc-api] info: GET /competencias
+2022-12-12T23:08:46.255Z [gpc-api] info: GET /tipologia
+2022-12-12T23:08:46.256Z [gpc-api] info: GET /competencias
+2022-12-12T23:08:46.260Z [gpc-api] info: GET /tipologia
+2022-12-12T23:08:46.260Z [gpc-api] info: GET /competencias
+2022-12-12T23:09:46.322Z [gpc-api] info: GET /tipologia
+2022-12-12T23:09:46.323Z [gpc-api] info: GET /competencias
+2022-12-12T23:09:46.325Z [gpc-api] info: GET /tipologia
+2022-12-12T23:09:46.326Z [gpc-api] info: GET /competencias
+2022-12-12T23:11:27.349Z [gpc-api] info: GET /tipologia
+2022-12-12T23:11:27.349Z [gpc-api] info: GET /competencias
+2022-12-12T23:11:28.518Z [gpc-api] info: GET /tipologia
+2022-12-12T23:11:28.519Z [gpc-api] info: GET /competencias
+2022-12-12T23:44:26.604Z [gpc-api] info: GET /tipologia
+2022-12-12T23:44:26.604Z [gpc-api] info: GET /competencias
+2022-12-12T23:44:26.609Z [gpc-api] info: GET /tipologia
+2022-12-12T23:44:26.610Z [gpc-api] info: GET /competencias
+2022-12-12T23:49:06.944Z [gpc-api] info: GET /tipologia
+2022-12-12T23:49:06.945Z [gpc-api] info: GET /competencias
+2022-12-12T23:49:06.948Z [gpc-api] info: GET /tipologia
+2022-12-12T23:49:06.949Z [gpc-api] info: GET /competencias
+2022-12-13T00:07:26.577Z [gpc-api] info: GET /tipologia
+2022-12-13T00:07:26.577Z [gpc-api] info: GET /competencias
+2022-12-13T00:07:26.580Z [gpc-api] info: GET /tipologia
+2022-12-13T00:07:26.581Z [gpc-api] info: GET /competencias
+2022-12-13T00:07:46.612Z [gpc-api] info: GET /tipologia
+2022-12-13T00:07:46.613Z [gpc-api] info: GET /competencias
+2022-12-13T00:07:46.616Z [gpc-api] info: GET /tipologia
+2022-12-13T00:07:46.617Z [gpc-api] info: GET /competencias
+2022-12-13T00:08:22.718Z [gpc-api] info: GET /tipologia
+2022-12-13T00:08:22.719Z [gpc-api] info: GET /competencias
+2022-12-13T00:08:24.539Z [gpc-api] info: GET /competencias
+2022-12-13T00:08:24.540Z [gpc-api] info: GET /tipologia
+2022-12-13T00:08:26.834Z [gpc-api] info: GET /tipologia
+2022-12-13T00:08:26.834Z [gpc-api] info: GET /competencias
+2022-12-13T00:08:26.837Z [gpc-api] info: GET /tipologia
+2022-12-13T00:08:26.838Z [gpc-api] info: GET /competencias
+2022-12-13T00:13:45.101Z [gpc-api] info: GET /tipologia
+2022-12-13T00:13:45.102Z [gpc-api] info: GET /competencias
+2022-12-13T00:13:46.542Z [gpc-api] info: GET /tipologia
+2022-12-13T00:13:46.543Z [gpc-api] info: GET /competencias
+2022-12-13T00:13:51.950Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:13:55.221Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:13:57.022Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:16:35.598Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:16:37.682Z [gpc-api] info: GET /tipologia
+2022-12-13T00:16:37.682Z [gpc-api] info: GET /competencias
+2022-12-13T00:16:37.686Z [gpc-api] info: GET /tipologia
+2022-12-13T00:16:37.720Z [gpc-api] info: GET /competencias
+2022-12-13T00:16:40.329Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:16:41.772Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:16:43.025Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:18:01.972Z [gpc-api] info: GET /tipologia
+2022-12-13T00:18:01.974Z [gpc-api] info: GET /competencias
+2022-12-13T00:18:03.535Z [gpc-api] info: GET /tipologia
+2022-12-13T00:18:03.536Z [gpc-api] info: GET /competencias
+2022-12-13T00:19:41.009Z [gpc-api] info: GET /tipologia
+2022-12-13T00:19:41.010Z [gpc-api] info: GET /competencias
+2022-12-13T00:19:41.014Z [gpc-api] info: GET /tipologia
+2022-12-13T00:19:41.015Z [gpc-api] info: GET /competencias
+2022-12-13T00:19:42.510Z [gpc-api] info: GET /tipologia
+2022-12-13T00:19:42.511Z [gpc-api] info: GET /competencias
+2022-12-13T00:19:42.513Z [gpc-api] info: GET /tipologia
+2022-12-13T00:19:42.514Z [gpc-api] info: GET /competencias
+2022-12-13T00:20:09.333Z [gpc-api] info: GET /tipologia
+2022-12-13T00:20:09.333Z [gpc-api] info: GET /competencias
+2022-12-13T00:20:10.506Z [gpc-api] info: GET /tipologia
+2022-12-13T00:20:10.506Z [gpc-api] info: GET /competencias
+2022-12-13T00:20:11.970Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:20:16.051Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:21:23.052Z [gpc-api] info: GET /tipologia
+2022-12-13T00:21:23.052Z [gpc-api] info: GET /competencias
+2022-12-13T00:21:24.548Z [gpc-api] info: GET /tipologia
+2022-12-13T00:21:24.551Z [gpc-api] info: GET /competencias
+2022-12-13T00:21:26.121Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:23:32.994Z [gpc-api] info: GET /tipologia
+2022-12-13T00:23:32.995Z [gpc-api] info: GET /competencias
+2022-12-13T00:23:34.546Z [gpc-api] info: GET /competencias
+2022-12-13T00:23:34.547Z [gpc-api] info: GET /tipologia
+2022-12-13T00:23:36.378Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:26:37.611Z [gpc-api] info: GET /tipologia
+2022-12-13T00:26:37.612Z [gpc-api] info: GET /competencias
+2022-12-13T00:26:37.614Z [gpc-api] info: GET /tipologia
+2022-12-13T00:26:37.615Z [gpc-api] info: GET /competencias
+2022-12-13T00:26:40.483Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:26:55.575Z [gpc-api] info: GET /tipologia
+2022-12-13T00:26:55.575Z [gpc-api] info: GET /competencias
+2022-12-13T00:26:56.512Z [gpc-api] info: GET /tipologia
+2022-12-13T00:26:56.513Z [gpc-api] info: GET /competencias
+2022-12-13T00:28:03.603Z [gpc-api] info: GET /tipologia
+2022-12-13T00:28:03.603Z [gpc-api] info: GET /competencias
+2022-12-13T00:28:03.606Z [gpc-api] info: GET /tipologia
+2022-12-13T00:28:03.607Z [gpc-api] info: GET /competencias
+2022-12-13T00:28:06.483Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:34.816Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:36.789Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:38.481Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:40.905Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:42.521Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:45.342Z [gpc-api] info: GET /tipologia
+2022-12-13T00:28:45.343Z [gpc-api] info: GET /competencias
+2022-12-13T00:28:45.346Z [gpc-api] info: GET /tipologia
+2022-12-13T00:28:45.347Z [gpc-api] info: GET /competencias
+2022-12-13T00:28:48.086Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:49.850Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:28:51.215Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:29:27.694Z [gpc-api] info: GET /tipologia
+2022-12-13T00:29:27.694Z [gpc-api] info: GET /competencias
+2022-12-13T00:29:27.697Z [gpc-api] info: GET /tipologia
+2022-12-13T00:29:27.698Z [gpc-api] info: GET /competencias
+2022-12-13T00:29:30.496Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:29:32.543Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:29:35.677Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:30:22.584Z [gpc-api] info: GET /tipologia
+2022-12-13T00:30:22.586Z [gpc-api] info: GET /tipologia
+2022-12-13T00:30:25.374Z [gpc-api] info: GET /competencias
+2022-12-13T00:30:25.377Z [gpc-api] info: GET /competencias
+2022-12-13T00:30:28.060Z [gpc-api] info: GET /tipologia
+2022-12-13T00:30:28.062Z [gpc-api] info: GET /tipologia
+2022-12-13T00:32:34.750Z [gpc-api] info: GET /tipologia
+2022-12-13T00:32:34.751Z [gpc-api] info: GET /competencias
+2022-12-13T00:32:34.753Z [gpc-api] info: GET /tipologia
+2022-12-13T00:32:34.754Z [gpc-api] info: GET /competencias
+2022-12-13T00:32:36.635Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:32:41.366Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:32:51.383Z [gpc-api] info: GET /tipologia
+2022-12-13T00:32:51.384Z [gpc-api] info: GET /competencias
+2022-12-13T00:32:51.388Z [gpc-api] info: GET /tipologia
+2022-12-13T00:32:51.389Z [gpc-api] info: GET /competencias
+2022-12-13T00:32:55.503Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:33:37.021Z [gpc-api] info: GET /tipologia
+2022-12-13T00:33:37.024Z [gpc-api] info: GET /tipologia
+2022-12-13T00:33:44.136Z [gpc-api] info: GET /competencias
+2022-12-13T00:33:44.140Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:03.123Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:03.123Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:03.126Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:03.127Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:07.942Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:36:13.680Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:36:15.425Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:36:17.799Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:17.800Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:17.803Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:17.804Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:56.975Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:56.976Z [gpc-api] info: GET /competencias
+2022-12-13T00:36:56.979Z [gpc-api] info: GET /tipologia
+2022-12-13T00:36:56.980Z [gpc-api] info: GET /competencias
+2022-12-13T00:37:01.237Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:37:04.413Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:37:06.374Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:37:09.958Z [gpc-api] info: GET /tipologia
+2022-12-13T00:37:09.959Z [gpc-api] info: GET /competencias
+2022-12-13T00:37:09.997Z [gpc-api] info: GET /tipologia
+2022-12-13T00:37:09.998Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:24.417Z [gpc-api] info: GET /tipologia
+2022-12-13T00:41:24.418Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:24.420Z [gpc-api] info: GET /tipologia
+2022-12-13T00:41:24.421Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:25.918Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:41:27.570Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:41:28.750Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-13T00:41:42.910Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:42.912Z [gpc-api] info: GET /forms
+2022-12-13T00:41:42.914Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:42.915Z [gpc-api] info: GET /forms
+2022-12-13T00:41:49.559Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:49.561Z [gpc-api] info: GET /forms
+2022-12-13T00:41:49.563Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:49.566Z [gpc-api] info: GET /forms
+2022-12-13T00:41:56.084Z [gpc-api] info: GET /competencias
+2022-12-13T00:41:56.089Z [gpc-api] info: GET /competencias
+2022-12-13T00:42:55.995Z [gpc-api] info: GET /tipologia
+2022-12-13T00:42:55.996Z [gpc-api] info: GET /competencias
+2022-12-13T00:42:56.000Z [gpc-api] info: GET /tipologia
+2022-12-13T00:42:56.001Z [gpc-api] info: GET /competencias
+2022-12-13T00:43:00.764Z [gpc-api] info: GET /tipologia
+2022-12-13T00:43:00.767Z [gpc-api] info: GET /tipologia
+2022-12-13T01:51:19.915Z [gpc-api] info: API Started!
+2022-12-13T01:51:19.921Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-13T01:51:34.330Z [gpc-api] info: GET /tipologia
+2022-12-13T02:00:52.598Z [gpc-api] info: API Started!
+2022-12-13T02:00:52.602Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-13T02:03:02.629Z [gpc-api] info: API Started!
+2022-12-13T02:03:02.633Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-13T02:03:15.121Z [gpc-api] info: GET /tipologia
+2022-12-13T02:07:06.277Z [gpc-api] info: API Started!
+2022-12-13T02:07:06.281Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-13T02:07:44.224Z [gpc-api] info: API Started!
+2022-12-13T02:07:44.228Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-13T02:09:51.076Z [gpc-api] info: API Started!
+2022-12-13T02:09:51.080Z [gpc-api] error: Validation error - Formulário já criado

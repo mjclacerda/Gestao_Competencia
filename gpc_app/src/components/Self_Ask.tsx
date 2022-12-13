@@ -10,7 +10,12 @@ import { v4 as uuid } from "uuid";
 
 export interface ISelf_Ask {
   list:
-    | Array<{ Tipologia?: string; Competencia: string; Conceito: string }>
+    | Array<{
+        typology?: string;
+        competenceId?: number;
+        competence: string;
+        description: string;
+      }>
     | any;
 }
 
@@ -31,7 +36,7 @@ export function Self_Ask({ list }: ISelf_Ask) {
               fontSize: "16px",
             }}
           >
-            {item.Competencia}
+            {item.competence}
           </BootstrapButton>
           <div
             key={uuid()}
@@ -53,7 +58,7 @@ export function Self_Ask({ list }: ISelf_Ask) {
                 fontSize: 16,
               }}
             >
-              {item.Conceito}
+              {item.description}
             </Typography>
           </div>
           <Typography
@@ -73,8 +78,8 @@ export function Self_Ask({ list }: ISelf_Ask) {
             <FormControl style={{ width: "20vw", marginBottom: "1vh" }}>
               <RadioGroup
                 row
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
+                aria-labelledby={item.competenceId}
+                name="importance_level"
               >
                 <FormControlLabel
                   value="1"
@@ -114,8 +119,8 @@ export function Self_Ask({ list }: ISelf_Ask) {
             <FormControl style={{ width: "20vw" }}>
               <RadioGroup
                 row
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
+                aria-labelledby={item.competenceId}
+                name="domain_level"
               >
                 <FormControlLabel
                   value="1"
