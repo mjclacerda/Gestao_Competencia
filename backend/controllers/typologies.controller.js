@@ -5,9 +5,10 @@ async function insertTypology(req, res, next) {
     let tipologia = req.body;
     if (!tipologia.typology || !tipologia.description || !tipologia.status) {
       throw new Error("Há campos obrigatórios não preenchidos");
+    } else {
+      res.send(await TypologyService.insertTypology(tipologia));
+      logger.info(`POST /tipologia - ${JSON.stringify(tipologia)}`);
     }
-    res.send(await TypologyService.insertTypology(tipologia));
-    logger.info(`POST /tipologia - ${JSON.stringify(tipologia)}`);
   } catch (err) {
     next(err);
   }
@@ -15,6 +16,15 @@ async function insertTypology(req, res, next) {
 
 async function getTypologies(req, res, next) {
   try {
+    let tipologia = req.body;
+    if (tipologia.typology) {
+      try {
+        res.send(await TypologyService.getTypologyByName(tipologia.typology));
+        logger.info("GET /tipologia pelo nome");
+      } catch (err) {
+        next(err);
+      }
+    }
     res.send(await TypologyService.getTypologies());
     logger.info("GET /tipologia");
   } catch (err) {

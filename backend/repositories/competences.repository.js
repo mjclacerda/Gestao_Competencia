@@ -30,6 +30,16 @@ async function getCompetences() {
   }
 }
 
+async function getCompetenceByName(competencename) {
+  try {
+    return await Competence.findAll({
+      where: { competence: competencename, status: true },
+    });
+  } catch (err) {
+    throw err;
+  }
+}
+
 async function getCompetencesTyp(typologyId) {
   try {
     return await Competence.findAll({
@@ -92,6 +102,7 @@ export default {
   getCompetencesHistory,
   getCompetencesTyp,
   getCompetence,
+  getCompetenceByName,
   inativateCompetence,
   updateCompetence,
 };

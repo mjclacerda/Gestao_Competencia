@@ -1,9 +1,8 @@
 import React from "react";
-import { Box, Button, IconButton, Menu, MenuItem, styled } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Button, Menu, MenuItem, styled, Typography } from "@mui/material";
 import Admin from "@mui/icons-material/AdminPanelSettings";
 import { Link } from "react-router-dom";
-import { StyledHeader } from "./Component";
+import { FlexBox, StyledAvatar, StyledHeader } from "./Component";
 
 export const linkStyle = {
   margin: "0",
@@ -15,18 +14,7 @@ const Adbutton = styled(Button)({
   textTransform: "none",
   fontSize: 14,
   color: "#ffffff",
-  fontFamily: [
-    "Roboto",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    '"Segoe UI"',
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
+  fontFamily: ["sans-serif"].join(","),
 });
 
 export default function Header() {
@@ -41,9 +29,23 @@ export default function Header() {
   return (
     <StyledHeader>
       <Box flex="1">
-        <IconButton size="large" edge="start" color="default" aria-label="menu">
-          <MenuIcon sx={{ color: "white", width: "50px", marginLeft: 2 }} />
-        </IconButton>
+        <FlexBox style={{ alignItems: "center" }}>
+          <StyledAvatar
+            style={{ width: 55, height: 38, marginLeft: 3 }}
+            alt="SkillManager"
+            src="./brain.svg"
+          />
+          <Typography
+            style={{
+              color: "white",
+              fontFamily: "sans-serif",
+              fontSize: 18,
+              fontWeight: "bolder",
+            }}
+          >
+            SkillManager
+          </Typography>
+        </FlexBox>
       </Box>
       <Box marginTop="6px">
         <Adbutton

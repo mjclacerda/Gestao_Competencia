@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Button, IconButton, Menu, MenuItem } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Button, Typography, Menu, MenuItem } from "@mui/material";
 import UserIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 import Styled from "styled-components";
+import { linkStyle } from "./Header";
+import { FlexBox, StyledAvatar } from "./Component";
 
 const StyledHeader = Styled.div`
   display: flex;
@@ -17,18 +19,7 @@ const Adbutton = styled(Button)({
   fontSize: 14,
   marginRight: 3,
   color: "#ffffff",
-  fontFamily: [
-    "Roboto",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    '"Segoe UI"',
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
+  fontFamily: ["sans-serif"].join(","),
 });
 
 export default function Header_user() {
@@ -43,9 +34,23 @@ export default function Header_user() {
   return (
     <StyledHeader>
       <Box flex="1">
-        <IconButton size="large" edge="start" color="default" aria-label="menu">
-          <MenuIcon sx={{ color: "white", width: "50px", marginLeft: 2 }} />
-        </IconButton>
+        <FlexBox style={{ alignItems: "center" }}>
+          <StyledAvatar
+            style={{ width: 55, height: 40, marginLeft: 1 }}
+            alt="SkillManager"
+            src="./brain.svg"
+          />
+          <Typography
+            style={{
+              color: "white",
+              fontFamily: "sans-serif",
+              fontSize: 18,
+              fontWeight: "bolder",
+            }}
+          >
+            SkillManager
+          </Typography>
+        </FlexBox>
       </Box>
       <Box marginTop="6px">
         <Adbutton
@@ -69,7 +74,11 @@ export default function Header_user() {
             "aria-labelledby": "basic-button",
           }}
         >
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          <Link to="/login">
+            <MenuItem onClick={handleClose} style={linkStyle}>
+              Logout
+            </MenuItem>
+          </Link>
         </Menu>
       </Box>
     </StyledHeader>

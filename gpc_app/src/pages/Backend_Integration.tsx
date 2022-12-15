@@ -1,18 +1,29 @@
-//Funções para Typologias
-async function postTypology() {
-  const answer = await fetch("http://localhost:3000/typologies", {
-    method: "POST",
-    //credentials: "include", habilitar quanto tiver autenticação.
-  });
-  return handleresp(answer);
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+//Hook para o método GET simples
+export function useFetch<T = unknown>(url: string) {
+  const [data, setData] = useState<T | null>();
+  const [isFatching, setIsFatching] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((resp) => {
+        setData(resp.data);
+      })
+      .catch((err) => {
+        setError;
+      })
+      .finally(() => setIsFatching(false));
+  }, []);
+  return { data, error, isFatching };
 }
 
-async function getTypologies() {
-  const answer = await fetch("http://localhost:3000/typologies", {
-    method: "GET",
-    //credentials: "include", habilitar quanto tiver autenticação.
+function getTypologies() {
+  return axios.get("http://localhost:3000/typologies").then((resp) => {
+    resp.data;
   });
-  return handleresp(answer);
 }
 
 async function getTypologyForId(id: number) {
@@ -210,7 +221,6 @@ function handleresp(resp: Response) {
 }
 
 export {
-  postTypology,
   getTypologies,
   getTypologyForId,
   updateTypology,

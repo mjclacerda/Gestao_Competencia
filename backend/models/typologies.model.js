@@ -13,10 +13,12 @@ const tipologias = db.define(
     typology: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     status: {
       type: DataTypes.BOOLEAN,

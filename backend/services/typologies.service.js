@@ -16,6 +16,14 @@ async function getTypologies() {
   throw new Error("Não há tipologias ativas cadastradas");
 }
 
+async function getTypologyByName(typologyname) {
+  const tipologia = await TypologyRepository.getTypologyByName(typologyname);
+  if (tipologia[0]) {
+    return tipologia;
+  }
+  throw new Error("Não há tipologias ativas cadastradas com esse nome");
+}
+
 async function getTypology(id) {
   const tipologia = await TypologyRepository.getTypology(id);
   if (tipologia) {
@@ -48,6 +56,7 @@ export default {
   insertTypology,
   getTypologies,
   getTypology,
+  getTypologyByName,
   inativateTypology,
   updateTypology,
 };

@@ -4,10 +4,6 @@ import { linkStyle } from "./Side_menu";
 import { Typography } from "@mui/material";
 import { v4 as uuid } from "uuid";
 
-interface IBottonList {
-  list: Array<string>;
-}
-
 interface IBottonDesc {
   list:
     | Array<{
@@ -20,12 +16,13 @@ interface IBottonDesc {
       }>
     | any;
   event?: any;
+  clic?: any;
 }
 
 export function BottonLink({ list }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
-      {list.map((tipo: any) => (
+      {list?.map((tipo: any) => (
         <Link key={uuid()} to={"/config_comp"} style={linkStyle}>
           <BootstrapButton
             key={uuid()}
@@ -40,10 +37,27 @@ export function BottonLink({ list }: IBottonDesc) {
   );
 }
 
+export function BottonListT({ list, clic }: IBottonDesc) {
+  return (
+    <div key={uuid()} style={{ display: "block" }}>
+      {list?.map((tipo: any) => (
+        <BootstrapButton
+          key={uuid()}
+          style={{ margin: 3, fontSize: 16, minWidth: 300 }}
+          value={tipo.typologyId}
+          onClick={clic}
+        >
+          {tipo.typology}
+        </BootstrapButton>
+      ))}
+    </div>
+  );
+}
+
 export function BottonList({ list }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
-      {list.map((tipo: any) => (
+      {list?.map((tipo: any) => (
         <BootstrapButton
           key={uuid()}
           style={{
@@ -70,7 +84,7 @@ export function BottonTDesc(props: IBottonDesc) {
         flexWrap: "wrap",
       }}
     >
-      {props.list.map((tipo: any) => (
+      {props.list?.map((tipo: any) => (
         <BoxColumn key={uuid()} style={{ width: "18vw", margin: 20 }}>
           <BootstrapButton
             key={uuid()}
@@ -118,7 +132,7 @@ export function BottonCDesc({ list }: IBottonDesc) {
         flexWrap: "wrap",
       }}
     >
-      {list.map((tipo: any) => (
+      {list?.map((tipo: any) => (
         <BoxColumn key={uuid()} style={{ width: "18vw", margin: 20 }}>
           <BootstrapButton
             key={uuid()}

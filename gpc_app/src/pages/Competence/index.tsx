@@ -5,11 +5,12 @@ import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox, FlexSemiBox } from "../../components/Component";
 import { BottonCDesc, BottonTDesc } from "../../components/BottonList";
 import {
-  getTypologies,
+  useFetch,
   getCompetences,
   getCompetenceForTypologyId,
 } from "../Backend_Integration";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const style = {
   flexDirection: "column",
@@ -19,16 +20,10 @@ const style = {
 };
 
 export default function Typology() {
-  const [tipologias, setTipologias] = useState([]);
   const [competencias, setCompetencias] = useState([]);
   const [selectedTyp, setSelectedTyp] = useState("");
 
-  useEffect(() => {
-    (async () => {
-      const data = await getTypologies();
-      setTipologias(data);
-    })();
-  }, []);
+  let tipologias = useFetch("http://localhost:3000/typologies");
 
   useEffect(() => {
     (async () => {
@@ -41,11 +36,17 @@ export default function Typology() {
     const {
       target: { value, name },
     } = event;
-    (async () => {
-      const data = await getCompetenceForTypologyId(value);
-      setCompetencias(data);
-      setSelectedTyp(name);
-    })();
+    const data = axios
+      .get(`http://localhost:3000/competencesfortypology/${value}`)
+      .then((resp) => {
+        setCompetencias(resp.data);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        setCompetencias([]);
+      });
+    setSelectedTyp(name);
   }
 
   return (
@@ -64,7 +65,7 @@ export default function Typology() {
             <Typography style={{ fontSize: 16, marginBottom: 20 }}>
               TIPOLOGIAS CADASTRADAS
             </Typography>
-            <BottonTDesc list={tipologias} event={ClikTypology} />
+            <BottonTDesc list={tipologias.data} event={ClikTypology} />
           </FlexSemiBox>
           <FlexSemiBox
             style={{

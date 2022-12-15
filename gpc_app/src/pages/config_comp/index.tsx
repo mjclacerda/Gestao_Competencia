@@ -5,7 +5,7 @@ import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import Form from "../../components/Form";
 import { BottonList } from "../../components/BottonList";
-import { getTypologies, getCompetences } from "../Backend_Integration";
+import { getCompetences } from "../Backend_Integration";
 import { useEffect, useState } from "react";
 
 export default function Config_tc() {
@@ -17,6 +17,9 @@ export default function Config_tc() {
       setCompetencias(data);
     })();
   }, []);
+
+  const ev = "";
+
   return (
     <Box>
       <Header />
@@ -78,7 +81,7 @@ export default function Config_tc() {
                 >
                   Cadastrar Competência
                 </Typography>
-                <Form label="Nome da competência" />
+                <Form label="Nome da Competência" />
               </BoxColumn>
             </FlexBox>
           </Box>

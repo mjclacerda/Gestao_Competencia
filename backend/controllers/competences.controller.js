@@ -29,6 +29,17 @@ async function getCompetencesHistory(req, res, next) {
 
 async function getCompetences(req, res, next) {
   try {
+    let competence = req.body;
+    if (competence.competence) {
+      try {
+        res.send(
+          await CompetenceService.getCompetenceByName(competence.competence)
+        );
+        logger.info("GET /competencia pelo nome");
+      } catch (err) {
+        next(err);
+      }
+    }
     res.send(await CompetenceService.getCompetences());
     logger.info("GET /competencias");
   } catch (err) {

@@ -10,15 +10,7 @@ const BootstrapButton = styled(Button)({
   backgroundColor: "#353535",
   color: "#ffffff",
   fontWeight: "normal",
-  fontFamily: [
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
+  fontFamily: ["sans-serif"].join(","),
   "&:hover": {
     backgroundColor: "#313131",
   },

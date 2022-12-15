@@ -1,22 +1,83 @@
+import axios from "axios";
 import Header from "../../components/Header";
-import { Box, Typography } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
-import { BoxColumn, FlexBox } from "../../components/Component";
 import Form from "../../components/Form";
-import { BottonLink } from "../../components/BottonList";
-import { getTypologies } from "../Backend_Integration";
-import { useEffect, useState } from "react";
+import { BoxColumn, FlexBox } from "../../components/Component";
+import { BottonListT } from "../../components/BottonList";
+import { Box, Typography, Stack, Alert } from "@mui/material";
+import React, { useState, useEffect, useCallback } from "react";
 
 export default function Config_tc() {
-  const [tipologias, setTipologias] = useState([]);
-
+  const typObjempt = { typology: "", description: "" }; //Objeto da tipologia
+  const [tipologias, setTipologias] = useState(); //dados das tipologias
+  const [alert, setAlert] = useState<boolean | null>(null); //alerta de sucesso ou falha na criação de tipologias
+  const [typologydata, setTypologydata] = useState<object>(typObjempt); //typologyId, typology e description capiturados ao clic do botão de tipologias cadastradas. É necessário inicializar o objeto com os valores vazios para evitar erro Uncontrolled no react
+  const [typologyId, setTypologyId] = useState<number>(0);
+  //Fetch do rol de tipologias ativas
   useEffect(() => {
-    (async () => {
-      const data = await getTypologies();
-      setTipologias(data);
-    })();
-  }, []);
+    axios
+      .get("http://localhost:3000/typologies")
+      .then((resp) => {
+        setTipologias(resp.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [alert]);
+  //Captura os valores do formulário de edição das tipologias
+  const handleChangeValues = (e: any): void => {
+    setTypologydata({ ...typologydata, [e.target.name]: e.target.value });
+  };
+  //Função dos botões da lista de tipologias
+  const handleButtonListT = (value: any): void => {
+    axios
+      .get(`http://localhost:3000/typologies/${value.target.value}`)
+      .then((resp) => {
+        const { data } = resp;
+        setTypologydata({
+          typology: data.typology,
+          description: data.description,
+        });
+        setTypologyId(data.typologyId);
+        setAlert(null);
+      });
+  };
+  //Função do botão Criar
+  const handleButtonCreate = () => {
+    axios
+      .post("http://localhost:3000/typologies", {
+        ...typologydata,
+        status: true,
+      })
+      .then((resp) => {
+        setAlert(true);
+        formcleaning();
+      })
+      .catch((error) => {
+        setAlert(false);
+      });
+  };
+  //Função do botão Alterar
+  const handleButtonUpdate = () => {
+    axios
+      .post("http://localhost:3000/typologies", {
+        ...typologydata,
+        status: true,
+      })
+      .then((resp) => {
+        setAlert(true);
+        formcleaning();
+      })
+      .catch((error) => {
+        setAlert(false);
+      });
+  };
+  //Limpar o formulário
+  const formcleaning = () => {
+    setTypologydata(typObjempt);
+    setTypologyId(0);
+  };
 
   return (
     <Box>
@@ -49,10 +110,18 @@ export default function Config_tc() {
                   top: "2vh",
                 }}
               >
-                <Typography style={{ margin: 40, fontSize: 18 }}>
+                <Typography style={{ margin: 20, fontSize: 18 }}>
                   TIPOLOGIAS CADASTRADAS
                 </Typography>
-                <BottonLink list={tipologias} />
+                <FlexBox
+                  style={{
+                    marginLeft: 40,
+                    overflow: "auto",
+                    maxHeight: "35vh",
+                  }}
+                >
+                  <BottonListT list={tipologias} clic={handleButtonListT} />
+                </FlexBox>
               </FlexBox>
             </FlexBox>
             <FlexBox
@@ -74,12 +143,31 @@ export default function Config_tc() {
                   top: "5vh",
                 }}
               >
-                <Typography
-                  sx={{ marginBottom: 3, color: "#fd7b30", fontWeight: "bold" }}
-                >
+                <Typography sx={{ color: "#fd7b30", fontWeight: "bold" }}>
                   Cadastrar Tipologia
                 </Typography>
-                <Form label="Nome da tipologia" />
+                {alert === true && (
+                  <Stack sx={{ width: "100%" }}>
+                    <Alert severity="success">
+                      Tipologia cirada com sucesso!
+                    </Alert>
+                  </Stack>
+                )}
+                {alert === false && (
+                  <Stack sx={{ width: "100%" }} spacing={2}>
+                    <Alert severity="error">
+                      Não foi possível criar essa tipologia, verifique se todos
+                      os campos foram preenchidos ou se essa tipologia já
+                      existe!
+                    </Alert>
+                  </Stack>
+                )}
+                <Form
+                  label="typology"
+                  criar={handleButtonCreate}
+                  eventoteclado={handleChangeValues}
+                  typologydata={typologydata}
+                />
               </BoxColumn>
             </FlexBox>
           </Box>

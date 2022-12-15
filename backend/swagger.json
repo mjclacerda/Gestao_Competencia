@@ -1,14 +1,19 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "API para Sistema de Gestão por Competências - SGP 1.0",
-    "description": "Essa é uma API desenvolvida especialmente para compor o projeto Sistema de Gestão por Competências,\n oferecendo o suporte necessário para as tarefas de CRUD em um banco de dados local.",
+    "title": "SkillManager - SkillManagerAPI 1.0",
+    "description": "Essa é uma API desenvolvida especialmente para compor o projeto Sistema de Gestão por Competências, oferecendo o suporte necessário para as tarefas de CRUD em um banco de dados local.",
     "contact": {
       "email": "mjcl.driver@gmail.com"
-    }
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
   },
   "externalDocs": {
-    "description": "Saiba mais sobre o SGP",
+    "description": "Saiba mais sobre o SkillManeger",
     "url": "https://github.com/mjclacerda/Gestao_Competencia"
   },
   "tags": [
@@ -34,19 +39,553 @@
     },
     {
       "name": "questionsuser",
-      "description": "Consulta questões relacionada a um usuário"
+      "description": "Consulta questões relacionadas a um usuário específico"
     },
     {
       "name": "forms",
-      "description": "Consultas de tipos de formulários"
+      "description": "Consulta de formulários"
     },
     {
       "name": "evaluations",
-      "description": "Criação de avaliações"
+      "description": "Tudo sobre as avaliações"
     },
     {
       "name": "questions",
-      "description": "Criação de questões"
+      "description": "Operações criação de questões"
     }
-  ]
+  ],
+  "paths": {
+    "/typologies": {
+      "post": {
+        "tags": ["typologies"],
+        "summary": "Adiciona uma nova tipologia",
+        "description": "Com o uso do método POST nessa rota, são realizadas as operações CREATE de tipologias. Antes da execução das operações são verificados se os campo \"typology\" e \"description\" foram preenchidos, é feita a validação dos dados e ao final a tipologia recebe automaticamente a propriedade \"status:true\" e é inserida no banco de dados, recebendo também uma primarykey \"typologyId\".",
+        "operationId": "insertTypology",
+        "requestBody": {
+          "description": "Cria uma nova tipologia na aplicação, sendo a propriedade \"typology\" do tipo UNIQUE",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["typology", "description"],
+                "properties": {
+                  "typology": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tipologia criada com sucesso"
+          },
+          "400": {
+            "description": "Há campos obrigatórios não preenchidos"
+          },
+          "500": {
+            "description": "Validation exception"
+          }
+        }
+      },
+      "get": {
+        "tags": ["typologies"],
+        "summary": "Consulta tipologias",
+        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de tipologias, especificamente são retornadas todas as informações das tipologias existentes e ativas no banco de dados. São consideradas tipologias ativas todas aquelas com \"status:true\".",
+        "operationId": "getTypologies",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Typologies"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Não há tipologias ativas cadastradas"
+          }
+        }
+      },
+      "put": {
+        "tags": ["typologies"],
+        "summary": "Altera uma tipologia",
+        "description": "Com o uso do método PUT nessa rota, são realizadas as operações de UPDATE de tipologias. Antes da execução da operação são verificados se os campos \"typology\" e \"description\" foram preenchidos, é feita a validação dos dados e ao final é realizada a alteração desse campos.",
+        "operationId": "updateTypology",
+        "requestBody": {
+          "description": "O campo \"status\", mesmo que seja inserido na requisição, não é considerando nessa operação, pois há outras regras de negócio relacionadas ao status da tipologia.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "typologyId": {
+                    "type": "integer"
+                  },
+                  "typology": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Typologies"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A tipologia procurada não existe ou não está ativa"
+          },
+          "500": {
+            "description": "Há campos obrigatórios não preenchidos"
+          }
+        }
+      }
+    },
+    "/tipologies/inativate": {
+      "put": {
+        "tags": ["typologies"],
+        "summary": "Inativa uma tipologia",
+        "description": "Com o uso do método PUT nessa rota, são realizadas as operação de UPDATE apenas do campo \"status\" para false. O campo \"status\" é utilizado para realizar uma espécie de DELETE da tipologia para o usuário, de modo que essa tipologia não seja mais utilizada pelo sistema, porém tenha os seus dados históricos mantidos no banco de dados.",
+        "operationId": "inativateTypology",
+        "requestBody": {
+          "description": "Atualiza apenas o campo \"status\" para false, para tanto é necessário informar o campo \"typologyId\" no body da requisição. Só é possível inativar uma tipologia se ela não possuir nenhuma competência ativa associada a ela.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "typologyId": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "A tipologia procurada não existe ou não está ativa"
+          },
+          "500": {
+            "description": "Há campos obrigatórios não preenchidos"
+          }
+        }
+      }
+    },
+    "/tipologies/{typologyId}": {
+      "get": {
+        "tags": ["typologies"],
+        "summary": "Localiza tipologias pelo Id",
+        "description": "Com o uso do método GET nessa rota incluido o parâmetro id, é retornada uma única tipologia associada a esse parâmetro pelo campo typologyId.",
+        "operationId": "getTypology",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "typologyId",
+            "required": true,
+            "description": "campo typologyId do usuário procurado",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Typologies"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Tipologia não localizada"
+          }
+        }
+      }
+    },
+    "/competences": {
+      "post": {
+        "tags": ["competences"],
+        "summary": "Adiciona uma nova competência",
+        "description": "Com o uso do método POST nessa rota, são realizadas as operações CREATE de competências. Antes da execução das operações são verificados se os campo \"competence\", \"description\" e \"typologyId\" foram preenchidos, é feita a validação dos dados e ao final a competência recebe automaticamente a propriedade \"status:true\" e é inserida no banco de dados, recebendo também uma primarykey \"competenceId\".",
+        "operationId": "insertCompetence",
+        "requestBody": {
+          "description": "Cria uma nova competência na aplicação, sendo a propriedade \"competence\" do tipo UNIQUE. Também só é possível criar uma competência se ela estiver associada a uma tipologia ativa.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "competences": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "typologyId": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Competência criada com sucesso"
+          },
+          "400": {
+            "description": "Há campos obrigatórios não preenchidos"
+          },
+          "500": {
+            "description": "Validation exception"
+          }
+        }
+      },
+      "get": {
+        "tags": ["competences"],
+        "summary": "Consulta competências",
+        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de competências, especificamente são retornadas todas as informações das competências existentes e ativas no banco de dados. São consideradas competencias ativas todas aquelas com \"status:true\".",
+        "operationId": "getCompetences",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Competences"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Não há competências ativas cadastradas"
+          }
+        }
+      },
+      "put": {
+        "tags": ["competences"],
+        "summary": "Altera uma competência",
+        "description": "Com o uso do método PUT nessa rota, são realizadas as operações de UPDATE de competências. Antes da execução da operação são verificados se os campos \"competenceId\", \"competence\", \"typologyId\" e \"description\" foram preenchidos, é feita a validação dos dados e ao final é realizada a alteração desse campos.",
+        "operationId": "updateCompetence",
+        "requestBody": {
+          "description": "O campo \"status\", mesmo que seja inserido na requisição, não é considerando nessa operação, pois há outras regras de negócio relacionadas ao status da tipologia.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "competenceId": {
+                    "type": "integer"
+                  },
+                  "competence": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "typologyId": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Competences"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A competencia procurada não existe ou não está ativa"
+          },
+          "500": {
+            "description": "Há campos obrigatórios não preenchidos"
+          }
+        }
+      }
+    },
+    "/competences/inativate": {
+      "put": {
+        "tags": ["competences"],
+        "summary": "Inativa uma competência",
+        "description": "Com o uso do método PUT nessa rota, são realizadas as operação de UPDATE apenas do campo \"status\" para false. O campo \"status\" é utilizado para realizar uma espécie de DELETE da competência para o usuário, de modo que essa tipologia não seja mais utilizada pelo sistema, porém tenha os seus dados históricos mantidos no banco de dados.",
+        "operationId": "inativateCompetence",
+        "requestBody": {
+          "description": "Atualiza apenas o campo \"status\" para false, para tanto é necessário informar o campo \"competenceId\" no body da requisição.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "competenceId": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "A competência procurada não existe ou não está ativa"
+          },
+          "500": {
+            "description": "Há campos obrigatórios não preenchidos"
+          }
+        }
+      }
+    },
+    "/competences/{competenceId}": {
+      "get": {
+        "tags": ["competences"],
+        "summary": "Localiza competências pelo Id",
+        "description": "Com o uso do método GET nessa rota incluido o parâmetro id, é retornada uma única competência associada a esse parâmetro pelo campo competenceId.",
+        "operationId": "getCompetence",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "competenceId",
+            "required": true,
+            "description": "campo CompetenceId da competência procurada",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Competences"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Competência não localizada"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Competences": {
+        "type": "object",
+        "properties": {
+          "competenceId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "typologyId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "competence": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "competenceId",
+          "typologyId",
+          "competence",
+          "description",
+          "status"
+        ],
+        "xml": {
+          "name": "competences"
+        }
+      },
+      "Evaluations": {
+        "type": "object",
+        "properties": {
+          "evaluationId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "evaluatorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "year": {
+            "type": "string"
+          },
+          "formId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": ["evaluationId", "evaluatorId", "year", "formId", "userId"],
+        "xml": {
+          "name": "evalutions"
+        }
+      },
+      "Forms": {
+        "type": "object",
+        "properties": {
+          "formId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "example": "autoavaliação"
+          }
+        },
+        "required": ["formId", "name"],
+        "xml": {
+          "name": "forms"
+        }
+      },
+      "Questions": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "evaluationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "competenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "importance_level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "domain_level": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "questionId",
+          "evaluationId",
+          "competenceId",
+          "importance_level",
+          "domain_level"
+        ],
+        "xml": {
+          "name": "questions"
+        }
+      },
+      "Typologies": {
+        "type": "object",
+        "properties": {
+          "typologyId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "typology": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        },
+        "required": ["typologyId", "typology", "description", "status"],
+        "xml": {
+          "name": "typologies"
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "example": "Maria"
+          },
+          "matricula": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": ["userId"],
+        "xml": {
+          "name": "user"
+        }
+      }
+    }
+  }
 }

@@ -2,19 +2,29 @@ import { TextField } from "@mui/material";
 import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
 
 interface IForm {
+  criar: () => void;
+  eventoteclado: React.ChangeEventHandler<HTMLInputElement>;
   label: string;
+  typologydata?: any;
 }
 
-export default function Form({ label }: IForm) {
+export default function Form({
+  criar,
+  eventoteclado,
+  label,
+  typologydata,
+}: IForm) {
   return (
     <FlexBox>
       <BoxColumn>
         <TextField
           sx={{ minWidth: "30vw" }}
-          hiddenLabel
-          id={label}
-          defaultValue={label}
+          type="text"
           variant="standard"
+          name={label}
+          placeholder="Digite o nome da tipologia"
+          onChange={eventoteclado}
+          value={typologydata.typology}
         />
         <TextField
           sx={{
@@ -23,18 +33,24 @@ export default function Form({ label }: IForm) {
             border: "none",
             borderRadius: 3,
           }}
-          id="descricao"
-          label="descrição"
+          type="text"
+          name="description"
+          placeholder="Digite aqui a descrição"
+          onChange={eventoteclado}
+          value={typologydata.description}
           multiline
           rows={5}
         />
       </BoxColumn>
-      <BoxColumn style={{ marginTop: 30 }}>
+      <BoxColumn style={{ marginTop: 46 }}>
         <BootstrapButton
           style={{
             marginLeft: 7,
             marginBottom: 2,
             height: 27,
+          }}
+          onClick={() => {
+            criar();
           }}
         >
           Criar

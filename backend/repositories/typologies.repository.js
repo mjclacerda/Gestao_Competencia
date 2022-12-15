@@ -1,5 +1,4 @@
 import Typology from "../models/typologies.model.js";
-import Competence from "../models/competences.model.js";
 
 async function insertTypology(typology) {
   try {
@@ -13,6 +12,16 @@ async function insertTypology(typology) {
 async function getTypologies() {
   try {
     return await Typology.findAll({ where: { status: true } });
+  } catch (err) {
+    throw err;
+  }
+}
+
+async function getTypologyByName(typologyname) {
+  try {
+    return await Typology.findAll({
+      where: { typology: typologyname, status: true },
+    });
   } catch (err) {
     throw err;
   }
@@ -67,6 +76,7 @@ export default {
   insertTypology,
   getTypologies,
   getTypology,
+  getTypologyByName,
   inativateTypology,
   updateTypology,
 };

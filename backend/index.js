@@ -51,7 +51,7 @@ app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 //Tratamento de erros
 app.use((err, req, res, next) => {
   logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
-  res.status(400).send({ error: err.message });
+  res.status(400).send({ err });
 });
 
 //Sincronização do banco de dados
@@ -62,7 +62,7 @@ async function verifyForms() {
   try {
     await forms.standardForms();
   } catch (err) {
-    logger.error(`${err.message} - Formulário já criado`);
+    logger.error(`${err} - Formulário já criado`);
   }
 }
 verifyForms();

@@ -32,6 +32,16 @@ async function getCompetences() {
   throw new Error("Não há competencias ativas cadastradas");
 }
 
+async function getCompetenceByName(competencename) {
+  const competencia = await CompetenceRepository.getCompetenceByName(
+    competencename
+  );
+  if (competencia[0]) {
+    return competencia;
+  }
+  throw new Error("Não há competencias ativas cadastradas com esse nome");
+}
+
 async function getCompetence(id) {
   const competencia = await CompetenceRepository.getCompetence(id);
   if (competencia) {
@@ -79,6 +89,7 @@ export default {
   getCompetencesHistory,
   getCompetences,
   getCompetence,
+  getCompetenceByName,
   getCompForTypology,
   inativateCompetence,
   updateCompetence,

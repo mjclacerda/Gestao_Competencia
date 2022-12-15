@@ -39,7 +39,7 @@ export default function Configuration() {
               <FlexBox
                 style={{ position: "relative", top: "-8vh", left: "8vw" }}
               >
-                <Link to="/config_tc">
+                <Link to="/configchoose">
                   <ImageButton
                     title="Tipologias e Competências"
                     path="./public/typology.png"
