@@ -54,7 +54,7 @@ export function BottonListT({ list, clic }: IBottonDesc) {
   );
 }
 
-export function BottonList({ list }: IBottonDesc) {
+export function BottonList({ list, clic }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
       {list?.map((tipo: any) => (
@@ -67,6 +67,7 @@ export function BottonList({ list }: IBottonDesc) {
             background: "#00EFFF",
           }}
           value={tipo.competenceId}
+          onClick={clic}
         >
           {tipo.competence}
         </BootstrapButton>

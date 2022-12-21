@@ -22,7 +22,7 @@ export interface ISelf_Ask {
 export function Self_Ask({ list }: ISelf_Ask) {
   return (
     <BoxColumn style={{ width: "87vw", overflow: "auto" }}>
-      {list.map((item: any) => (
+      {list?.map((item: any) => (
         <BoxColumn
           key={uuid()}
           style={{ width: "18vw", marginLeft: "10vw", marginBottom: "6vh" }}

@@ -96,8 +96,22 @@
       "get": {
         "tags": ["typologies"],
         "summary": "Consulta tipologias",
-        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de tipologias, especificamente são retornadas todas as informações das tipologias existentes e ativas no banco de dados. São consideradas tipologias ativas todas aquelas com \"status:true\".",
+        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de tipologias, especificamente são retornadas todas as informações das tipologias existentes e ativas no banco de dados. São consideradas tipologias ativas todas aquelas com \"status:true\". Caso a requisição seja enviada com campo \"typology\", então será feita a busca da tipologia pelo nome, retornando-se apenas um registro.",
         "operationId": "getTypologies",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "typology",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "typology": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -279,8 +293,22 @@
       "get": {
         "tags": ["competences"],
         "summary": "Consulta competências",
-        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de competências, especificamente são retornadas todas as informações das competências existentes e ativas no banco de dados. São consideradas competencias ativas todas aquelas com \"status:true\".",
+        "description": "Com o uso do método GET nessa rota, são realizadas as operações READ de competências, especificamente são retornadas todas as informações das competências existentes e ativas no banco de dados. São consideradas competencias ativas todas aquelas com \"status:true\". Caso a requisição seja enviada com campo \"competence\", então será feita a busca da tipologia pelo nome, retornando-se apenas um registro.",
         "operationId": "getCompetences",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "competence",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "competence": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -418,6 +446,40 @@
           },
           "400": {
             "description": "Competência não localizada"
+          }
+        }
+      }
+    },
+    "/competencesfortypology/{typologyId}": {
+      "get": {
+        "tags": ["typologies"],
+        "summary": "Localiza as competências de uma tipologia",
+        "description": "Com o uso do método GET nessa rota incluido o parâmetro id, são retornadas todas as competências associadas ao typologyId de uma tipologia.",
+        "operationId": "getCompForTypology",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "typologyId",
+            "required": true,
+            "description": "campo typologyId da tipologia procurada",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Competences"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Não foram localizadas competências relacionadas a essa tipologia"
           }
         }
       }

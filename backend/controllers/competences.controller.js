@@ -68,13 +68,7 @@ async function getCompForTypology(req, res, next) {
 async function inativateCompetence(req, res, next) {
   try {
     let competencia = req.body;
-    if (
-      !competencia.competenceId ||
-      !competencia.competence ||
-      !competencia.description ||
-      !competencia.typologyId ||
-      !competencia.status
-    ) {
+    if (!competencia.competenceId) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }
     res.send(await CompetenceService.inativateCompetence(competencia));
@@ -91,8 +85,7 @@ async function updateCompetence(req, res, next) {
       !competencia.competenceId ||
       !competencia.competence ||
       !competencia.description ||
-      !competencia.typologyId ||
-      !competencia.status
+      !competencia.typologyId
     ) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }

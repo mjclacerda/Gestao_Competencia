@@ -99,11 +99,6 @@ export default function Dashboard() {
                   </BoxColumn>
                 </FlexBox>
               </FlexBox>
-              <FlexBox style={{ alignSelf: "center", paddingTop: 100 }}>
-                <Typography style={{ fontWeight: "bold" }}>
-                  Perguntas frequentes:
-                </Typography>
-              </FlexBox>
             </BoxColumn>
           </StyledBox>
         </Box>

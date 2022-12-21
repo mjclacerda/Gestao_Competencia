@@ -4,20 +4,9 @@ import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox, FlexSemiBox } from "../../components/Component";
 import { BottonCDesc, BottonTDesc } from "../../components/BottonList";
-import {
-  useFetch,
-  getCompetences,
-  getCompetenceForTypologyId,
-} from "../Backend_Integration";
+import { useFetch } from "../Backend_Integration";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-const style = {
-  flexDirection: "column",
-  alignItems: "center",
-  overflow: "auto",
-  padding: 50,
-};
 
 export default function Typology() {
   const [competencias, setCompetencias] = useState([]);
@@ -26,10 +15,14 @@ export default function Typology() {
   let tipologias = useFetch("http://localhost:3000/typologies");
 
   useEffect(() => {
-    (async () => {
-      const data = await getCompetences();
-      setCompetencias(data);
-    })();
+    axios
+      .get("http://localhost:3000/competences")
+      .then((resp) => {
+        setCompetencias(resp.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   function ClikTypology(event: any) {
@@ -40,10 +33,8 @@ export default function Typology() {
       .get(`http://localhost:3000/competencesfortypology/${value}`)
       .then((resp) => {
         setCompetencias(resp.data);
-        console.log(data);
       })
       .catch((err) => {
-        console.log(err);
         setCompetencias([]);
       });
     setSelectedTyp(name);

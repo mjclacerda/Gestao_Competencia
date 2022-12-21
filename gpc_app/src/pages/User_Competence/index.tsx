@@ -4,41 +4,40 @@ import Side_menu from "../../components/Side_menu_user";
 import Bar from "../../components/Bar";
 import { BoxColumn, FlexBox, FlexSemiBox } from "../../components/Component";
 import { BottonCDesc, BottonTDesc } from "../../components/BottonList";
-import {
-  getTypologies,
-  getCompetences,
-  getCompetenceForTypologyId,
-} from "../Backend_Integration";
+import { useFetch } from "../Backend_Integration";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Typology() {
-  const [tipologias, setTipologias] = useState([]);
   const [competencias, setCompetencias] = useState([]);
   const [selectedTyp, setSelectedTyp] = useState("");
 
-  useEffect(() => {
-    (async () => {
-      const data = await getTypologies();
-      setTipologias(data);
-    })();
-  }, []);
+  let tipologias = useFetch("http://localhost:3000/typologies");
 
   useEffect(() => {
-    (async () => {
-      const data = await getCompetences();
-      setCompetencias(data);
-    })();
+    axios
+      .get("http://localhost:3000/competences")
+      .then((resp) => {
+        setCompetencias(resp.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   function ClikTypology(event: any) {
     const {
       target: { value, name },
     } = event;
-    (async () => {
-      const data = await getCompetenceForTypologyId(value);
-      setCompetencias(data);
-      setSelectedTyp(name);
-    })();
+    const data = axios
+      .get(`http://localhost:3000/competencesfortypology/${value}`)
+      .then((resp) => {
+        setCompetencias(resp.data);
+      })
+      .catch((err) => {
+        setCompetencias([]);
+      });
+    setSelectedTyp(name);
   }
 
   return (
@@ -57,7 +56,7 @@ export default function Typology() {
             <Typography style={{ fontSize: 16, marginBottom: 20 }}>
               TIPOLOGIAS CADASTRADAS
             </Typography>
-            <BottonTDesc list={tipologias} event={ClikTypology} />
+            <BottonTDesc list={tipologias.data} event={ClikTypology} />
           </FlexSemiBox>
           <FlexSemiBox
             style={{

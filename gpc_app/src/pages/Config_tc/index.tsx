@@ -6,14 +6,15 @@ import Form from "../../components/Form";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import { BottonListT } from "../../components/BottonList";
 import { Box, Typography, Stack, Alert } from "@mui/material";
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 export default function Config_tc() {
   const typObjempt = { typology: "", description: "" }; //Objeto da tipologia
   const [tipologias, setTipologias] = useState(); //dados das tipologias
   const [alert, setAlert] = useState<boolean | null>(null); //alerta de sucesso ou falha na criação de tipologias
   const [typologydata, setTypologydata] = useState<object>(typObjempt); //typologyId, typology e description capiturados ao clic do botão de tipologias cadastradas. É necessário inicializar o objeto com os valores vazios para evitar erro Uncontrolled no react
-  const [typologyId, setTypologyId] = useState<number>(0);
+  const [typologyId, setTypologyId] = useState<number>(0); //captura somente o typologyId do botão de tipologias cadastradas quando este é clicado
+  const [messagealert, setMessagealert] = useState<string>(""); //alimenta os alertas de sucesso ou falha como mensagens personalizadas
   //Fetch do rol de tipologias ativas
   useEffect(() => {
     axios
@@ -51,27 +52,62 @@ export default function Config_tc() {
         status: true,
       })
       .then((resp) => {
+        setMessagealert("Tipologia criada com sucesso!!!");
         setAlert(true);
         formcleaning();
       })
       .catch((error) => {
+        setMessagealert(
+          "Não foi possível criar essa tipologia, verifique se todos os campos foram preenchidos ou se essa tipologia já existe"
+        );
         setAlert(false);
       });
   };
   //Função do botão Alterar
   const handleButtonUpdate = () => {
-    axios
-      .post("http://localhost:3000/typologies", {
-        ...typologydata,
-        status: true,
-      })
-      .then((resp) => {
-        setAlert(true);
-        formcleaning();
-      })
-      .catch((error) => {
-        setAlert(false);
-      });
+    if (typologyId > 0) {
+      axios
+        .put("http://localhost:3000/typologies", {
+          typologyId,
+          ...typologydata,
+        })
+        .then((resp) => {
+          setMessagealert("Tipologia alterada com sucesso!!!");
+          setAlert(true);
+          formcleaning();
+        })
+        .catch((error) => {
+          setMessagealert(
+            "Não foi possível alterar essa tipologia, verifique se todos os campos foram preenchidos ou se essa tipologia já existe"
+          );
+          setAlert(false);
+        });
+    }
+  };
+  //Função do botão Excluir
+  const handleButtonExcluir = () => {
+    if (typologyId > 0) {
+      axios
+        .put("http://localhost:3000/typologies/inativate", {
+          typologyId,
+        })
+        .then((resp) => {
+          setMessagealert("Tipologia excluida com sucesso!!!");
+          setAlert(true);
+          formcleaning();
+        })
+        .catch((error) => {
+          setMessagealert(
+            "Não foi possível excluir essa Tipologia, pois há competências ativas vinculadas a ela. Por favor, primeiro exclua as competências vinculadas."
+          );
+          setAlert(false);
+        });
+    }
+  };
+  //Função do botão limpar
+  const handleButtonLimpar = () => {
+    formcleaning();
+    setAlert(null);
   };
   //Limpar o formulário
   const formcleaning = () => {
@@ -148,25 +184,23 @@ export default function Config_tc() {
                 </Typography>
                 {alert === true && (
                   <Stack sx={{ width: "100%" }}>
-                    <Alert severity="success">
-                      Tipologia cirada com sucesso!
-                    </Alert>
+                    <Alert severity="success">{messagealert}</Alert>
                   </Stack>
                 )}
                 {alert === false && (
                   <Stack sx={{ width: "100%" }} spacing={2}>
-                    <Alert severity="error">
-                      Não foi possível criar essa tipologia, verifique se todos
-                      os campos foram preenchidos ou se essa tipologia já
-                      existe!
-                    </Alert>
+                    <Alert severity="error">{messagealert}</Alert>
                   </Stack>
                 )}
                 <Form
                   label="typology"
                   criar={handleButtonCreate}
+                  alterar={handleButtonUpdate}
+                  excluir={handleButtonExcluir}
+                  limpar={handleButtonLimpar}
                   eventoteclado={handleChangeValues}
-                  typologydata={typologydata}
+                  data={typologydata}
+                  showbuttons={typologyId}
                 />
               </BoxColumn>
             </FlexBox>

@@ -1,3 +1,6 @@
+import Header from "../../components/Header_user";
+import Side_menu from "../../components/Side_menu_user";
+import Bar from "../../components/Bar";
 import {
   Box,
   Typography,
@@ -8,13 +11,10 @@ import {
   Select,
 } from "@mui/material";
 import { SelectChangeEvent } from "@mui/material/Select";
-import Header from "../../components/Header_user";
-import Side_menu from "../../components/Side_menu_user";
-import Bar from "../../components/Bar";
 import { BoxColumn, StyledBox } from "../../components/Component";
 import { Self_Ask } from "../../components/Self_Ask";
 import { useState, useEffect } from "react";
-import { getCompetences, getUsers } from "../Backend_Integration";
+import { useFetch } from "../Backend_Integration";
 import { IUser } from "../../components/Interfaces";
 
 //Buscar o nome do avaliado no banco
@@ -33,22 +33,9 @@ const MenuProps = {
 
 export default function Self_Evaluation() {
   const [bossName, setBossName] = useState<string[]>([]);
-  const [competencias, setCompetencias] = useState([]);
-  const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      const data = await getCompetences();
-      setCompetencias(data);
-    })();
-  }, []);
-
-  useEffect(() => {
-    (async () => {
-      const data = await getUsers();
-      setUsers(data);
-    })();
-  }, []);
+  let competencias = useFetch("http://localhost:3000/competences");
+  let users: any = useFetch("http://localhost:3000/users");
 
   const handleChange = (event: SelectChangeEvent<typeof bossName>) => {
     const {
@@ -95,14 +82,15 @@ export default function Self_Evaluation() {
                   MenuProps={MenuProps}
                   style={{ height: 40, marginBottom: "5vh" }}
                 >
-                  {users.map((name: IUser) => (
-                    <MenuItem key={name.name} value={name.name}>
-                      {name.name}
-                    </MenuItem>
-                  ))}
+                  {users.data &&
+                    users.data.map((name: IUser) => (
+                      <MenuItem key={name.userId} value={name.name}>
+                        {name.name}
+                      </MenuItem>
+                    ))}
                 </Select>
               </FormControl>
-              <Self_Ask list={competencias} />
+              <Self_Ask list={competencias.data} />
             </BoxColumn>
           </StyledBox>
         </Box>

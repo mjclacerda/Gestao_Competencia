@@ -44,12 +44,7 @@ async function getTypology(req, res, next) {
 async function inativateTypology(req, res, next) {
   try {
     let tipologia = req.body;
-    if (
-      !tipologia.typologyId ||
-      !tipologia.typology ||
-      !tipologia.description ||
-      !tipologia.status
-    ) {
+    if (!tipologia.typologyId) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }
     res.send(await TypologyService.inativateTypology(tipologia));
@@ -65,8 +60,7 @@ async function updateTypology(req, res, next) {
     if (
       !tipologia.typologyId ||
       !tipologia.typology ||
-      !tipologia.description ||
-      !tipologia.status
+      !tipologia.description
     ) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }

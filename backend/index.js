@@ -14,6 +14,7 @@ import compforTypRouter from "./routes/compfortyp.router.js";
 import questionsUserRouter from "./routes/questionsforuser.js";
 import competencesHistoryRouter from "./routes/comphistory.router.js";
 import forms from "./repositories/forms.repository.js";
+import yearsRouter from "./routes/years.router.js";
 
 const app = express();
 
@@ -30,7 +31,7 @@ global.logger = winston.createLogger({
   ],
   format: combine(label({ label: "gpc-api" }), timestamp(), myFormat),
 });
-
+//Configuração para o uso de JSON
 app.use(express.json());
 
 //Habilitando o compartilhamento de recurso de origem cruzada
@@ -46,6 +47,7 @@ app.use("/forms", formsRouter);
 app.use("/questions", questionRouter);
 app.use("/questionsuser", questionsUserRouter);
 app.use("/users", usersRouter);
+app.use("/years", yearsRouter);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 //Tratamento de erros
@@ -62,7 +64,7 @@ async function verifyForms() {
   try {
     await forms.standardForms();
   } catch (err) {
-    logger.error(`${err} - Formulário já criado`);
+    logger.error(`${err.message} - Formulário já criado`);
   }
 }
 verifyForms();

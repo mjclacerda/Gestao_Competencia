@@ -11,7 +11,10 @@ async function insertTypology(typology) {
 //Na hora de retornar as tipologias, queremos apenas as tipologias que estão ativas.
 async function getTypologies() {
   try {
-    return await Typology.findAll({ where: { status: true } });
+    return await Typology.findAll({
+      where: { status: true },
+      order: ["typology"],
+    });
   } catch (err) {
     throw err;
   }

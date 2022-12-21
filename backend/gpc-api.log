@@ -3658,3 +3658,1259 @@
 2022-12-15T23:26:49.952Z [gpc-api] info: GET /competencias
 2022-12-15T23:29:06.777Z [gpc-api] info: API Started!
 2022-12-15T23:29:06.782Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T18:11:35.235Z [gpc-api] info: API Started!
+2022-12-16T18:11:35.240Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T18:12:44.191Z [gpc-api] info: API Started!
+2022-12-16T18:12:44.195Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T18:12:52.311Z [gpc-api] info: API Started!
+2022-12-16T18:12:52.316Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T18:21:31.647Z [gpc-api] info: GET /tipologia
+2022-12-16T18:21:31.649Z [gpc-api] info: GET /competencias
+2022-12-16T18:21:31.655Z [gpc-api] info: GET /tipologia
+2022-12-16T18:21:31.657Z [gpc-api] info: GET /competencias
+2022-12-16T18:21:33.048Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T18:21:34.528Z [gpc-api] error: GET  - A tipologia procurada não existe ou não está ativa
+2022-12-16T18:21:36.671Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T18:21:42.994Z [gpc-api] info: GET /tipologia
+2022-12-16T18:21:43.011Z [gpc-api] info: GET /tipologia
+2022-12-16T18:21:44.965Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:21:46.802Z [gpc-api] info: POST /tipologia - {"typology":"string","description":"string","status":true}
+2022-12-16T18:21:47.062Z [gpc-api] info: GET /tipologia
+2022-12-16T18:24:25.102Z [gpc-api] info: PUT /tipologia - {"typologyId":15,"typology":"DocsSwagger","description":"Esse é um teste do swagger","status":true}
+2022-12-16T18:25:11.809Z [gpc-api] info: GET /tipologia
+2022-12-16T18:25:11.813Z [gpc-api] info: GET /tipologia
+2022-12-16T18:25:30.181Z [gpc-api] info: GET /tipologia
+2022-12-16T18:25:30.193Z [gpc-api] info: GET /tipologia
+2022-12-16T18:28:14.821Z [gpc-api] info: GET /competencia/:id
+2022-12-16T18:28:21.825Z [gpc-api] error: GET  - A competencia procurada não existe ou não está ativa
+2022-12-16T18:33:58.633Z [gpc-api] info: GET /tipologia
+2022-12-16T18:39:23.750Z [gpc-api] info: GET /tipologia
+2022-12-16T18:39:23.762Z [gpc-api] info: GET /tipologia
+2022-12-16T18:39:58.568Z [gpc-api] info: POST /tipologia - {"typology":"Tuipe","description":"Tuipe","status":true}
+2022-12-16T18:39:58.855Z [gpc-api] info: GET /tipologia
+2022-12-16T18:42:11.465Z [gpc-api] info: GET /tipologia
+2022-12-16T18:42:11.471Z [gpc-api] info: GET /tipologia
+2022-12-16T18:42:15.887Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-16T18:42:16.269Z [gpc-api] info: GET /tipologia
+2022-12-16T18:43:18.973Z [gpc-api] info: GET /tipologia
+2022-12-16T18:43:22.110Z [gpc-api] info: GET /tipologia
+2022-12-16T18:43:22.114Z [gpc-api] info: GET /tipologia
+2022-12-16T18:46:55.873Z [gpc-api] info: GET /tipologia
+2022-12-16T18:46:59.335Z [gpc-api] info: GET /tipologia
+2022-12-16T18:46:59.341Z [gpc-api] info: GET /tipologia
+2022-12-16T18:48:33.860Z [gpc-api] info: GET /tipologia
+2022-12-16T18:49:11.152Z [gpc-api] info: GET /tipologia
+2022-12-16T18:49:14.402Z [gpc-api] info: GET /tipologia
+2022-12-16T18:49:14.406Z [gpc-api] info: GET /tipologia
+2022-12-16T18:52:14.749Z [gpc-api] info: GET /tipologia
+2022-12-16T18:52:14.753Z [gpc-api] info: GET /tipologia
+2022-12-16T18:54:12.233Z [gpc-api] info: GET /tipologia
+2022-12-16T18:54:12.238Z [gpc-api] info: GET /tipologia
+2022-12-16T18:56:08.695Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:57:35.673Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:57:49.046Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:57:59.588Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:58:07.094Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T18:59:01.281Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:00:18.238Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:01:45.936Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:03:56.314Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:04:02.863Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:05:11.596Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:07:28.269Z [gpc-api] info: GET /tipologia
+2022-12-16T19:07:30.908Z [gpc-api] info: GET /tipologia
+2022-12-16T19:07:30.913Z [gpc-api] info: GET /tipologia
+2022-12-16T19:18:38.141Z [gpc-api] info: GET /tipologia
+2022-12-16T19:18:38.146Z [gpc-api] info: GET /tipologia
+2022-12-16T19:26:15.295Z [gpc-api] info: GET /tipologia
+2022-12-16T19:26:15.300Z [gpc-api] info: GET /tipologia
+2022-12-16T19:28:55.822Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:37:36.660Z [gpc-api] info: GET /tipologia
+2022-12-16T19:37:36.664Z [gpc-api] info: GET /tipologia
+2022-12-16T19:37:42.955Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:41:46.095Z [gpc-api] info: GET /tipologia
+2022-12-16T19:41:46.099Z [gpc-api] info: GET /tipologia
+2022-12-16T19:41:50.690Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:42:40.000Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:43:42.277Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:45:29.854Z [gpc-api] info: GET /tipologia
+2022-12-16T19:45:29.858Z [gpc-api] info: GET /tipologia
+2022-12-16T19:46:05.318Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:46:10.994Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:47:14.377Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:48:06.711Z [gpc-api] info: GET /tipologia
+2022-12-16T19:48:09.415Z [gpc-api] info: GET /tipologia
+2022-12-16T19:48:09.423Z [gpc-api] info: GET /tipologia
+2022-12-16T19:48:13.061Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:51:03.009Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:08.072Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:51:11.605Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:11.609Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:13.472Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:51:21.723Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T19:51:22.083Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:52.760Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:56.607Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:56.611Z [gpc-api] info: GET /tipologia
+2022-12-16T19:51:58.781Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:52:06.001Z [gpc-api] info: PUT /tipologia - {"typologyId":1,"typology":"Organizacional","description":"São consideradas competências organizacionais, ou core competences, a combinação de conhecimentos e habilidades de uma corporação visando o benefício do negócio e dos clientes.","status":true}
+2022-12-16T19:52:06.345Z [gpc-api] info: GET /tipologia
+2022-12-16T19:56:26.793Z [gpc-api] info: GET /tipologia
+2022-12-16T19:56:26.806Z [gpc-api] info: GET /tipologia
+2022-12-16T19:58:50.069Z [gpc-api] info: GET /tipologia
+2022-12-16T19:58:53.707Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:58:59.559Z [gpc-api] info: PUT /tipologia - {"typologyId":3,"typology":"Técnica","description":"São aquelas que o colaborador adquire por meio de treinamentos, cursos, palestras, experiências em outras organizações e etc. Elas irão ajudar o profissional a ter um melhor desempenho nas atividades que desempenha na organização.","status":true}
+2022-12-16T19:58:59.872Z [gpc-api] info: GET /tipologia
+2022-12-16T19:59:14.255Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T19:59:14.589Z [gpc-api] info: GET /tipologia
+2022-12-16T19:59:25.007Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T19:59:25.443Z [gpc-api] info: GET /tipologia
+2022-12-16T20:01:15.788Z [gpc-api] info: GET /tipologia
+2022-12-16T20:01:15.803Z [gpc-api] info: GET /tipologia
+2022-12-16T20:01:21.746Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:03:46.196Z [gpc-api] info: GET /tipologia
+2022-12-16T20:03:46.199Z [gpc-api] info: GET /tipologia
+2022-12-16T20:03:52.153Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:04:00.672Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:04:00.944Z [gpc-api] info: GET /tipologia
+2022-12-16T20:04:05.461Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-16T20:05:27.507Z [gpc-api] info: GET /tipologia
+2022-12-16T20:05:27.519Z [gpc-api] info: GET /tipologia
+2022-12-16T20:05:39.462Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:06:42.943Z [gpc-api] info: GET /tipologia
+2022-12-16T20:06:51.402Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:06:54.646Z [gpc-api] info: POST /tipologia - {"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:06:54.992Z [gpc-api] info: GET /tipologia
+2022-12-16T20:07:01.286Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:07:01.610Z [gpc-api] info: GET /tipologia
+2022-12-16T20:07:03.005Z [gpc-api] info: POST /tipologia - {"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:07:03.311Z [gpc-api] info: GET /tipologia
+2022-12-16T20:07:06.209Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:07:06.525Z [gpc-api] info: GET /tipologia
+2022-12-16T20:07:10.564Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-16T20:07:10.899Z [gpc-api] info: GET /tipologia
+2022-12-16T20:07:19.765Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:07:20.072Z [gpc-api] info: GET /tipologia
+2022-12-16T20:09:49.326Z [gpc-api] info: GET /tipologia
+2022-12-16T20:09:49.332Z [gpc-api] info: GET /tipologia
+2022-12-16T20:10:16.557Z [gpc-api] info: GET /tipologia
+2022-12-16T20:11:08.329Z [gpc-api] info: GET /tipologia
+2022-12-16T20:11:10.634Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:19.194Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:20.800Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:26.334Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:30.450Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:38.168Z [gpc-api] info: POST /tipologia - {"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:12:38.502Z [gpc-api] info: GET /tipologia
+2022-12-16T20:12:45.982Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:12:46.312Z [gpc-api] info: GET /tipologia
+2022-12-16T20:13:00.819Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:17:19.593Z [gpc-api] info: GET /tipologia
+2022-12-16T20:17:39.395Z [gpc-api] info: GET /tipologia
+2022-12-16T20:17:46.297Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:17:46.603Z [gpc-api] info: GET /tipologia
+2022-12-16T20:17:48.716Z [gpc-api] info: GET /tipologia
+2022-12-16T20:18:03.339Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:18:03.649Z [gpc-api] info: GET /tipologia
+2022-12-16T20:18:06.336Z [gpc-api] info: GET /tipologia
+2022-12-16T20:19:20.356Z [gpc-api] info: GET /tipologia
+2022-12-16T20:19:20.361Z [gpc-api] info: GET /tipologia
+2022-12-16T20:19:21.989Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:19:24.649Z [gpc-api] info: GET /tipologia
+2022-12-16T20:20:28.573Z [gpc-api] error: GET  - invalid input syntax for type integer: "inativate"
+2022-12-16T20:22:51.612Z [gpc-api] error: GET  - invalid input syntax for type integer: "inativate"
+2022-12-16T20:25:22.989Z [gpc-api] info: GET /tipologia
+2022-12-16T20:25:33.371Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:25:33.738Z [gpc-api] info: GET /tipologia
+2022-12-16T20:25:36.784Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:25:37.134Z [gpc-api] info: GET /tipologia
+2022-12-16T20:27:00.626Z [gpc-api] info: GET /tipologia
+2022-12-16T20:27:03.565Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:27:03.872Z [gpc-api] info: GET /tipologia
+2022-12-16T20:27:05.491Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:27:05.802Z [gpc-api] info: GET /tipologia
+2022-12-16T20:28:26.753Z [gpc-api] info: GET /tipologia
+2022-12-16T20:28:30.276Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:28:30.593Z [gpc-api] info: GET /tipologia
+2022-12-16T20:28:32.001Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:28:32.332Z [gpc-api] info: GET /tipologia
+2022-12-16T20:29:08.995Z [gpc-api] info: GET /tipologia
+2022-12-16T20:32:10.185Z [gpc-api] info: GET /tipologia
+2022-12-16T20:35:56.036Z [gpc-api] info: GET /tipologia
+2022-12-16T20:36:53.545Z [gpc-api] info: GET /tipologia
+2022-12-16T20:37:04.112Z [gpc-api] info: GET /tipologia
+2022-12-16T20:37:51.180Z [gpc-api] info: GET /tipologia
+2022-12-16T20:37:55.042Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:37:55.362Z [gpc-api] info: GET /tipologia
+2022-12-16T20:37:56.631Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:37:56.948Z [gpc-api] info: GET /tipologia
+2022-12-16T20:38:43.366Z [gpc-api] info: GET /tipologia
+2022-12-16T20:38:47.189Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:39:35.161Z [gpc-api] info: GET /tipologia
+2022-12-16T20:39:36.716Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T20:39:57.805Z [gpc-api] info: GET /tipologia
+2022-12-16T20:39:59.481Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":76,"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:39:59.772Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:10.186Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:40:10.503Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:11.496Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":75,"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:40:11.802Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:13.284Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:40:13.574Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:14.966Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":74,"typology":"JSDLHKJSh","description":"çajdhçjash","status":true}
+2022-12-16T20:40:15.276Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:17.425Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:40:17.729Z [gpc-api] info: GET /tipologia
+2022-12-16T20:40:20.809Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T20:40:21.135Z [gpc-api] info: GET /tipologia
+2022-12-16T20:44:54.627Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:11.643Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:13.822Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:13.826Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:17.806Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:45:19.558Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":15,"typology":"DocsSwagger","description":"Esse é um teste do swagger","status":true}
+2022-12-16T20:45:19.892Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:24.414Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:45:24.727Z [gpc-api] info: GET /tipologia
+2022-12-16T20:45:25.984Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T20:45:26.303Z [gpc-api] info: GET /tipologia
+2022-12-16T20:46:16.196Z [gpc-api] info: GET /tipologia
+2022-12-16T20:46:18.085Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T20:46:37.006Z [gpc-api] info: GET /tipologia
+2022-12-16T20:52:33.649Z [gpc-api] info: API Started!
+2022-12-16T20:52:33.653Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T20:52:50.005Z [gpc-api] info: GET /tipologia
+2022-12-16T20:52:55.089Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:52:55.410Z [gpc-api] info: GET /tipologia
+2022-12-16T20:52:56.800Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":69}
+2022-12-16T20:52:57.122Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:00.041Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:53:00.339Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:01.284Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":45}
+2022-12-16T20:53:01.576Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:02.478Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:53:02.763Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:03.673Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":50}
+2022-12-16T20:53:03.960Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:04.607Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:53:04.892Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:05.865Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":49}
+2022-12-16T20:53:06.163Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:08.139Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:53:08.421Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:09.773Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":43}
+2022-12-16T20:53:10.070Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:11.574Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:53:11.835Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:13.585Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":42}
+2022-12-16T20:53:13.863Z [gpc-api] info: GET /tipologia
+2022-12-16T20:53:35.353Z [gpc-api] info: GET /tipologia
+2022-12-16T20:54:45.370Z [gpc-api] info: API Started!
+2022-12-16T20:54:45.375Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T20:55:04.716Z [gpc-api] info: API Started!
+2022-12-16T20:55:04.720Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T20:55:19.685Z [gpc-api] info: API Started!
+2022-12-16T20:55:19.689Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T20:55:39.439Z [gpc-api] info: GET /tipologia
+2022-12-16T20:55:52.269Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:55:52.574Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:04.104Z [gpc-api] info: PUT /tipologia - {"typologyId":63,"typology":"Alterada","description":"sdfasdf"}
+2022-12-16T20:56:04.382Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:21.227Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:21.529Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:28.045Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:29.434Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":17}
+2022-12-16T20:56:29.717Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:31.418Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:31.683Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:32.756Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":29}
+2022-12-16T20:56:33.032Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:34.208Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:34.494Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:35.292Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":24}
+2022-12-16T20:56:35.539Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:36.526Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:36.773Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:37.608Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":33}
+2022-12-16T20:56:37.891Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:38.775Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:39.037Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:39.869Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":27}
+2022-12-16T20:56:40.121Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:41.066Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:41.326Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:42.275Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":28}
+2022-12-16T20:56:42.535Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:43.640Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:43.885Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:44.768Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":30}
+2022-12-16T20:56:45.013Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:47.607Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:47.856Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:48.646Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":39}
+2022-12-16T20:56:48.882Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:50.056Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:50.298Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:51.106Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":25}
+2022-12-16T20:56:51.354Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:52.672Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:52.915Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:53.806Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":47}
+2022-12-16T20:56:54.053Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:55.092Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:55.326Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:56.835Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":38}
+2022-12-16T20:56:57.076Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:58.137Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:56:58.364Z [gpc-api] info: GET /tipologia
+2022-12-16T20:56:59.322Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":40}
+2022-12-16T20:56:59.567Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:00.372Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:00.610Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:02.141Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":41}
+2022-12-16T20:57:02.376Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:03.357Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:03.598Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:04.638Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":52}
+2022-12-16T20:57:04.872Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:06.103Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:06.326Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:07.302Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":51}
+2022-12-16T20:57:07.522Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:08.736Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:08.963Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:10.169Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":36}
+2022-12-16T20:57:10.404Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:11.960Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:12.188Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:13.249Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":37}
+2022-12-16T20:57:13.477Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:14.651Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:14.856Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:16.057Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":26}
+2022-12-16T20:57:16.281Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:17.550Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:17.766Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:18.900Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":61}
+2022-12-16T20:57:19.111Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:19.836Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:20.062Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:20.786Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":62}
+2022-12-16T20:57:20.995Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:23.450Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:23.649Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:24.435Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":31}
+2022-12-16T20:57:24.646Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:28.317Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:28.530Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:29.491Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":44}
+2022-12-16T20:57:29.708Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:30.716Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:30.912Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:31.778Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":67}
+2022-12-16T20:57:31.969Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:33.066Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:33.249Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:35.437Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:36.872Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:39.481Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:41.140Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:46.271Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:48.052Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":10}
+2022-12-16T20:57:48.254Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:53.864Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:54.067Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:55.052Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":70}
+2022-12-16T20:57:55.235Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:57.364Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:57:57.551Z [gpc-api] info: GET /tipologia
+2022-12-16T20:57:58.644Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":60}
+2022-12-16T20:57:58.829Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:02.429Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:58:02.622Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:03.579Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":23}
+2022-12-16T20:58:03.769Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:05.045Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:58:05.240Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:06.265Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":53}
+2022-12-16T20:58:06.447Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:50.379Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:58:50.524Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:51.528Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":71}
+2022-12-16T20:58:51.724Z [gpc-api] info: GET /tipologia
+2022-12-16T20:58:53.257Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:58:53.446Z [gpc-api] info: GET /tipologia
+2022-12-16T20:59:07.401Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:59:08.707Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:59:11.370Z [gpc-api] info: GET /tipologia
+2022-12-16T20:59:11.374Z [gpc-api] info: GET /tipologia
+2022-12-16T20:59:14.028Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T20:59:20.807Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:00:20.503Z [gpc-api] error: GET  - Não há tipologias ativas cadastradas com esse nome
+2022-12-16T21:00:25.832Z [gpc-api] info: GET /tipologia
+2022-12-16T21:01:38.357Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T21:01:50.601Z [gpc-api] info: GET /tipologia
+2022-12-16T21:02:19.740Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T21:02:52.372Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-16T21:06:32.344Z [gpc-api] error: GET  - A tipologia procurada não existe ou não está ativa
+2022-12-16T21:06:37.257Z [gpc-api] info: GET /tipologia
+2022-12-16T21:06:37.262Z [gpc-api] info: GET /tipologia
+2022-12-16T21:06:43.588Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:08.935Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:10.253Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":7}
+2022-12-16T21:07:10.500Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:12.693Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:12.916Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:13.825Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":12}
+2022-12-16T21:07:14.014Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:14.803Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:14.990Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:15.894Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":8}
+2022-12-16T21:07:16.091Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:17.617Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:17.803Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:18.554Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":22}
+2022-12-16T21:07:18.745Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:19.458Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:19.629Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:20.530Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":14}
+2022-12-16T21:07:20.732Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:21.878Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:22.061Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:23.117Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":9}
+2022-12-16T21:07:23.290Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:24.742Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:24.906Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:26.071Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":18}
+2022-12-16T21:07:26.246Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:30.466Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:30.622Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:31.642Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":63}
+2022-12-16T21:07:31.818Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:32.829Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:32.993Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:34.009Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":73}
+2022-12-16T21:07:34.169Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:35.209Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:35.366Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:36.336Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":66}
+2022-12-16T21:07:36.491Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:38.213Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:07:38.358Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:39.359Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":59}
+2022-12-16T21:07:39.515Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:52.229Z [gpc-api] info: GET /tipologia
+2022-12-16T21:07:52.241Z [gpc-api] info: GET /tipologia
+2022-12-16T21:08:04.750Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:08:06.993Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":20}
+2022-12-16T21:08:07.195Z [gpc-api] info: GET /tipologia
+2022-12-16T21:09:53.506Z [gpc-api] info: API Started!
+2022-12-16T21:09:53.511Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T21:09:56.334Z [gpc-api] info: GET /tipologia
+2022-12-16T21:09:56.338Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:03.404Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:10:09.461Z [gpc-api] info: PUT /tipologia - {"typologyId":68,"typology":"Comportamental","description":"São as atitudes, habilidades e conhecimentos que uma pessoa tem na relação com o outro no seu cotidiano, como age e reage a diversas situações que se apresentam para ela."}
+2022-12-16T21:10:09.628Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:19.491Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:10:19.636Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:28.666Z [gpc-api] info: PUT /tipologia - {"typologyId":2,"typology":"Comportamental","description":"São as atitudes, habilidades e conhecimentos que uma pessoa tem na relação com o outro no seu cotidiano, como age e reage a diversas situações que se apresentam para ela."}
+2022-12-16T21:10:28.815Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:34.903Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:10:35.045Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:37.600Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T21:10:37.764Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:42.189Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:10:42.322Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:44.083Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":68}
+2022-12-16T21:10:44.227Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:47.665Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:10:47.787Z [gpc-api] info: GET /tipologia
+2022-12-16T21:10:49.028Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":11}
+2022-12-16T21:10:49.150Z [gpc-api] info: GET /tipologia
+2022-12-16T21:11:24.395Z [gpc-api] info: API Started!
+2022-12-16T21:11:24.422Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T21:11:58.691Z [gpc-api] info: API Started!
+2022-12-16T21:11:58.695Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T21:13:04.696Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T21:13:21.563Z [gpc-api] info: GET /competencias
+2022-12-16T21:13:29.632Z [gpc-api] info: GET /histórico de competencias
+2022-12-16T21:14:20.301Z [gpc-api] info: GET /tipologia
+2022-12-16T21:15:01.200Z [gpc-api] info: API Started!
+2022-12-16T21:15:01.204Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-16T21:15:03.112Z [gpc-api] info: GET /tipologia
+2022-12-16T21:15:08.199Z [gpc-api] info: GET /histórico de competencias
+2022-12-16T21:17:01.898Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:17:02.055Z [gpc-api] info: GET /tipologia
+2022-12-16T21:17:28.740Z [gpc-api] info: GET /competencias
+2022-12-16T21:17:46.295Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:07.948Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:09.732Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":58}
+2022-12-16T21:29:09.879Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:10.791Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:10.913Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:12.076Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":32}
+2022-12-16T21:29:12.200Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:13.306Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:13.424Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:14.692Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":34}
+2022-12-16T21:29:14.809Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:16.231Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:16.344Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:17.629Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":54}
+2022-12-16T21:29:17.741Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:19.024Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:19.140Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:20.273Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":57}
+2022-12-16T21:29:20.388Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:21.304Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:21.404Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:22.620Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":46}
+2022-12-16T21:29:22.736Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:23.837Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:23.943Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:25.091Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":19}
+2022-12-16T21:29:25.205Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:25.920Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:26.035Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:27.301Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":55}
+2022-12-16T21:29:27.393Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:28.826Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:28.918Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:30.037Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":56}
+2022-12-16T21:29:30.136Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:31.654Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:31.747Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:32.641Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":65}
+2022-12-16T21:29:32.731Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:33.537Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:33.623Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:34.733Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":6}
+2022-12-16T21:29:34.820Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:35.707Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:35.800Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:37.230Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":72}
+2022-12-16T21:29:37.315Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:39.754Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:39.843Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:41.068Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":16}
+2022-12-16T21:29:41.158Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:41.919Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:42.001Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:43.182Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":48}
+2022-12-16T21:29:43.288Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:44.606Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:44.690Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:45.769Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":35}
+2022-12-16T21:29:45.847Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:47.286Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:47.362Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:48.552Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":21}
+2022-12-16T21:29:48.629Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:50.933Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:51.006Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:52.747Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":13}
+2022-12-16T21:29:52.817Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:55.549Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:29:55.623Z [gpc-api] info: GET /tipologia
+2022-12-16T21:29:58.416Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":64}
+2022-12-16T21:29:58.490Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:01.103Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:30:01.174Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:02.600Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T21:30:02.695Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:04.247Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:30:04.319Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:05.320Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T21:30:05.398Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:06.564Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:30:06.642Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:07.880Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T21:30:07.959Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:35.783Z [gpc-api] info: POST /tipologia - {"typology":"Nova Tipologia","description":"Tipologia teste","status":true}
+2022-12-16T21:30:35.857Z [gpc-api] info: GET /tipologia
+2022-12-16T21:30:42.167Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:30:42.240Z [gpc-api] info: GET /tipologia
+2022-12-16T21:40:02.243Z [gpc-api] info: GET /tipologia
+2022-12-16T21:40:02.246Z [gpc-api] info: GET /tipologia
+2022-12-16T21:40:07.628Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:42:00.722Z [gpc-api] info: GET /tipologia
+2022-12-16T21:44:53.415Z [gpc-api] info: GET /tipologia
+2022-12-16T21:46:31.096Z [gpc-api] info: GET /tipologia
+2022-12-16T21:46:38.598Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:46:42.092Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":77}
+2022-12-16T21:46:42.209Z [gpc-api] info: GET /tipologia
+2022-12-16T21:47:30.840Z [gpc-api] info: GET /tipologia
+2022-12-16T21:47:41.164Z [gpc-api] info: GET /tipologia
+2022-12-16T21:47:59.948Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:48:02.936Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T21:48:03.050Z [gpc-api] info: GET /tipologia
+2022-12-16T21:48:12.354Z [gpc-api] info: GET /tipologia
+2022-12-16T21:48:30.752Z [gpc-api] info: POST /tipologia - {"typology":"Nova comp","description":"dasdfasd","status":true}
+2022-12-16T21:48:55.333Z [gpc-api] info: GET /tipologia
+2022-12-16T21:51:03.241Z [gpc-api] info: GET /tipologia
+2022-12-16T21:51:06.621Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T21:51:08.727Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":78}
+2022-12-16T21:51:08.828Z [gpc-api] info: GET /tipologia
+2022-12-16T21:51:10.977Z [gpc-api] info: GET /tipologia
+2022-12-16T21:51:26.849Z [gpc-api] info: POST /tipologia - {"typology":"Nova","description":"asdfas","status":true}
+2022-12-16T21:51:26.932Z [gpc-api] info: GET /tipologia
+2022-12-16T22:01:28.432Z [gpc-api] info: GET /tipologia
+2022-12-16T22:01:28.436Z [gpc-api] info: GET /tipologia
+2022-12-16T22:01:50.638Z [gpc-api] info: GET /tipologia
+2022-12-16T22:01:50.646Z [gpc-api] info: GET /tipologia
+2022-12-16T22:06:06.267Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-16T22:06:39.651Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-16T22:09:07.865Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:07.866Z [gpc-api] info: GET /competencias
+2022-12-16T22:09:07.871Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:07.872Z [gpc-api] info: GET /competencias
+2022-12-16T22:09:10.504Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:12.353Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:14.215Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:15.643Z [gpc-api] error: GET  - A tipologia procurada não existe ou não está ativa
+2022-12-16T22:09:21.706Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:25.881Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:25.886Z [gpc-api] info: GET /competencias
+2022-12-16T22:09:25.887Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:25.893Z [gpc-api] info: GET /competencias
+2022-12-16T22:09:48.887Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:50.934Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:09:53.952Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:53.954Z [gpc-api] info: GET /competencias
+2022-12-16T22:09:53.960Z [gpc-api] info: GET /tipologia
+2022-12-16T22:09:53.961Z [gpc-api] info: GET /competencias
+2022-12-16T22:10:12.452Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-16T22:10:17.052Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:17.056Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:27.338Z [gpc-api] info: POST /tipologia - {"typology":"jfkjalskdjf","description":"dfasdfasdfd","status":true}
+2022-12-16T22:10:27.363Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:34.096Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:35.431Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T22:10:42.508Z [gpc-api] info: PUT /tipologia - {"typologyId":80,"typology":"Editar","description":"dfasdfasdfd"}
+2022-12-16T22:10:42.619Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:46.777Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T22:10:46.799Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:50.429Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":80}
+2022-12-16T22:10:50.529Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:52.324Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T22:10:52.353Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:53.480Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":79}
+2022-12-16T22:10:53.580Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:54.920Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T22:10:55.007Z [gpc-api] info: GET /tipologia
+2022-12-16T22:10:58.403Z [gpc-api] error: PUT  - A tipologia em questão possui competências ativas. Para excluir essa tipologia favor exclua primeiro suas competências relacionadas a ela.
+2022-12-16T22:10:58.430Z [gpc-api] info: GET /tipologia
+2022-12-16T22:11:10.098Z [gpc-api] info: GET /tipologia
+2022-12-16T22:11:29.544Z [gpc-api] info: GET /tipologia
+2022-12-16T22:11:29.555Z [gpc-api] info: GET /tipologia
+2022-12-16T22:12:00.679Z [gpc-api] info: GET /tipologia/:id
+2022-12-16T22:12:18.982Z [gpc-api] info: GET /tipologia
+2022-12-16T22:12:18.983Z [gpc-api] info: GET /competencias
+2022-12-16T22:12:18.985Z [gpc-api] info: GET /tipologia
+2022-12-16T22:12:18.986Z [gpc-api] info: GET /competencias
+2022-12-16T22:12:51.761Z [gpc-api] info: GET /competencias
+2022-12-16T22:12:51.774Z [gpc-api] info: GET /forms
+2022-12-16T22:12:51.785Z [gpc-api] info: GET /competencias
+2022-12-16T22:12:51.795Z [gpc-api] info: GET /forms
+2022-12-16T22:13:22.492Z [gpc-api] info: GET /questões
+2022-12-16T22:14:26.080Z [gpc-api] info: GET /competencias
+2022-12-16T22:14:26.082Z [gpc-api] info: GET /forms
+2022-12-16T22:14:26.086Z [gpc-api] info: GET /competencias
+2022-12-16T22:14:26.088Z [gpc-api] info: GET /forms
+2022-12-16T22:14:51.963Z [gpc-api] info: GET /tipologia
+2022-12-16T22:14:51.966Z [gpc-api] info: GET /tipologia
+2022-12-18T12:02:22.048Z [gpc-api] info: API Started!
+2022-12-18T12:02:22.072Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T12:02:23.234Z [gpc-api] info: GET /questões
+2022-12-18T12:02:53.117Z [gpc-api] info: GET /questões
+2022-12-18T12:03:06.061Z [gpc-api] info: GET /histórico de competencias
+2022-12-18T12:15:55.704Z [gpc-api] info: GET /tipologia
+2022-12-18T12:15:55.716Z [gpc-api] info: GET /tipologia
+2022-12-18T12:15:58.765Z [gpc-api] info: GET /tipologia/:id
+2022-12-18T12:18:05.141Z [gpc-api] info: POST /tipologia - {"typology":"Teste de integração","description":"Esse teste é para provar que fronte e backend estão interagindo.","status":true}
+2022-12-18T12:18:05.255Z [gpc-api] info: GET /tipologia
+2022-12-18T12:18:31.446Z [gpc-api] info: GET /tipologia/:id
+2022-12-18T12:18:31.542Z [gpc-api] info: GET /tipologia
+2022-12-18T12:19:11.803Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":81}
+2022-12-18T12:19:11.897Z [gpc-api] info: GET /tipologia
+2022-12-18T12:19:32.177Z [gpc-api] info: GET /tipologia
+2022-12-18T12:23:55.410Z [gpc-api] info: GET /tipologia
+2022-12-18T12:23:55.412Z [gpc-api] info: GET /competencias
+2022-12-18T12:23:55.418Z [gpc-api] info: GET /tipologia
+2022-12-18T12:23:55.421Z [gpc-api] info: GET /competencias
+2022-12-18T12:23:57.489Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-18T12:24:01.186Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-18T14:29:40.137Z [gpc-api] info: API Started!
+2022-12-18T14:29:40.150Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:30:17.477Z [gpc-api] info: API Started!
+2022-12-18T14:30:17.482Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:37:32.128Z [gpc-api] info: API Started!
+2022-12-18T14:37:32.132Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:37:52.735Z [gpc-api] info: API Started!
+2022-12-18T14:37:52.741Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:39:53.047Z [gpc-api] info: API Started!
+2022-12-18T14:39:53.054Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:42:09.836Z [gpc-api] info: API Started!
+2022-12-18T14:42:09.843Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-18T14:46:08.308Z [gpc-api] info: API Started!
+2022-12-18T14:46:08.315Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-19T18:54:17.123Z [gpc-api] info: API Started!
+2022-12-19T18:54:17.142Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-19T18:54:59.243Z [gpc-api] info: API Started!
+2022-12-19T18:54:59.252Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-19T18:55:44.940Z [gpc-api] info: GET /tipologia
+2022-12-19T18:55:44.944Z [gpc-api] info: GET /competencias
+2022-12-19T18:55:44.949Z [gpc-api] info: GET /tipologia
+2022-12-19T18:55:44.950Z [gpc-api] info: GET /competencias
+2022-12-19T18:55:46.524Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T18:55:48.280Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T18:55:52.081Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T18:55:56.817Z [gpc-api] info: GET /tipologia
+2022-12-19T18:55:56.830Z [gpc-api] info: GET /tipologia
+2022-12-19T18:55:59.486Z [gpc-api] info: GET /tipologia/:id
+2022-12-19T18:56:14.412Z [gpc-api] info: GET /tipologia
+2022-12-19T18:56:14.417Z [gpc-api] info: GET /tipologia
+2022-12-19T19:05:06.160Z [gpc-api] info: GET /competencias
+2022-12-19T19:05:06.172Z [gpc-api] info: GET /competencias
+2022-12-19T19:06:02.827Z [gpc-api] info: GET /tipologia
+2022-12-19T19:06:02.839Z [gpc-api] info: GET /tipologia
+2022-12-19T19:06:03.695Z [gpc-api] info: GET /tipologia/:id
+2022-12-19T19:07:36.534Z [gpc-api] info: GET /competencias
+2022-12-19T19:07:36.547Z [gpc-api] info: GET /competencias
+2022-12-19T19:11:09.798Z [gpc-api] info: GET /competencias
+2022-12-19T19:14:28.282Z [gpc-api] info: GET /competencias
+2022-12-19T19:16:50.471Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:19:42.841Z [gpc-api] info: GET /competencias
+2022-12-19T19:19:50.635Z [gpc-api] info: GET /competencias
+2022-12-19T19:20:03.040Z [gpc-api] info: GET /competencias
+2022-12-19T19:20:36.697Z [gpc-api] info: GET /competencias
+2022-12-19T19:22:07.290Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:22:34.668Z [gpc-api] info: GET /competencias
+2022-12-19T19:25:58.513Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:26:41.712Z [gpc-api] info: GET /tipologia
+2022-12-19T19:26:41.722Z [gpc-api] info: GET /tipologia
+2022-12-19T19:26:50.471Z [gpc-api] info: POST /tipologia - {"typology":"dasfdasdf","description":"asdfasdafsd","status":true}
+2022-12-19T19:26:50.579Z [gpc-api] info: GET /tipologia
+2022-12-19T19:27:36.168Z [gpc-api] info: GET /competencias
+2022-12-19T19:27:36.177Z [gpc-api] info: GET /competencias
+2022-12-19T19:27:38.184Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:27:59.086Z [gpc-api] info: POST /competencia - {"competence":"Nova Teste","description":"Nova teste","typologyId":3,"status":true}
+2022-12-19T19:27:59.188Z [gpc-api] info: GET /competencias
+2022-12-19T19:28:06.043Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:28:06.160Z [gpc-api] info: GET /competencias
+2022-12-19T19:28:16.165Z [gpc-api] info: PUT /competencia - {"competenceId":8,"competence":"Tomada de Decisão","description":"Identificar as prioridades e as problemáticas da unidade, de modo a decidir, rápida e racionalmente, visando alcançar resultados positivos para a.","typologyId":3}
+2022-12-19T19:28:16.264Z [gpc-api] info: GET /competencias
+2022-12-19T19:28:27.673Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:28:27.782Z [gpc-api] info: GET /competencias
+2022-12-19T19:29:46.997Z [gpc-api] info: GET /competencias
+2022-12-19T19:30:03.946Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:30:08.224Z [gpc-api] info: PUT /competencia - {"competenceId":11,"competence":"Nova Teste","description":"Nova testeddfadf","typologyId":3}
+2022-12-19T19:30:08.346Z [gpc-api] info: GET /competencias
+2022-12-19T19:30:11.214Z [gpc-api] info: GET /competencia/:id
+2022-12-19T19:30:11.325Z [gpc-api] info: GET /competencias
+2022-12-19T19:30:14.671Z [gpc-api] info: PUT /competencia(inativate)
+2022-12-19T19:30:14.778Z [gpc-api] info: GET /competencias
+2022-12-19T19:30:25.588Z [gpc-api] info: GET /competencias
+2022-12-19T19:30:29.411Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-19T19:30:29.532Z [gpc-api] info: GET /competencias
+2022-12-19T19:35:43.831Z [gpc-api] info: GET /competencias
+2022-12-19T19:36:17.974Z [gpc-api] info: GET /competencias
+2022-12-19T19:42:15.520Z [gpc-api] info: GET /competencias
+2022-12-19T19:44:22.884Z [gpc-api] info: GET /competencias
+2022-12-19T19:44:22.886Z [gpc-api] info: GET /competencias
+2022-12-19T19:47:17.671Z [gpc-api] info: GET /competencias
+2022-12-19T19:47:28.251Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-19T19:47:28.549Z [gpc-api] info: GET /competencias
+2022-12-19T19:52:12.033Z [gpc-api] info: GET /competencias
+2022-12-19T19:52:12.043Z [gpc-api] info: GET /competencias
+2022-12-19T19:58:21.211Z [gpc-api] info: API Started!
+2022-12-19T19:58:21.215Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-19T19:58:28.361Z [gpc-api] info: GET /competencias
+2022-12-19T19:58:28.365Z [gpc-api] info: GET /competencias
+2022-12-19T20:00:56.407Z [gpc-api] info: GET /tipologia
+2022-12-19T20:00:56.409Z [gpc-api] info: GET /competencias
+2022-12-19T20:00:56.413Z [gpc-api] info: GET /tipologia
+2022-12-19T20:00:56.415Z [gpc-api] info: GET /competencias
+2022-12-19T20:01:20.005Z [gpc-api] info: GET /tipologia
+2022-12-19T20:01:20.006Z [gpc-api] info: GET /competencias
+2022-12-19T20:01:30.550Z [gpc-api] info: GET /tipologia
+2022-12-19T20:01:30.551Z [gpc-api] info: GET /competencias
+2022-12-19T20:01:30.557Z [gpc-api] info: GET /tipologia
+2022-12-19T20:01:30.559Z [gpc-api] info: GET /competencias
+2022-12-19T20:02:42.045Z [gpc-api] info: GET /tipologia
+2022-12-19T20:02:42.046Z [gpc-api] info: GET /competencias
+2022-12-19T20:02:42.050Z [gpc-api] info: GET /tipologia
+2022-12-19T20:02:42.053Z [gpc-api] info: GET /competencias
+2022-12-19T20:03:39.922Z [gpc-api] info: GET /tipologia
+2022-12-19T20:03:39.924Z [gpc-api] info: GET /competencias
+2022-12-19T20:03:42.412Z [gpc-api] info: GET /tipologia
+2022-12-19T20:03:42.414Z [gpc-api] info: GET /competencias
+2022-12-19T20:03:42.417Z [gpc-api] info: GET /tipologia
+2022-12-19T20:03:42.419Z [gpc-api] info: GET /competencias
+2022-12-19T20:10:41.806Z [gpc-api] info: GET /tipologia
+2022-12-19T20:10:41.809Z [gpc-api] info: GET /competencias
+2022-12-19T20:10:41.815Z [gpc-api] info: GET /tipologia
+2022-12-19T20:10:41.818Z [gpc-api] info: GET /competencias
+2022-12-19T20:11:01.486Z [gpc-api] info: GET /tipologia
+2022-12-19T20:11:01.487Z [gpc-api] info: GET /competencias
+2022-12-19T20:11:01.490Z [gpc-api] info: GET /competencias
+2022-12-19T20:11:01.491Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:06.131Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:06.133Z [gpc-api] info: GET /competencias
+2022-12-19T20:16:06.137Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:06.139Z [gpc-api] info: GET /competencias
+2022-12-19T20:16:14.589Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:14.590Z [gpc-api] info: GET /competencias
+2022-12-19T20:16:14.594Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:14.595Z [gpc-api] info: GET /competencias
+2022-12-19T20:16:57.787Z [gpc-api] info: GET /tipologia
+2022-12-19T20:16:57.790Z [gpc-api] info: GET /competencias
+2022-12-19T20:17:28.979Z [gpc-api] info: GET /tipologia
+2022-12-19T20:17:28.981Z [gpc-api] info: GET /competencias
+2022-12-19T20:17:32.810Z [gpc-api] info: GET /tipologia
+2022-12-19T20:17:32.811Z [gpc-api] info: GET /competencias
+2022-12-19T20:17:32.815Z [gpc-api] info: GET /competencias
+2022-12-19T20:17:32.816Z [gpc-api] info: GET /tipologia
+2022-12-19T20:17:43.421Z [gpc-api] info: GET /tipologia
+2022-12-19T20:17:43.423Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:04.649Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:04.650Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:04.653Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:04.654Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:33.300Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:33.301Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:33.307Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:33.309Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:48.643Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:48.644Z [gpc-api] info: GET /competencias
+2022-12-19T20:22:48.647Z [gpc-api] info: GET /tipologia
+2022-12-19T20:22:48.649Z [gpc-api] info: GET /competencias
+2022-12-19T20:23:50.925Z [gpc-api] info: GET /tipologia
+2022-12-19T20:23:50.928Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:29.750Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:29.751Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:33.450Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:33.451Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:33.456Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:33.460Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:44.068Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:44.069Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:46.332Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:46.333Z [gpc-api] info: GET /competencias
+2022-12-19T20:24:46.336Z [gpc-api] info: GET /tipologia
+2022-12-19T20:24:46.337Z [gpc-api] info: GET /competencias
+2022-12-19T20:26:40.844Z [gpc-api] info: GET /tipologia
+2022-12-19T20:26:40.845Z [gpc-api] info: GET /competencias
+2022-12-19T20:26:44.309Z [gpc-api] info: GET /competencias
+2022-12-19T20:26:44.309Z [gpc-api] info: GET /tipologia
+2022-12-19T20:26:44.313Z [gpc-api] info: GET /competencias
+2022-12-19T20:26:44.314Z [gpc-api] info: GET /tipologia
+2022-12-19T20:26:47.173Z [gpc-api] info: GET /competencia/:id
+2022-12-19T20:27:14.556Z [gpc-api] info: GET /tipologia
+2022-12-19T20:27:14.559Z [gpc-api] info: GET /competencias
+2022-12-19T20:27:16.097Z [gpc-api] info: GET /competencia/:id
+2022-12-19T20:29:38.987Z [gpc-api] info: GET /tipologia
+2022-12-19T20:29:38.988Z [gpc-api] info: GET /competencias
+2022-12-19T20:38:55.952Z [gpc-api] info: GET /tipologia
+2022-12-19T20:38:55.956Z [gpc-api] info: GET /competencias
+2022-12-19T20:38:59.038Z [gpc-api] info: GET /tipologia
+2022-12-19T20:38:59.039Z [gpc-api] info: GET /competencias
+2022-12-19T20:38:59.041Z [gpc-api] info: GET /tipologia
+2022-12-19T20:38:59.043Z [gpc-api] info: GET /competencias
+2022-12-19T20:40:14.093Z [gpc-api] info: GET /tipologia
+2022-12-19T20:40:14.094Z [gpc-api] info: GET /competencias
+2022-12-19T20:40:41.931Z [gpc-api] info: GET /tipologia
+2022-12-19T20:40:41.932Z [gpc-api] info: GET /competencias
+2022-12-19T20:47:44.396Z [gpc-api] info: GET /tipologia
+2022-12-19T20:47:44.397Z [gpc-api] info: GET /competencias
+2022-12-19T20:47:44.400Z [gpc-api] info: GET /tipologia
+2022-12-19T20:47:44.402Z [gpc-api] info: GET /competencias
+2022-12-19T20:47:51.221Z [gpc-api] info: GET /tipologia
+2022-12-19T20:47:51.224Z [gpc-api] info: GET /competencias
+2022-12-19T20:47:51.227Z [gpc-api] info: GET /tipologia
+2022-12-19T20:47:51.228Z [gpc-api] info: GET /competencias
+2022-12-19T20:50:33.842Z [gpc-api] info: GET /tipologia
+2022-12-19T20:50:33.843Z [gpc-api] info: GET /competencias
+2022-12-19T20:50:39.293Z [gpc-api] info: GET /competencias
+2022-12-19T20:50:39.294Z [gpc-api] info: GET /tipologia
+2022-12-19T20:50:39.299Z [gpc-api] info: GET /competencias
+2022-12-19T20:50:39.300Z [gpc-api] info: GET /tipologia
+2022-12-19T20:54:09.916Z [gpc-api] info: GET /tipologia
+2022-12-19T20:54:09.917Z [gpc-api] info: GET /competencias
+2022-12-19T20:54:09.920Z [gpc-api] info: GET /tipologia
+2022-12-19T20:54:09.921Z [gpc-api] info: GET /competencias
+2022-12-19T20:56:51.279Z [gpc-api] info: GET /tipologia
+2022-12-19T20:56:51.280Z [gpc-api] info: GET /competencias
+2022-12-19T20:56:54.958Z [gpc-api] info: GET /competencia/:id
+2022-12-19T20:57:00.881Z [gpc-api] info: GET /competencia/:id
+2022-12-19T20:58:45.487Z [gpc-api] info: GET /tipologia
+2022-12-19T20:58:45.489Z [gpc-api] info: GET /competencias
+2022-12-19T20:58:48.569Z [gpc-api] info: GET /tipologia
+2022-12-19T20:58:48.571Z [gpc-api] info: GET /competencias
+2022-12-19T20:58:48.575Z [gpc-api] info: GET /tipologia
+2022-12-19T20:58:48.575Z [gpc-api] info: GET /competencias
+2022-12-19T20:58:57.234Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:05:50.975Z [gpc-api] info: GET /tipologia
+2022-12-19T21:05:50.977Z [gpc-api] info: GET /competencias
+2022-12-19T21:05:50.984Z [gpc-api] info: GET /tipologia
+2022-12-19T21:05:50.986Z [gpc-api] info: GET /competencias
+2022-12-19T21:05:56.961Z [gpc-api] info: GET /tipologia
+2022-12-19T21:05:56.966Z [gpc-api] info: GET /competencias
+2022-12-19T21:05:56.967Z [gpc-api] info: GET /tipologia
+2022-12-19T21:05:56.970Z [gpc-api] info: GET /competencias
+2022-12-19T21:10:38.084Z [gpc-api] info: GET /tipologia
+2022-12-19T21:10:38.084Z [gpc-api] info: GET /competencias
+2022-12-19T21:10:58.608Z [gpc-api] info: GET /tipologia
+2022-12-19T21:10:58.609Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:15.343Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:15.345Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:15.351Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:15.353Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:18.582Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:18.584Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:18.588Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:18.592Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:35.385Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:35.385Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:40.365Z [gpc-api] info: GET /tipologia
+2022-12-19T21:11:40.366Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:40.370Z [gpc-api] info: GET /competencias
+2022-12-19T21:11:40.371Z [gpc-api] info: GET /tipologia
+2022-12-19T21:13:13.049Z [gpc-api] info: GET /tipologia
+2022-12-19T21:13:13.050Z [gpc-api] info: GET /competencias
+2022-12-19T21:13:17.279Z [gpc-api] info: GET /tipologia
+2022-12-19T21:13:17.280Z [gpc-api] info: GET /competencias
+2022-12-19T21:13:17.286Z [gpc-api] info: GET /tipologia
+2022-12-19T21:13:17.288Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:03.378Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:03.379Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:43.834Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:43.835Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:43.841Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:43.842Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:48.000Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:48.001Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:48.004Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:48.005Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:53.645Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:53.646Z [gpc-api] info: GET /competencias
+2022-12-19T21:15:53.650Z [gpc-api] info: GET /tipologia
+2022-12-19T21:15:53.651Z [gpc-api] info: GET /competencias
+2022-12-19T21:16:25.590Z [gpc-api] info: GET /tipologia
+2022-12-19T21:16:25.591Z [gpc-api] info: GET /competencias
+2022-12-19T21:16:25.596Z [gpc-api] info: GET /competencias
+2022-12-19T21:16:25.597Z [gpc-api] info: GET /tipologia
+2022-12-19T21:17:17.070Z [gpc-api] info: GET /tipologia
+2022-12-19T21:17:17.072Z [gpc-api] info: GET /competencias
+2022-12-19T21:18:56.044Z [gpc-api] info: GET /tipologia
+2022-12-19T21:18:56.045Z [gpc-api] info: GET /competencias
+2022-12-19T21:20:44.933Z [gpc-api] info: GET /tipologia
+2022-12-19T21:20:44.935Z [gpc-api] info: GET /competencias
+2022-12-19T21:20:47.388Z [gpc-api] info: GET /tipologia
+2022-12-19T21:20:47.390Z [gpc-api] info: GET /competencias
+2022-12-19T21:20:47.395Z [gpc-api] info: GET /tipologia
+2022-12-19T21:20:47.396Z [gpc-api] info: GET /competencias
+2022-12-19T21:22:22.075Z [gpc-api] info: GET /tipologia
+2022-12-19T21:22:22.076Z [gpc-api] info: GET /competencias
+2022-12-19T21:22:41.606Z [gpc-api] info: GET /tipologia
+2022-12-19T21:22:41.608Z [gpc-api] info: GET /competencias
+2022-12-19T21:22:44.879Z [gpc-api] info: GET /competencias
+2022-12-19T21:22:44.879Z [gpc-api] info: GET /tipologia
+2022-12-19T21:22:44.882Z [gpc-api] info: GET /competencias
+2022-12-19T21:22:44.884Z [gpc-api] info: GET /tipologia
+2022-12-19T21:22:48.037Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:23:43.044Z [gpc-api] info: GET /tipologia
+2022-12-19T21:23:43.045Z [gpc-api] info: GET /competencias
+2022-12-19T21:23:46.856Z [gpc-api] info: GET /tipologia
+2022-12-19T21:23:46.856Z [gpc-api] info: GET /competencias
+2022-12-19T21:23:46.859Z [gpc-api] info: GET /tipologia
+2022-12-19T21:23:46.861Z [gpc-api] info: GET /competencias
+2022-12-19T21:23:48.591Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:23.121Z [gpc-api] info: PUT /competencia - {"competenceId":4,"competence":"Comunicação","description":"Comunicar-se de modo claro, objetivo e acessível ao interlocutor, com a utilização do meio mais adequado e o foco no entendimento recíproco.","typologyId":2}
+2022-12-19T21:24:23.299Z [gpc-api] info: GET /tipologia
+2022-12-19T21:24:23.303Z [gpc-api] info: GET /competencias
+2022-12-19T21:24:35.767Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:35.941Z [gpc-api] info: GET /tipologia
+2022-12-19T21:24:35.944Z [gpc-api] info: GET /competencias
+2022-12-19T21:24:47.829Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:51.562Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:53.729Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:55.726Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:24:59.074Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:25:00.478Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:25:01.956Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:25:48.990Z [gpc-api] info: GET /tipologia
+2022-12-19T21:25:48.991Z [gpc-api] info: GET /competencias
+2022-12-19T21:25:57.294Z [gpc-api] info: GET /tipologia
+2022-12-19T21:25:57.295Z [gpc-api] info: GET /competencias
+2022-12-19T21:25:57.300Z [gpc-api] info: GET /tipologia
+2022-12-19T21:25:57.300Z [gpc-api] info: GET /competencias
+2022-12-19T21:26:37.112Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-19T21:26:37.608Z [gpc-api] info: GET /tipologia
+2022-12-19T21:26:37.611Z [gpc-api] info: GET /competencias
+2022-12-19T21:28:13.589Z [gpc-api] info: GET /tipologia
+2022-12-19T21:28:13.590Z [gpc-api] info: GET /competencias
+2022-12-19T21:28:17.263Z [gpc-api] info: GET /competencias
+2022-12-19T21:28:17.264Z [gpc-api] info: GET /tipologia
+2022-12-19T21:28:17.267Z [gpc-api] info: GET /competencias
+2022-12-19T21:28:17.268Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:05.973Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:05.975Z [gpc-api] info: GET /competencias
+2022-12-19T21:29:24.500Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:24.501Z [gpc-api] info: GET /competencias
+2022-12-19T21:29:24.504Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:24.505Z [gpc-api] info: GET /competencias
+2022-12-19T21:29:45.093Z [gpc-api] info: POST /competencia - {"competence":"Nova Tesxte","description":"fasdfasdfas","status":true,"typologyId":82}
+2022-12-19T21:29:45.224Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:45.229Z [gpc-api] info: GET /competencias
+2022-12-19T21:29:53.788Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:29:53.916Z [gpc-api] info: GET /tipologia
+2022-12-19T21:29:53.922Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:05.290Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:05.291Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:05.294Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:05.295Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:10.787Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:31:38.869Z [gpc-api] info: POST /competencia - {"competence":"TexteII","description":"fasdfasdfas","typologyId":2,"status":true}
+2022-12-19T21:31:38.995Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:38.999Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:44.543Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:31:44.671Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:44.675Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:49.180Z [gpc-api] info: PUT /competencia(inativate)
+2022-12-19T21:31:49.302Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:49.306Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:53.819Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:31:53.939Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:53.943Z [gpc-api] info: GET /competencias
+2022-12-19T21:31:56.545Z [gpc-api] info: PUT /competencia(inativate)
+2022-12-19T21:31:56.667Z [gpc-api] info: GET /tipologia
+2022-12-19T21:31:56.670Z [gpc-api] info: GET /competencias
+2022-12-19T21:32:10.476Z [gpc-api] info: GET /tipologia
+2022-12-19T21:32:10.480Z [gpc-api] info: GET /competencias
+2022-12-19T21:33:00.882Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:36:27.704Z [gpc-api] info: GET /tipologia
+2022-12-19T21:36:27.705Z [gpc-api] info: GET /competencias
+2022-12-19T21:36:39.218Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:36:56.284Z [gpc-api] error: PUT  - Há campos obrigatórios não preenchidos
+2022-12-19T21:36:56.757Z [gpc-api] info: GET /tipologia
+2022-12-19T21:36:56.760Z [gpc-api] info: GET /competencias
+2022-12-19T21:38:43.864Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:38:44.014Z [gpc-api] info: GET /tipologia
+2022-12-19T21:38:44.017Z [gpc-api] info: GET /competencias
+2022-12-19T21:39:30.234Z [gpc-api] info: POST /competencia - {"competence":"Nova","description":"Identificar as prioridades e as problemáticas da unidade, de modo a decidir, rápida e racionalmente, visando alcançar resultados positivos para a.","status":true,"typologyId":3}
+2022-12-19T21:39:30.356Z [gpc-api] info: GET /tipologia
+2022-12-19T21:39:30.360Z [gpc-api] info: GET /competencias
+2022-12-19T21:39:35.999Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:39:36.124Z [gpc-api] info: GET /tipologia
+2022-12-19T21:39:36.127Z [gpc-api] info: GET /competencias
+2022-12-19T21:41:22.015Z [gpc-api] info: GET /tipologia
+2022-12-19T21:41:22.018Z [gpc-api] info: GET /competencias
+2022-12-19T21:41:25.504Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:41:31.694Z [gpc-api] info: PUT /competencia - {"competenceId":14,"competence":"Nova","description":"Identificar as prioridades e as problemáticas da unidade, de modo a decidir, rápida e racionalmente, visando alcançar resultados positivos para a.","typologyId":2}
+2022-12-19T21:41:31.817Z [gpc-api] info: GET /tipologia
+2022-12-19T21:41:31.824Z [gpc-api] info: GET /competencias
+2022-12-19T21:41:34.752Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:41:34.879Z [gpc-api] info: GET /tipologia
+2022-12-19T21:41:34.883Z [gpc-api] info: GET /competencias
+2022-12-19T21:41:46.000Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:41:53.183Z [gpc-api] info: PUT /competencia(inativate)
+2022-12-19T21:41:53.342Z [gpc-api] info: GET /tipologia
+2022-12-19T21:41:53.360Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:04.118Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2022-12-19T21:42:04.556Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:04.559Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:10.153Z [gpc-api] info: POST /competencia - {"competence":"asdfasd","description":"afsdfasdf","status":true,"typologyId":82}
+2022-12-19T21:42:10.270Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:10.275Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:13.748Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:42:13.873Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:13.876Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:20.065Z [gpc-api] info: PUT /competencia - {"competenceId":15,"competence":"asdfasd","description":"afsdfasdf","typologyId":2}
+2022-12-19T21:42:20.181Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:20.188Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:22.877Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:42:23.001Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:23.004Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:32.717Z [gpc-api] info: PUT /competencia - {"competenceId":15,"competence":"Nome diginop","description":"afsdfasdf","typologyId":2}
+2022-12-19T21:42:32.839Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:32.843Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:37.408Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:42:37.539Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:37.543Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:41.727Z [gpc-api] info: PUT /competencia - {"competenceId":15,"competence":"Nome diginop","description":"adfasdfsad","typologyId":2}
+2022-12-19T21:42:41.845Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:41.849Z [gpc-api] info: GET /competencias
+2022-12-19T21:42:43.496Z [gpc-api] info: GET /tipologia
+2022-12-19T21:42:43.500Z [gpc-api] info: GET /competencias
+2022-12-19T21:43:32.815Z [gpc-api] info: GET /tipologia
+2022-12-19T21:43:32.817Z [gpc-api] info: GET /competencias
+2022-12-19T21:43:35.853Z [gpc-api] info: GET /competencias
+2022-12-19T21:43:35.854Z [gpc-api] info: GET /tipologia
+2022-12-19T21:43:35.857Z [gpc-api] info: GET /competencias
+2022-12-19T21:43:35.858Z [gpc-api] info: GET /tipologia
+2022-12-19T21:45:47.334Z [gpc-api] info: GET /tipologia
+2022-12-19T21:45:47.335Z [gpc-api] info: GET /competencias
+2022-12-19T21:46:23.262Z [gpc-api] info: GET /tipologia
+2022-12-19T21:46:23.265Z [gpc-api] info: GET /competencias
+2022-12-19T21:46:38.985Z [gpc-api] info: GET /tipologia
+2022-12-19T21:46:38.986Z [gpc-api] info: GET /competencias
+2022-12-19T21:47:14.682Z [gpc-api] info: GET /tipologia
+2022-12-19T21:47:14.684Z [gpc-api] info: GET /competencias
+2022-12-19T21:48:20.835Z [gpc-api] info: POST /competencia - {"competence":"Liderança","description":"A liderança é tipica do lider","status":true,"typologyId":3}
+2022-12-19T21:48:20.959Z [gpc-api] info: GET /tipologia
+2022-12-19T21:48:20.962Z [gpc-api] info: GET /competencias
+2022-12-19T21:48:24.379Z [gpc-api] info: GET /competencias
+2022-12-19T21:48:24.383Z [gpc-api] info: GET /tipologia
+2022-12-19T21:48:33.652Z [gpc-api] info: GET /competencia/:id
+2022-12-19T21:48:39.135Z [gpc-api] info: GET /tipologia
+2022-12-19T21:48:39.138Z [gpc-api] info: GET /competencias
+2022-12-19T21:48:39.150Z [gpc-api] info: GET /tipologia
+2022-12-19T21:48:39.154Z [gpc-api] info: GET /competencias
+2022-12-19T21:48:45.174Z [gpc-api] error: GET  - A tipologia procurada não existe ou não está ativa
+2022-12-19T21:48:46.766Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T21:48:47.530Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T21:48:48.580Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:07:11.299Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:11.309Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:12.767Z [gpc-api] info: GET /tipologia/:id
+2022-12-19T22:07:14.415Z [gpc-api] info: PUT /tipologia(inativate) - {"typologyId":82}
+2022-12-19T22:07:14.516Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:24.110Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:24.114Z [gpc-api] info: GET /competencias
+2022-12-19T22:07:24.126Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:24.130Z [gpc-api] info: GET /competencias
+2022-12-19T22:07:32.949Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:32.958Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:54.575Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:54.576Z [gpc-api] info: GET /competencias
+2022-12-19T22:07:54.582Z [gpc-api] info: GET /tipologia
+2022-12-19T22:07:54.584Z [gpc-api] info: GET /competencias
+2022-12-19T22:08:06.127Z [gpc-api] info: GET /tipologia
+2022-12-19T22:08:06.135Z [gpc-api] info: GET /tipologia
+2022-12-19T22:08:09.999Z [gpc-api] info: GET /tipologia
+2022-12-19T22:08:10.002Z [gpc-api] info: GET /competencias
+2022-12-19T22:08:10.014Z [gpc-api] info: GET /tipologia
+2022-12-19T22:08:10.020Z [gpc-api] info: GET /competencias
+2022-12-19T22:09:54.649Z [gpc-api] info: GET /competencias
+2022-12-19T22:09:54.652Z [gpc-api] info: GET /competencias
+2022-12-19T22:09:54.654Z [gpc-api] info: GET /forms
+2022-12-19T22:09:54.657Z [gpc-api] info: GET /forms
+2022-12-19T22:11:30.055Z [gpc-api] info: GET /tipologia
+2022-12-19T22:11:30.056Z [gpc-api] info: GET /competencias
+2022-12-19T22:11:30.060Z [gpc-api] info: GET /competencias
+2022-12-19T22:11:30.061Z [gpc-api] info: GET /tipologia
+2022-12-19T22:15:23.052Z [gpc-api] info: GET /tipologia
+2022-12-19T22:15:23.054Z [gpc-api] info: GET /competencias
+2022-12-19T22:15:23.063Z [gpc-api] info: GET /tipologia
+2022-12-19T22:15:23.066Z [gpc-api] info: GET /competencias
+2022-12-19T22:16:06.008Z [gpc-api] info: GET /tipologia
+2022-12-19T22:16:06.010Z [gpc-api] info: GET /competencias
+2022-12-19T22:18:47.661Z [gpc-api] info: GET /tipologia
+2022-12-19T22:18:47.662Z [gpc-api] info: GET /competencias
+2022-12-19T22:18:47.668Z [gpc-api] info: GET /tipologia
+2022-12-19T22:18:47.670Z [gpc-api] info: GET /competencias
+2022-12-19T22:20:26.819Z [gpc-api] info: GET /tipologia
+2022-12-19T22:20:26.819Z [gpc-api] info: GET /competencias
+2022-12-19T22:20:34.145Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:22:09.550Z [gpc-api] info: GET /tipologia
+2022-12-19T22:22:09.551Z [gpc-api] info: GET /competencias
+2022-12-19T22:23:08.625Z [gpc-api] info: GET /tipologia
+2022-12-19T22:23:08.626Z [gpc-api] info: GET /competencias
+2022-12-19T22:23:44.102Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:23:44.863Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:23:45.821Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:25:48.191Z [gpc-api] info: GET /tipologia
+2022-12-19T22:25:48.193Z [gpc-api] info: GET /competencias
+2022-12-19T22:25:48.197Z [gpc-api] info: GET /competencias
+2022-12-19T22:25:48.198Z [gpc-api] info: GET /tipologia
+2022-12-19T22:25:54.865Z [gpc-api] info: GET /tipologia
+2022-12-19T22:25:54.869Z [gpc-api] info: GET /competencias
+2022-12-19T22:25:54.878Z [gpc-api] info: GET /tipologia
+2022-12-19T22:25:54.882Z [gpc-api] info: GET /competencias
+2022-12-19T22:25:56.222Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:25:57.313Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:25:58.219Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-19T22:26:24.174Z [gpc-api] info: GET /competencias
+2022-12-19T22:26:24.177Z [gpc-api] info: GET /forms
+2022-12-19T22:26:24.181Z [gpc-api] info: GET /competencias
+2022-12-19T22:26:24.183Z [gpc-api] info: GET /forms
+2022-12-19T22:33:32.351Z [gpc-api] info: GET /competencias
+2022-12-19T22:33:32.353Z [gpc-api] info: GET /forms
+2022-12-19T22:33:32.355Z [gpc-api] info: GET /competencias
+2022-12-19T22:33:32.357Z [gpc-api] info: GET /forms
+2022-12-19T23:03:10.251Z [gpc-api] info: GET /questões
+2022-12-19T23:04:05.129Z [gpc-api] info: GET /competencias
+2022-12-19T23:04:47.540Z [gpc-api] info: GET /competencias
+2022-12-19T23:05:19.014Z [gpc-api] info: GET /competencias
+2022-12-19T23:05:30.785Z [gpc-api] info: GET /competencias
+2022-12-19T23:05:33.188Z [gpc-api] info: GET /competencias
+2022-12-19T23:06:06.851Z [gpc-api] info: GET /competencias
+2022-12-19T23:10:06.955Z [gpc-api] info: GET /competencias
+2022-12-19T23:10:06.957Z [gpc-api] info: GET /forms
+2022-12-19T23:11:23.576Z [gpc-api] info: GET /forms
+2022-12-19T23:12:52.134Z [gpc-api] info: GET /competencias
+2022-12-19T23:12:52.136Z [gpc-api] info: GET /forms
+2022-12-19T23:12:52.139Z [gpc-api] info: GET /competencias
+2022-12-19T23:12:52.141Z [gpc-api] info: GET /forms
+2022-12-19T23:13:03.524Z [gpc-api] info: GET /competencias
+2022-12-19T23:13:03.526Z [gpc-api] info: GET /forms
+2022-12-19T23:13:03.528Z [gpc-api] info: GET /competencias
+2022-12-19T23:13:03.530Z [gpc-api] info: GET /forms
+2022-12-19T23:17:40.887Z [gpc-api] info: GET /competencias
+2022-12-19T23:17:40.894Z [gpc-api] info: GET /forms
+2022-12-19T23:17:40.901Z [gpc-api] info: GET /competencias
+2022-12-19T23:17:40.908Z [gpc-api] info: GET /forms
+2022-12-19T23:27:50.827Z [gpc-api] info: GET /competencias
+2022-12-19T23:27:50.832Z [gpc-api] info: GET /forms
+2022-12-19T23:27:50.838Z [gpc-api] info: GET /competencias
+2022-12-19T23:27:50.843Z [gpc-api] info: GET /forms
+2022-12-19T23:28:34.877Z [gpc-api] info: GET /competencias
+2022-12-19T23:28:34.878Z [gpc-api] info: GET /forms
+2022-12-19T23:29:08.214Z [gpc-api] info: GET /competencias
+2022-12-19T23:29:08.217Z [gpc-api] info: GET /forms
+2022-12-19T23:29:08.220Z [gpc-api] info: GET /competencias
+2022-12-19T23:29:08.223Z [gpc-api] info: GET /forms
+2022-12-19T23:29:27.829Z [gpc-api] info: GET /competencias
+2022-12-19T23:29:27.831Z [gpc-api] info: GET /forms
+2022-12-19T23:31:00.136Z [gpc-api] info: GET /tipologia
+2022-12-19T23:31:00.137Z [gpc-api] info: GET /competencias
+2022-12-19T23:31:00.142Z [gpc-api] info: GET /competencias
+2022-12-19T23:31:00.143Z [gpc-api] info: GET /tipologia
+2022-12-19T23:31:29.232Z [gpc-api] info: GET /competencias
+2022-12-19T23:31:29.235Z [gpc-api] info: GET /forms
+2022-12-19T23:31:29.239Z [gpc-api] info: GET /competencias
+2022-12-19T23:31:29.242Z [gpc-api] info: GET /forms
+2022-12-20T12:18:57.623Z [gpc-api] info: API Started!
+2022-12-20T12:18:57.646Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:19:41.964Z [gpc-api] info: GET /forms
+2022-12-20T12:19:56.460Z [gpc-api] error: GET  - Não há inventários cadastrados
+2022-12-20T12:23:45.987Z [gpc-api] error: POST  - invalid input syntax for type timestamp with time zone: "Invalid date"
+2022-12-20T12:24:47.876Z [gpc-api] error: POST  - invalid input syntax for type timestamp with time zone: "Invalid date"
+2022-12-20T12:25:15.723Z [gpc-api] info: POST /year - {"open":"1983-02-02","close":"1983-03-03"}
+2022-12-20T12:25:44.508Z [gpc-api] info: POST /year - {"open":"1983-02-24","close":"1983-03-24"}
+2022-12-20T12:26:42.060Z [gpc-api] info: GET /year
+2022-12-20T12:33:31.894Z [gpc-api] info: API Started!
+2022-12-20T12:33:31.899Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:34:01.978Z [gpc-api] info: API Started!
+2022-12-20T12:34:01.982Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:38:14.481Z [gpc-api] info: API Started!
+2022-12-20T12:38:14.486Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:38:31.581Z [gpc-api] info: API Started!
+2022-12-20T12:38:31.590Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:42:32.351Z [gpc-api] info: API Started!
+2022-12-20T12:42:32.357Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:42:58.502Z [gpc-api] info: API Started!
+2022-12-20T12:42:58.513Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:44:29.043Z [gpc-api] info: PUT /year - {"yearId":1,"open":"1983-02-25","close":"1983-03-24"}
+2022-12-20T12:45:40.281Z [gpc-api] error: GET  - YearRepository.getUser is not a function
+2022-12-20T12:46:45.243Z [gpc-api] info: GET /year
+2022-12-20T12:46:56.028Z [gpc-api] error: GET  - YearRepository.getUser is not a function
+2022-12-20T12:48:21.232Z [gpc-api] info: API Started!
+2022-12-20T12:48:21.237Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:48:25.086Z [gpc-api] info: GET /year/:id
+2022-12-20T12:48:44.647Z [gpc-api] info: GET /year/:id
+2022-12-20T12:50:04.327Z [gpc-api] info: API Started!
+2022-12-20T12:50:04.332Z [gpc-api] error: Validation error - Formulário já criado
+2022-12-20T12:51:49.103Z [gpc-api] info: API Started!
+2022-12-20T12:51:49.107Z [gpc-api] error: Validation error - Formulário já criado

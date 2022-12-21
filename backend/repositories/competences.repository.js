@@ -13,7 +13,7 @@ async function getCompetencesHistory() {
   try {
     return await Competence.findAll({
       include: { model: Typology },
-      order: ["competenceId"],
+      order: ["competence"],
     });
   } catch (err) {
     throw err;
@@ -24,6 +24,7 @@ async function getCompetences() {
   try {
     return await Competence.findAll({
       where: { status: true },
+      order: ["competence"],
     });
   } catch (err) {
     throw err;
@@ -44,6 +45,7 @@ async function getCompetencesTyp(typologyId) {
   try {
     return await Competence.findAll({
       where: { typologyId: typologyId, status: true },
+      order: ["competence"],
     });
   } catch (err) {
     throw err;

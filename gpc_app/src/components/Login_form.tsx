@@ -10,7 +10,7 @@ export default function login_form() {
           backgroundImage: "url(/Challenge_5.jpg)",
         }}
       >
-        <Box flex="0.70" height="850px">
+        <Box flex="0.63" height="850px">
           <Box
             display="flex"
             flexDirection="column"
@@ -20,7 +20,7 @@ export default function login_form() {
             <Avatar
               alt="Brain"
               src="/brain.svg"
-              sx={{ width: 316, height: 284, marginTop: 28, marginBottom: 5 }}
+              sx={{ width: 316, height: 284, marginTop: 25, marginBottom: 5 }}
               variant="square"
             />
             <Footnote variant="h1" gutterBottom bgcolor="#e1e5e9">

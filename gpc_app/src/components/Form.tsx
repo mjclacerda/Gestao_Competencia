@@ -3,16 +3,24 @@ import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
 
 interface IForm {
   criar: () => void;
+  alterar: () => void;
+  excluir: () => void;
+  limpar: () => void;
   eventoteclado: React.ChangeEventHandler<HTMLInputElement>;
   label: string;
-  typologydata?: any;
+  showbuttons: number;
+  data: any;
 }
 
 export default function Form({
   criar,
+  alterar,
+  excluir,
+  limpar,
   eventoteclado,
   label,
-  typologydata,
+  data,
+  showbuttons,
 }: IForm) {
   return (
     <FlexBox>
@@ -22,9 +30,9 @@ export default function Form({
           type="text"
           variant="standard"
           name={label}
-          placeholder="Digite o nome da tipologia"
+          placeholder="Digite o nome"
           onChange={eventoteclado}
-          value={typologydata.typology}
+          value={data.typology || data.competence || ""}
         />
         <TextField
           sx={{
@@ -37,42 +45,91 @@ export default function Form({
           name="description"
           placeholder="Digite aqui a descrição"
           onChange={eventoteclado}
-          value={typologydata.description}
+          value={data.description}
           multiline
           rows={5}
         />
       </BoxColumn>
-      <BoxColumn style={{ marginTop: 46 }}>
-        <BootstrapButton
-          style={{
-            marginLeft: 7,
-            marginBottom: 2,
-            height: 27,
-          }}
-          onClick={() => {
-            criar();
-          }}
-        >
-          Criar
-        </BootstrapButton>
-        <BootstrapButton
-          style={{
-            marginLeft: 7,
-            marginBottom: 2,
-            height: 27,
-          }}
-        >
-          Alterar
-        </BootstrapButton>
-        <BootstrapButton
-          style={{
-            marginLeft: 7,
-            height: 27,
-          }}
-        >
-          Excluir
-        </BootstrapButton>
-      </BoxColumn>
+      {showbuttons ? (
+        <BoxColumn style={{ marginTop: 32 }}>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+            }}
+            onClick={() => {
+              criar();
+            }}
+          >
+            Criar
+          </BootstrapButton>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+            }}
+            onClick={() => {
+              alterar();
+            }}
+          >
+            Alterar
+          </BootstrapButton>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+            }}
+            onClick={() => {
+              limpar();
+            }}
+          >
+            Limpar
+          </BootstrapButton>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+              background: "#f4290f",
+            }}
+            onClick={() => {
+              excluir();
+            }}
+          >
+            Excluir
+          </BootstrapButton>
+        </BoxColumn>
+      ) : (
+        <BoxColumn style={{ marginTop: 32 }}>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+            }}
+            onClick={() => {
+              criar();
+            }}
+          >
+            Criar
+          </BootstrapButton>
+          <BootstrapButton
+            style={{
+              marginLeft: 7,
+              marginBottom: 2,
+              height: 27,
+            }}
+            onClick={() => {
+              limpar();
+            }}
+          >
+            Limpar
+          </BootstrapButton>
+        </BoxColumn>
+      )}
     </FlexBox>
   );
 }
