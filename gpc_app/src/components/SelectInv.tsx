@@ -11,32 +11,33 @@ import { GenerateRange } from "./GenerateRange";
 
 interface ISelect {
   ano: number | string;
-  mes: number | string;
+  mes: string;
   anof: number | string;
   mesf: number | string;
   handleChange: any;
   handleChangeMes: any;
   handleChangeFinal: any;
   handleChangeMesFinal: any;
+  onClick: any;
 }
 
-const meses = [
-  "Jan",
-  "Fev",
-  "Mar",
-  "Abr",
-  "Mai",
-  "Jun",
-  "Jul",
-  "Ago",
-  "Set",
-  "Out",
-  "Nov",
-  "Dez",
+export const meses = [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
 ];
 
 //Gerador de anos para o menu ano
-const anos = GenerateRange(3);
+const anos = GenerateRange(2);
 
 export default function SelectInv({
   ano,
@@ -47,6 +48,7 @@ export default function SelectInv({
   mesf,
   handleChangeMes,
   handleChangeMesFinal,
+  onClick,
 }: ISelect) {
   return (
     <BoxColumn style={{ alignItems: "end", margin: "60px" }}>
@@ -85,7 +87,7 @@ export default function SelectInv({
               <em>None</em>
             </MenuItem>
             {meses.map((month) => (
-              <MenuItem key={uuid()} value={month}>
+              <MenuItem key={meses.indexOf(month) + 1} value={month}>
                 {month}
               </MenuItem>
             ))}
@@ -164,6 +166,7 @@ export default function SelectInv({
       </FlexBox>
       <FlexBox>
         <BootstrapButton
+          onClick={onClick}
           style={{ margin: 3, background: "#0FEDFB", color: "#000000" }}
         >
           Abrir

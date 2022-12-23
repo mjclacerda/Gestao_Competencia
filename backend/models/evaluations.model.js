@@ -12,9 +12,11 @@ const avaliacoes = db.define(
       allowNull: false,
       primaryKey: true,
     },
-    evaluatorId: {
+    bossId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+    },
+    teamId: {
+      type: DataTypes.INTEGER,
     },
     year: {
       type: DataTypes.STRING,

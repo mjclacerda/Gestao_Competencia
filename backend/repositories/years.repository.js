@@ -2,7 +2,11 @@ import Year from "../models/years.model.js";
 
 async function insertYear(year) {
   try {
-    return await Year.create(year);
+    return await Year.create({
+      open: year.open,
+      close: year.close,
+      year: String(year.year),
+    });
   } catch (err) {
     throw err;
   }
@@ -16,10 +20,18 @@ async function getYears() {
   }
 }
 
+async function getJustYears() {
+  try {
+    return await Year.findAll({ attributes: ["year"] });
+  } catch (err) {
+    throw err;
+  }
+}
+
 async function getYearByName(year) {
   try {
     return await Year.findAll({
-      where: { close: year },
+      where: { year: String(year.year) },
     });
   } catch (err) {
     throw err;
@@ -40,7 +52,6 @@ async function updateYear(yearbody) {
       {
         open: yearbody.open,
         close: yearbody.close,
-        year: yearbody.year,
       },
       {
         where: {
@@ -57,6 +68,7 @@ async function updateYear(yearbody) {
 export default {
   insertYear,
   getYears,
+  getJustYears,
   getYear,
   getYearByName,
   updateYear,

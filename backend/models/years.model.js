@@ -11,16 +11,21 @@ const anos = db.define(
       primaryKey: true,
     },
     open: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     close: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     year: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+  },
+  {
+    uniqueKeys: {
+      Items_unique: { fields: ["year"] },
     },
   },
   { underscored: true }

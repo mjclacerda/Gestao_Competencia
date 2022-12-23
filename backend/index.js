@@ -15,6 +15,7 @@ import questionsUserRouter from "./routes/questionsforuser.js";
 import competencesHistoryRouter from "./routes/comphistory.router.js";
 import forms from "./repositories/forms.repository.js";
 import yearsRouter from "./routes/years.router.js";
+import justyearsRouter from "./routes/yearsjustyear.router.js";
 
 const app = express();
 
@@ -48,12 +49,13 @@ app.use("/questions", questionRouter);
 app.use("/questionsuser", questionsUserRouter);
 app.use("/users", usersRouter);
 app.use("/years", yearsRouter);
+app.use("/justyears", justyearsRouter);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 //Tratamento de erros
 app.use((err, req, res, next) => {
   logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
-  res.status(400).send({ err });
+  res.status(400).send(err.message);
 });
 
 //Sincronização do banco de dados
@@ -64,7 +66,7 @@ async function verifyForms() {
   try {
     await forms.standardForms();
   } catch (err) {
-    logger.error(`${err.message} - Formulário já criado`);
+    logger.error(`${err} - Formulário já criado`);
   }
 }
 verifyForms();

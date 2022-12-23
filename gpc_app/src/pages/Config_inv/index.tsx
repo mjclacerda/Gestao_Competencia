@@ -1,38 +1,69 @@
 import Header from "../../components/Header";
-import {
-  Box,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Typography,
-} from "@mui/material";
+import { Box, Typography, Stack, Alert } from "@mui/material";
 import Side_menu from "../../components/Side_menu";
 import Bar from "../../components/Bar";
-import { BoxColumn, FlexBox, StyledBox } from "../../components/Component";
-import React from "react";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { FlexBox, StyledBox } from "../../components/Component";
+import { SelectChangeEvent } from "@mui/material/Select";
 import SelectInv from "../../components/SelectInv";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import _ from "lodash";
 
 export default function Config_inv() {
-  const [ano, setAno] = React.useState("");
-  const [mes, setMes] = React.useState("");
-  const [anofinal, setAnofinal] = React.useState("");
-  const [mesfinal, setMesfinal] = React.useState("");
-
+  const [ano, setAno] = useState("");
+  const [mes, setMes] = useState("");
+  const [anofinal, setAnofinal] = useState("");
+  const [mesfinal, setMesfinal] = useState("");
+  const [mesatual, setMesatual] = useState<number>();
+  const [alert, setAlert] = useState<boolean | null>(null);
+  const [messagealert, setMessagealert] = useState<string>("");
   //criar busca no banco para o último inventário
-  const ultimo = "2022";
-
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/justyears")
+      .then((resp) => {
+        let anos: Array<number> = [];
+        resp.data?.map((item: any) => anos.push(parseInt(item.year)));
+        setMesatual(_.max(anos));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [alert]);
+  //captura o ano de abertura
   const handleChange = (event: SelectChangeEvent) => {
     setAno(event.target.value);
   };
+  //caputra o mês de abertura
   const handleChangeMes = (event: SelectChangeEvent) => {
     setMes(event.target.value);
   };
+  //captura o ano de encerramento
   const handleChangeFinal = (event: SelectChangeEvent) => {
     setAnofinal(event.target.value);
   };
+  //captura o mês de encerramento
   const handleChangeMesFinal = (event: SelectChangeEvent) => {
     setMesfinal(event.target.value);
+  };
+  //função do botão abrir inventário
+  const handleButtonCreate = () => {
+    axios
+      .post("http://localhost:3000/years", {
+        open: `${ano}-${mes}-01`,
+        close: `${anofinal}-${mesfinal}-01`,
+        year: ano,
+      })
+      .then((resp) => {
+        setMessagealert("Inventário criado com sucesso!!!");
+        setAlert(true);
+      })
+      .catch((error) => {
+        setMessagealert(
+          "Não foi possível abrir esses inventário, verifique se todos os campos foram preenchidos"
+        );
+        setAlert(false);
+      });
   };
 
   return (
@@ -58,6 +89,7 @@ export default function Config_inv() {
                   handleChangeFinal={handleChangeFinal}
                   handleChangeMes={handleChangeMes}
                   handleChangeMesFinal={handleChangeMesFinal}
+                  onClick={handleButtonCreate}
                 />
               </FlexBox>
               <Typography
@@ -72,7 +104,19 @@ export default function Config_inv() {
                 <span
                   style={{ background: "#0FEDFB", padding: 4, borderRadius: 6 }}
                 >
-                  {ultimo}
+                  {mesatual}
+                </span>
+                <span>
+                  {alert === true && (
+                    <Stack>
+                      <Alert severity="success">{messagealert}</Alert>
+                    </Stack>
+                  )}
+                  {alert === false && (
+                    <Stack>
+                      <Alert severity="error">{messagealert}</Alert>
+                    </Stack>
+                  )}
                 </span>
               </Typography>
             </StyledBox>

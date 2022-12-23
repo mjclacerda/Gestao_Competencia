@@ -1,3 +1,5 @@
+//Função para gerar o ano atual mais o próximo ano
 export function GenerateRange(n: number) {
-  return Array.from({ length: n }, (_, i) => i + 2022);
+  const date = new Date();
+  return Array.from({ length: n }, (_, i) => i + date.getFullYear());
 }

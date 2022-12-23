@@ -1,10 +1,13 @@
 import YearRepository from "../repositories/years.repository.js";
 
-async function insertYear(year) {
-  if (year) {
-    return await YearRepository.insertYear(year);
+async function insertYear(yearbody) {
+  const year = await YearRepository.getYearByName(yearbody);
+  if (!year[0]) {
+    return await YearRepository.insertYear(yearbody);
   }
-  throw new Error("Não foi possível abrir esse inventário");
+  throw new Error(
+    "Não foi possível abrir esse inventário pois esse ano já foi cadastrado"
+  );
 }
 
 async function getYears() {
@@ -12,7 +15,15 @@ async function getYears() {
   if (years[0]) {
     return years;
   }
-  throw new Error("Não há inventários cadastrados");
+  throw new Error("Não há anos cadastrados");
+}
+
+async function getJustYears() {
+  const years = await YearRepository.getJustYears();
+  if (years[0]) {
+    return years;
+  }
+  throw new Error("Não há anos cadastrados");
 }
 
 async function getYearByName(yearbody) {
@@ -20,7 +31,7 @@ async function getYearByName(yearbody) {
   if (year[0]) {
     return year;
   }
-  throw new Error("Esse inventário não está cadastrados");
+  throw new Error("Esse ano não está cadastrado");
 }
 
 async function getYear(id) {
@@ -43,6 +54,7 @@ export default {
   insertYear,
   getYears,
   getYear,
+  getJustYears,
   getYearByName,
   updateYear,
 };

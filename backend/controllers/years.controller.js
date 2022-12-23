@@ -3,7 +3,7 @@ import YearService from "../services/years.service.js";
 async function insertYear(req, res, next) {
   try {
     let inventario = req.body;
-    if (!inventario.open || !inventario.close) {
+    if (!inventario.open || !inventario.close || !inventario.year) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }
     res.send(await YearService.insertYear(inventario));
@@ -16,9 +16,9 @@ async function insertYear(req, res, next) {
 async function getYears(req, res, next) {
   try {
     let yearbody = req.body;
-    if (yearbody.close) {
+    if (yearbody.year) {
       try {
-        res.send(await YearService.getYearByName(yearbody.close));
+        res.send(await YearService.getYearByName(yearbody));
         logger.info("GET /year pelo nome");
       } catch (err) {
         next(err);
@@ -26,6 +26,15 @@ async function getYears(req, res, next) {
     }
     res.send(await YearService.getYears());
     logger.info("GET /year");
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function getJustYears(req, res, next) {
+  try {
+    res.send(await YearService.getJustYears());
+    logger.info("GET /justyear");
   } catch (err) {
     next(err);
   }
@@ -57,5 +66,6 @@ export default {
   insertYear,
   getYears,
   getYear,
+  getJustYears,
   updateYear,
 };
