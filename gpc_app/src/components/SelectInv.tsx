@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { v4 as uuid } from "uuid";
 import { BootstrapButton, BoxColumn, FlexBox } from "./Component";
-import { GenerateRange } from "./GenerateRange";
+import { GenerateRange } from "../assets/GenerateRange";
 
 interface ISelect {
   ano: number | string;
@@ -18,7 +18,10 @@ interface ISelect {
   handleChangeMes: any;
   handleChangeFinal: any;
   handleChangeMesFinal: any;
-  onClick: any;
+  showbuttons: number;
+  create: () => void;
+  update: () => void;
+  cleaning: () => void;
 }
 
 export const meses = [
@@ -37,7 +40,7 @@ export const meses = [
 ];
 
 //Gerador de anos para o menu ano
-const anos = GenerateRange(2);
+const anos = GenerateRange(3);
 
 export default function SelectInv({
   ano,
@@ -48,7 +51,10 @@ export default function SelectInv({
   mesf,
   handleChangeMes,
   handleChangeMesFinal,
-  onClick,
+  create,
+  update,
+  cleaning,
+  showbuttons,
 }: ISelect) {
   return (
     <BoxColumn style={{ alignItems: "end", margin: "60px" }}>
@@ -164,24 +170,55 @@ export default function SelectInv({
           </Select>
         </FormControl>
       </FlexBox>
-      <FlexBox>
-        <BootstrapButton
-          onClick={onClick}
-          style={{ margin: 3, background: "#0FEDFB", color: "#000000" }}
-        >
-          Abrir
-        </BootstrapButton>
-        <BootstrapButton
-          style={{
-            margin: 3,
-            marginRight: -3,
-            background: "#0FEDFB",
-            color: "#000000",
-          }}
-        >
-          Alterar
-        </BootstrapButton>
-      </FlexBox>
+      {showbuttons ? (
+        <FlexBox>
+          <BootstrapButton
+            onClick={create}
+            style={{ margin: 3, background: "#0FEDFB", color: "#000000" }}
+          >
+            Abrir
+          </BootstrapButton>
+          <BootstrapButton
+            onClick={update}
+            style={{
+              margin: 3,
+              background: "#0FEDFB",
+              color: "#000000",
+            }}
+          >
+            Alterar
+          </BootstrapButton>
+          <BootstrapButton
+            onClick={cleaning}
+            style={{
+              margin: 3,
+              background: "#0FEDFB",
+              color: "#000000",
+            }}
+          >
+            Limpar
+          </BootstrapButton>
+        </FlexBox>
+      ) : (
+        <FlexBox>
+          <BootstrapButton
+            onClick={create}
+            style={{ margin: 3, background: "#0FEDFB", color: "#000000" }}
+          >
+            Abrir
+          </BootstrapButton>
+          <BootstrapButton
+            onClick={cleaning}
+            style={{
+              margin: 3,
+              background: "#0FEDFB",
+              color: "#000000",
+            }}
+          >
+            Limpar
+          </BootstrapButton>
+        </FlexBox>
+      )}
     </BoxColumn>
   );
 }

@@ -14,7 +14,7 @@ async function insertYear(year) {
 
 async function getYears() {
   try {
-    return await Year.findAll();
+    return await Year.findAll({ order: [["year", "DESC"]] });
   } catch (err) {
     throw err;
   }

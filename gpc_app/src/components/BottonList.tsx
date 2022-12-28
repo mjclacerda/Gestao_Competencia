@@ -54,6 +54,37 @@ export function BottonListT({ list, clic }: IBottonDesc) {
   );
 }
 
+export function BottonInvList({ list, clic }: IBottonDesc) {
+  return (
+    <div
+      key={uuid()}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        maxHeight: "800px",
+        overflow: "auto",
+      }}
+    >
+      {list?.map((year: any) => (
+        <BootstrapButton
+          key={uuid()}
+          style={{
+            margin: 2,
+            fontSize: 16,
+            color: "black",
+            minWidth: 100,
+            background: "#0FEDFB",
+          }}
+          value={year.yearId}
+          onClick={clic}
+        >
+          {year.year}
+        </BootstrapButton>
+      ))}
+    </div>
+  );
+}
+
 export function BottonList({ list, clic }: IBottonDesc) {
   return (
     <div key={uuid()} style={{ display: "block" }}>
