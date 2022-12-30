@@ -6838,3 +6838,24 @@
 2022-12-28T01:00:25.987Z [gpc-api] info: GET /tipologia
 2022-12-28T01:00:25.988Z [gpc-api] info: GET /competencias
 2022-12-28T01:00:26.957Z [gpc-api] info: GET /competencias por tipologia/:id
+2022-12-29T18:29:35.323Z [gpc-api] info: API Started!
+2022-12-29T18:29:35.329Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-29T18:30:17.354Z [gpc-api] info: GET /competencias
+2022-12-29T18:30:17.357Z [gpc-api] info: GET /tipologia
+2022-12-29T18:30:17.362Z [gpc-api] info: GET /competencias
+2022-12-29T18:30:17.364Z [gpc-api] info: GET /tipologia
+2022-12-29T18:30:21.220Z [gpc-api] info: GET /year
+2022-12-29T18:30:21.233Z [gpc-api] info: GET /year
+2022-12-29T18:30:25.971Z [gpc-api] info: GET /year/:id
+2022-12-29T19:00:23.263Z [gpc-api] info: GET /year
+2022-12-29T19:00:23.268Z [gpc-api] info: GET /year
+2022-12-29T22:49:07.574Z [gpc-api] info: API Started!
+2022-12-29T22:49:07.584Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2022-12-29T22:50:26.140Z [gpc-api] info: GET /tipologia
+2022-12-29T22:50:26.144Z [gpc-api] info: GET /competencias
+2022-12-29T22:50:26.150Z [gpc-api] info: GET /tipologia
+2022-12-29T22:50:26.152Z [gpc-api] info: GET /competencias
+2022-12-30T01:13:04.265Z [gpc-api] info: GET /tipologia
+2022-12-30T01:13:04.266Z [gpc-api] info: GET /competencias
+2022-12-30T01:13:04.270Z [gpc-api] info: GET /tipologia
+2022-12-30T01:13:04.272Z [gpc-api] info: GET /competencias
