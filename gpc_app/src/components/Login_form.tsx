@@ -1,16 +1,15 @@
 import { Box, Avatar, TextField, Typography } from "@mui/material";
-import { Footnote, BootstrapButton } from "./Component";
+import { Footnote, BootstrapButton, FlexBox, BoxColumn } from "./Component";
 
 export default function login_form() {
   return (
-    <div>
-      <Box
-        display="flex"
-        sx={{
+    <BoxColumn>
+      <FlexBox
+        style={{
           backgroundImage: "url(/Challenge_5.jpg)",
         }}
       >
-        <Box flex="0.63" height="850px">
+        <Box flex="0.60" sx={{ height: "930px" }}>
           <Box
             display="flex"
             flexDirection="column"
@@ -24,23 +23,21 @@ export default function login_form() {
               variant="square"
             />
             <Footnote variant="h1" gutterBottom bgcolor="#e1e5e9">
-              SISTEMA ELETRÔNICO DE
+              SKILLMANAGER
             </Footnote>
             <Footnote variant="h1" gutterBottom bgcolor="#e1e5e9">
-              GESTÃO DE PESSOAS POR COMPETÊNCIA
+              GESTÃO POR COMPETÊNCIA
             </Footnote>
           </Box>
         </Box>
         <Box
-          flex="0.40"
+          flex="0.30"
           flexDirection="column"
           sx={{
             maxWidth: 450,
-            minWidth: 250,
+            minWidth: 240,
             marginTop: 25,
             borderRadius: 4,
-            marginRight: 15,
-            marginLeft: 20,
           }}
         >
           <Box>
@@ -80,8 +77,8 @@ export default function login_form() {
             <BootstrapButton>Entrar</BootstrapButton>
           </Box>
         </Box>
-      </Box>
-      <Box display="flex" flexDirection="row" sx={{ bgcolor: "#d9d9d9" }}>
+      </FlexBox>
+      <Box display="flex" flexDirection="row" sx={{ bgcolor: "#ffffff" }}>
         <Box flex="0.25"></Box>
         <Box display="flex" flexDirection="column" sx={{ marginBottom: 10 }}>
           <Avatar
@@ -135,6 +132,6 @@ export default function login_form() {
         </Box>
         <Box flex="0.25"></Box>
       </Box>
-    </div>
+    </BoxColumn>
   );
 }

@@ -16,9 +16,8 @@ import { Self_Ask } from "../../components/Self_Ask";
 import { useState, useEffect } from "react";
 import { useFetch } from "../Backend_Integration";
 import { IUser } from "../../components/Interfaces";
-
-//Buscar o nome do avaliado no banco
-const evaluetedname = "Maria Janete Lacerda";
+import axios from "axios";
+import _ from "lodash";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -32,19 +31,48 @@ const MenuProps = {
 };
 
 export default function Self_Evaluation() {
-  const [bossName, setBossName] = useState<string[]>([]);
+  const [evalName, setEvalName] = useState("Maria Janete Lacerda"); //Buscar o nome do avaliado pelo login
+  const [userId, setUserId] = useState<number>(2); //rever essa variável depois que criar a autenticação pois ela deve armazenar o id do usuário que está logado
+  const [bossId, setBossId] = useState<string[] | string>("");
+  const [lastInv, setLastInv] = useState(""); //dados do último inventário
+  const [resp, setResp] = useState();
+  //Busca no banco o último inventário
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/years")
+      .then((resp) => {
+        setLastInv(resp.data[0].year);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-  let competencias = useFetch("http://localhost:3000/competences");
-  let users: any = useFetch("http://localhost:3000/users");
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/evaluations")
+      .then((resp) => {
+        const data: Array<object> | any = _.filter(resp.data, {
+          userId,
+          year: String(lastInv),
+          formId: 1,
+        });
+        setResp(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [lastInv]);
+  console.log(resp);
 
-  const handleChange = (event: SelectChangeEvent<typeof bossName>) => {
+  let competencias = useFetch("http://localhost:3000/competences"); //retorna todas a competências ativas;
+  let users: any = useFetch("http://localhost:3000/users"); //retorna todos o usuários;
+
+  const handleChange = (event: SelectChangeEvent<typeof bossId>) => {
     const {
       target: { value },
     } = event;
-    setBossName(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
+    setBossId(typeof value === "string" ? value.split(",") : value);
   };
   return (
     <>
@@ -67,7 +95,7 @@ export default function Self_Evaluation() {
                   fontWeight: "bold",
                 }}
               >
-                Avaliado: {evaluetedname}
+                Avaliado: {evalName}
               </Typography>
               <FormControl sx={{ marginLeft: "10vw", width: 300 }}>
                 <InputLabel id="demo-multiple-name-label">
@@ -76,7 +104,7 @@ export default function Self_Evaluation() {
                 <Select
                   labelId="demo-multiple-name-label"
                   id="boss_name"
-                  value={bossName}
+                  value={bossId}
                   onChange={handleChange}
                   input={<OutlinedInput label="Chefe Imediato" />}
                   MenuProps={MenuProps}
@@ -84,7 +112,7 @@ export default function Self_Evaluation() {
                 >
                   {users.data &&
                     users.data.map((name: IUser) => (
-                      <MenuItem key={name.userId} value={name.name}>
+                      <MenuItem key={name.userId} value={name.userId}>
                         {name.name}
                       </MenuItem>
                     ))}

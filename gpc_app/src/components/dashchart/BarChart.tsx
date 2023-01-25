@@ -73,9 +73,9 @@ export function BarChart() {
   return (
     <BoxColumn
       style={{
-        minWidth: 500,
-        marginTop: "10vh",
-        marginLeft: "10vw",
+        maxWidth: "30vw",
+        marginTop: "3vh",
+        marginLeft: "3vw",
       }}
     >
       <Bar options={options} data={data} />

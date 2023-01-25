@@ -62,5 +62,9 @@ export const data = {
 };
 
 export function HistoryChart() {
-  return <Line options={options} data={data} />;
+  return (
+    <div style={{ marginTop: "3vh", marginLeft: "3vw", maxWidth: "30vw" }}>
+      <Line options={options} data={data} />
+    </div>
+  );
 }

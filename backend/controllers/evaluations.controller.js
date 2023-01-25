@@ -49,6 +49,9 @@ async function getEvaluations(req, res, next) {
           "Se você preencheu o userId, não deve preenche nem o bossId, nem o teamId"
         );
       }
+      if (avaliacao.formId) {
+        res.send(await EvaluationService.getEvalUserYearForm(avaliacao));
+      }
       res.send(await EvaluationService.getEvalUserYear(avaliacao));
       logger.info("GET /avaliacoes - userYear");
     }

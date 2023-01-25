@@ -70,6 +70,18 @@ async function getEvalUserYear(evaluation) {
   );
 }
 
+async function getEvalUserYearForm(evaluation) {
+  const evaluations = await EvaluationRepository.getEvalUserYearForm(
+    evaluation
+  );
+  if (evaluations[0]) {
+    return evaluations;
+  }
+  throw new Error(
+    "Não há formulário cadastradas para esse usuário no ano informado"
+  );
+}
+
 async function getEvalBossYear(evaluation) {
   const evaluations = await EvaluationRepository.getEvalBossYear(evaluation);
   if (evaluations[0]) {
@@ -102,6 +114,7 @@ export default {
   insertEvaluation,
   getEvaluations,
   getEvalUserYear,
+  getEvalUserYearForm,
   getEvalBossYear,
   getEvalTeamYear,
   getEvaluation,

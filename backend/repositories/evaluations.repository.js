@@ -28,6 +28,20 @@ async function getEvalUserYear(evaluation) {
   }
 }
 
+async function getEvalUserYearForm(evaluation) {
+  try {
+    return await Evaluation.findAll({
+      where: {
+        userId: evaluation.userId,
+        year: String(evaluation.year),
+        formId: evaluation.formId,
+      },
+    });
+  } catch (err) {
+    throw err;
+  }
+}
+
 async function getEvalBossYear(evaluation) {
   try {
     return await Evaluation.findAll({
@@ -61,6 +75,7 @@ export default {
   getEvaluations,
   getEvaluation,
   getEvalUserYear,
+  getEvalUserYearForm,
   getEvalBossYear,
   getEvalTeamYear,
 };
