@@ -5,6 +5,8 @@ import {
   FormControlLabel,
   RadioGroup,
   Radio,
+  Stack,
+  Pagination,
 } from "@mui/material";
 import { v4 as uuid } from "uuid";
 
@@ -17,9 +19,29 @@ export interface ISelf_Ask {
         description: string;
       }>
     | any;
+  chooseimp: any;
+  choosedom: any;
+  importance: number | string;
+  domain: number | string;
+  enviar: any;
+  page: number;
+  currentPage: number;
+  handlePagination: any;
+  answered: Array<number>;
 }
 
-export function Self_Ask({ list }: ISelf_Ask) {
+export function Self_Ask({
+  list,
+  chooseimp,
+  importance,
+  choosedom,
+  domain,
+  enviar,
+  page,
+  currentPage,
+  handlePagination,
+  answered,
+}: ISelf_Ask) {
   return (
     <BoxColumn style={{ width: "87vw", overflow: "auto" }}>
       {list?.map((item: any) => (
@@ -79,7 +101,9 @@ export function Self_Ask({ list }: ISelf_Ask) {
               <RadioGroup
                 row
                 aria-labelledby={item.competenceId}
-                name="importance_level"
+                name={String(item.competenceId)}
+                onChange={chooseimp}
+                value={importance}
               >
                 <FormControlLabel
                   value="1"
@@ -121,6 +145,8 @@ export function Self_Ask({ list }: ISelf_Ask) {
                 row
                 aria-labelledby={item.competenceId}
                 name="domain_level"
+                onChange={choosedom}
+                value={domain}
               >
                 <FormControlLabel
                   value="1"
@@ -155,13 +181,42 @@ export function Self_Ask({ list }: ISelf_Ask) {
               </RadioGroup>
             </FormControl>
           </BoxColumn>
+          {answered.includes(item.competenceId) ? (
+            <BootstrapButton
+              style={{
+                width: "100px",
+                alignSelf: "start",
+                marginBottom: "5vh",
+                background: "green",
+              }}
+              onClick={enviar}
+              disabled
+            >
+              Enviada
+            </BootstrapButton>
+          ) : (
+            <BootstrapButton
+              style={{
+                width: "100px",
+                alignSelf: "start",
+                marginBottom: "5vh",
+              }}
+              onClick={enviar}
+            >
+              Enviar
+            </BootstrapButton>
+          )}
         </BoxColumn>
       ))}
-      <BootstrapButton
-        style={{ width: "100px", alignSelf: "center", marginBottom: "5vh" }}
-      >
-        Enviar
-      </BootstrapButton>
+      <Stack spacing={0} sx={{ marginLeft: "20vw" }}>
+        <Pagination
+          count={page}
+          page={currentPage}
+          siblingCount={0}
+          boundaryCount={1}
+          onChange={handlePagination}
+        />
+      </Stack>
     </BoxColumn>
   );
 }
