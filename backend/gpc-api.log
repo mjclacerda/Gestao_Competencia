@@ -15253,3 +15253,29 @@
 2023-02-01T02:20:17.722Z [gpc-api] info: GET /avaliacoes
 2023-02-01T02:20:17.783Z [gpc-api] info: GET /avaliacoes
 2023-02-01T02:20:17.784Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:08.626Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:08.627Z [gpc-api] info: GET /year
+2023-02-01T02:21:08.628Z [gpc-api] info: GET /competencias
+2023-02-01T02:21:08.630Z [gpc-api] info: GET /forms
+2023-02-01T02:21:08.631Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:08.632Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:08.634Z [gpc-api] info: GET /year
+2023-02-01T02:21:08.634Z [gpc-api] info: GET /competencias
+2023-02-01T02:21:08.635Z [gpc-api] info: GET /forms
+2023-02-01T02:21:08.635Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:08.648Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:08.724Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:08.727Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:12.165Z [gpc-api] info: GET /year
+2023-02-01T02:21:12.166Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:12.168Z [gpc-api] info: GET /competencias
+2023-02-01T02:21:12.179Z [gpc-api] info: GET /forms
+2023-02-01T02:21:12.181Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:12.187Z [gpc-api] info: GET /competencias
+2023-02-01T02:21:12.189Z [gpc-api] info: GET /year
+2023-02-01T02:21:12.190Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:12.194Z [gpc-api] info: GET /forms
+2023-02-01T02:21:12.199Z [gpc-api] info: GET /questões por usuário
+2023-02-01T02:21:12.224Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:12.296Z [gpc-api] info: GET /avaliacoes
+2023-02-01T02:21:12.298Z [gpc-api] info: GET /questões por usuário
