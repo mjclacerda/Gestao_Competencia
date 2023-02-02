@@ -1,5 +1,5 @@
 
-![image](https://user-images.githubusercontent.com/55890755/216442121-5fe2c949-1b81-4509-a0b3-76646eada8cf.png)
+![SkillManager](https://user-images.githubusercontent.com/55890755/216445211-2612aac5-cbee-4ff5-a6f3-b98cdc6e6b53.png)
 <p>
 #SkillManager 1.0
 <div align="justify">
