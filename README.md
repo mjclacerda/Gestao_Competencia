@@ -1,3 +1,6 @@
+
+![image](https://user-images.githubusercontent.com/55890755/216442121-5fe2c949-1b81-4509-a0b3-76646eada8cf.png)
+<p>
 #SkillManager 1.0
 <div align="justify">
 <h3>Aplicação web para Gestão por Competência</h3>
