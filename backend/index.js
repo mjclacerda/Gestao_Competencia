@@ -14,8 +14,11 @@ import compforTypRouter from "./routes/compfortyp.router.js";
 import questionsUserRouter from "./routes/questionsforuser.js";
 import competencesHistoryRouter from "./routes/comphistory.router.js";
 import forms from "./repositories/forms.repository.js";
+import permissions from "./repositories/permissions.repository.js";
+import permissionsRouter from "./routes/permissions.router.js";
 import yearsRouter from "./routes/years.router.js";
 import justyearsRouter from "./routes/yearsjustyear.router.js";
+import sessionRouter from "./routes/session.router.js";
 
 const app = express();
 
@@ -45,11 +48,13 @@ app.use("/competencesfortypology", compforTypRouter);
 app.use("/competenceshistory", competencesHistoryRouter);
 app.use("/evaluations", evaluationsRouter);
 app.use("/forms", formsRouter);
+app.use("/permissions", permissionsRouter);
 app.use("/questions", questionRouter);
 app.use("/questionsuser", questionsUserRouter);
 app.use("/users", usersRouter);
 app.use("/years", yearsRouter);
 app.use("/justyears", justyearsRouter);
+app.use("/sessions", sessionRouter);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 //Tratamento de erros
@@ -70,6 +75,16 @@ async function verifyForms() {
   }
 }
 verifyForms();
+
+//Criação das permissions padrões
+async function verifyPermissions() {
+  try {
+    await permissions.standardPermissions();
+  } catch (err) {
+    logger.error(`${err} - Permissões já criadas`);
+  }
+}
+verifyPermissions();
 
 //Definição da porta da API
 app.listen(3000, () => {

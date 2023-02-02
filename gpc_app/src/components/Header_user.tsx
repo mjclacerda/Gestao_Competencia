@@ -74,7 +74,7 @@ export default function Header_user() {
             "aria-labelledby": "basic-button",
           }}
         >
-          <Link to="/login">
+          <Link to="/">
             <MenuItem onClick={handleClose} style={linkStyle}>
               Logout
             </MenuItem>

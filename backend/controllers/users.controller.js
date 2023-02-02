@@ -3,7 +3,7 @@ import UserService from "../services/users.service.js";
 async function insertUser(req, res, next) {
   try {
     let usuario = req.body;
-    if (!usuario.name || !usuario.matricula) {
+    if (!usuario.name || !usuario.username || !usuario.password) {
       throw new Error("Há campos obrigatórios não preenchidos");
     }
     res.send(await UserService.insertUser(usuario));

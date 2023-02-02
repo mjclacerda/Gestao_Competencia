@@ -15279,3 +15279,779 @@
 2023-02-01T02:21:12.224Z [gpc-api] info: GET /avaliacoes
 2023-02-01T02:21:12.296Z [gpc-api] info: GET /avaliacoes
 2023-02-01T02:21:12.298Z [gpc-api] info: GET /questões por usuário
+2023-02-01T12:57:37.063Z [gpc-api] info: API Started!
+2023-02-01T12:57:37.076Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T14:49:09.789Z [gpc-api] info: API Started!
+2023-02-01T14:49:09.794Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T14:51:09.971Z [gpc-api] info: API Started!
+2023-02-01T14:51:09.975Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T14:51:41.803Z [gpc-api] info: GET /tipologia
+2023-02-01T14:51:41.806Z [gpc-api] info: GET /competencias
+2023-02-01T14:51:41.810Z [gpc-api] info: GET /tipologia
+2023-02-01T14:51:41.812Z [gpc-api] info: GET /competencias
+2023-02-01T14:51:53.330Z [gpc-api] info: GET /competencias
+2023-02-01T14:51:53.363Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:51:53.369Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:51:53.370Z [gpc-api] info: GET /competencias
+2023-02-01T14:51:53.372Z [gpc-api] info: GET /forms
+2023-02-01T14:51:53.373Z [gpc-api] info: GET /year
+2023-02-01T14:51:53.375Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:51:53.378Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:51:53.383Z [gpc-api] info: GET /year
+2023-02-01T14:51:53.384Z [gpc-api] info: GET /forms
+2023-02-01T14:51:53.399Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:51:53.459Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:51:53.462Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:54:02.906Z [gpc-api] error: POST  - Unexpected number in JSON at position 63
+2023-02-01T14:54:24.109Z [gpc-api] error: POST  - Unexpected number in JSON at position 67
+2023-02-01T14:54:44.148Z [gpc-api] error: POST  - Unexpected token } in JSON at position 52
+2023-02-01T14:54:54.973Z [gpc-api] error: POST  - Unexpected token } in JSON at position 49
+2023-02-01T14:55:12.773Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2023-02-01T14:56:15.734Z [gpc-api] info: POST /tipologia - {"name":"Maria Lacerda","matricula":50225,"password":"0000"}
+2023-02-01T14:56:32.210Z [gpc-api] info: POST /tipologia - {"name":"admin","matricula":50225,"password":"admin"}
+2023-02-01T14:56:50.237Z [gpc-api] info: POST /tipologia - {"name":"Pedro Assis","matricula":50225,"password":"0000"}
+2023-02-01T14:56:56.038Z [gpc-api] info: GET /year
+2023-02-01T14:56:56.040Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:56:56.042Z [gpc-api] info: GET /competencias
+2023-02-01T14:56:56.047Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:56:56.152Z [gpc-api] info: GET /year
+2023-02-01T14:56:56.155Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:56:56.157Z [gpc-api] info: GET /forms
+2023-02-01T14:56:56.159Z [gpc-api] info: GET /competencias
+2023-02-01T14:56:56.160Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:56:56.162Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:56:56.163Z [gpc-api] info: GET /forms
+2023-02-01T14:56:56.229Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:56:56.230Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:57:10.815Z [gpc-api] info: POST /tipologia - {"name":"Jaciara Silva","matricula":50225,"password":"0000"}
+2023-02-01T14:57:20.085Z [gpc-api] info: POST /tipologia - {"name":"Augusta Abreu","matricula":50225,"password":"0000"}
+2023-02-01T14:57:22.516Z [gpc-api] info: GET /year
+2023-02-01T14:57:22.518Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:57:22.520Z [gpc-api] info: GET /competencias
+2023-02-01T14:57:22.523Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:57:22.619Z [gpc-api] info: GET /year
+2023-02-01T14:57:22.648Z [gpc-api] info: GET /forms
+2023-02-01T14:57:22.650Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:57:22.652Z [gpc-api] info: GET /competencias
+2023-02-01T14:57:22.654Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:57:22.657Z [gpc-api] info: GET /forms
+2023-02-01T14:57:22.658Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:57:22.715Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:57:22.717Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:57:35.445Z [gpc-api] info: POST /tipologia - {"name":"Jefferson Santos","matricula":50225,"password":"0000"}
+2023-02-01T14:57:56.063Z [gpc-api] info: POST /tipologia - {"name":"Pedro Silva","matricula":50225,"password":"0000"}
+2023-02-01T14:58:09.750Z [gpc-api] info: POST /tipologia - {"name":"Mariza Costa","matricula":50225,"password":"0000"}
+2023-02-01T14:58:19.557Z [gpc-api] info: GET /year
+2023-02-01T14:58:19.558Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:58:19.561Z [gpc-api] info: GET /competencias
+2023-02-01T14:58:19.567Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:58:19.679Z [gpc-api] info: GET /year
+2023-02-01T14:58:19.682Z [gpc-api] info: GET /forms
+2023-02-01T14:58:19.683Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:58:19.686Z [gpc-api] info: GET /competencias
+2023-02-01T14:58:19.687Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:58:19.690Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:58:19.691Z [gpc-api] info: GET /forms
+2023-02-01T14:58:19.749Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:58:19.752Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:59:00.597Z [gpc-api] info: POST /tipologia - {"name":"Roberto Magalhães","matricula":50225,"password":"0000"}
+2023-02-01T14:59:13.736Z [gpc-api] info: POST /tipologia - {"name":"João Esteves","matricula":50225,"password":"0000"}
+2023-02-01T14:59:24.584Z [gpc-api] info: POST /tipologia - {"name":"Mateus Lacerda","matricula":50225,"password":"0000"}
+2023-02-01T14:59:43.453Z [gpc-api] info: POST /tipologia - {"name":"Antônio Feliciano","matricula":50225,"password":"0000"}
+2023-02-01T14:59:49.825Z [gpc-api] info: GET /year
+2023-02-01T14:59:49.827Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:59:49.829Z [gpc-api] info: GET /competencias
+2023-02-01T14:59:49.834Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:59:49.955Z [gpc-api] info: GET /year
+2023-02-01T14:59:49.957Z [gpc-api] info: GET /forms
+2023-02-01T14:59:49.959Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:59:49.960Z [gpc-api] info: GET /competencias
+2023-02-01T14:59:49.962Z [gpc-api] info: GET /questões por usuário
+2023-02-01T14:59:49.964Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:59:49.966Z [gpc-api] info: GET /forms
+2023-02-01T14:59:50.025Z [gpc-api] info: GET /avaliacoes
+2023-02-01T14:59:50.026Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:00:26.817Z [gpc-api] info: GET /forms
+2023-02-01T15:00:40.926Z [gpc-api] error: GET  - Cannot set headers after they are sent to the client
+2023-02-01T15:05:31.225Z [gpc-api] info: API Started!
+2023-02-01T15:05:31.229Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:05:53.079Z [gpc-api] error: POST  - notNull Violation: users.password cannot be null
+2023-02-01T15:06:20.296Z [gpc-api] info: API Started!
+2023-02-01T15:06:20.301Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:06:21.285Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2023-02-01T15:06:27.500Z [gpc-api] info: POST /tipologia - {"name":"Antônio Feliciano","matricula":50225,"password":"0000"}
+2023-02-01T15:12:51.879Z [gpc-api] info: API Started!
+2023-02-01T15:12:51.883Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:13:26.716Z [gpc-api] info: API Started!
+2023-02-01T15:13:26.721Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:13:43.442Z [gpc-api] error: POST  - Há campos obrigatórios não preenchidos
+2023-02-01T15:14:27.110Z [gpc-api] error: POST  - column "username" of relation "users" does not exist
+2023-02-01T15:14:57.292Z [gpc-api] info: API Started!
+2023-02-01T15:14:57.296Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:16:06.193Z [gpc-api] info: POST /tipologia - {"name":"admin","username":"admin","password":"admin"}
+2023-02-01T15:16:17.608Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:16:17.610Z [gpc-api] info: GET /year
+2023-02-01T15:16:17.613Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:16:17.616Z [gpc-api] info: GET /competencias
+2023-02-01T15:16:17.618Z [gpc-api] info: GET /forms
+2023-02-01T15:16:17.624Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:16:17.626Z [gpc-api] info: GET /year
+2023-02-01T15:16:17.628Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:16:17.630Z [gpc-api] info: GET /competencias
+2023-02-01T15:16:17.632Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:16:17.633Z [gpc-api] info: GET /forms
+2023-02-01T15:16:17.664Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:16:17.666Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:16:39.684Z [gpc-api] error: POST  - Validation error
+2023-02-01T15:19:58.865Z [gpc-api] info: POST /tipologia - {"name":"Maria Lacerda","username":"Maria","password":"0000"}
+2023-02-01T15:20:13.615Z [gpc-api] info: POST /tipologia - {"name":"João Guilherme","username":"João","password":"0000"}
+2023-02-01T15:20:26.123Z [gpc-api] error: POST  - Validation error
+2023-02-01T15:20:36.250Z [gpc-api] info: POST /tipologia - {"name":"Gustavo Alves","username":"Gustavo","password":"0000"}
+2023-02-01T15:20:44.902Z [gpc-api] info: GET /year
+2023-02-01T15:20:44.904Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:20:44.907Z [gpc-api] info: GET /competencias
+2023-02-01T15:20:44.911Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:20:45.003Z [gpc-api] info: GET /year
+2023-02-01T15:20:45.031Z [gpc-api] info: GET /forms
+2023-02-01T15:20:45.033Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:20:45.036Z [gpc-api] info: GET /competencias
+2023-02-01T15:20:45.038Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:20:45.042Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:20:45.043Z [gpc-api] info: GET /forms
+2023-02-01T15:20:45.105Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:20:45.107Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:04.309Z [gpc-api] info: POST /tipologia - {"name":"Jacinta Lopes","username":"Jacinta","password":"0000"}
+2023-02-01T15:21:09.027Z [gpc-api] info: GET /year
+2023-02-01T15:21:09.032Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:09.036Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:09.041Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:09.042Z [gpc-api] info: GET /year
+2023-02-01T15:21:09.117Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:09.184Z [gpc-api] info: GET /forms
+2023-02-01T15:21:09.186Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:09.187Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:09.190Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:09.192Z [gpc-api] info: GET /forms
+2023-02-01T15:21:09.260Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:09.261Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:29.903Z [gpc-api] info: POST /tipologia - {"name":"Maria Anunciação","username":"Mariaa","password":"0000"}
+2023-02-01T15:21:32.748Z [gpc-api] info: GET /year
+2023-02-01T15:21:32.749Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:32.751Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:32.755Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:32.869Z [gpc-api] info: GET /year
+2023-02-01T15:21:32.873Z [gpc-api] info: GET /forms
+2023-02-01T15:21:32.875Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:32.878Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:32.880Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:32.885Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:32.886Z [gpc-api] info: GET /forms
+2023-02-01T15:21:32.952Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:32.954Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:55.161Z [gpc-api] info: POST /tipologia - {"name":"Aparecida da Costa","username":"Aparecida","password":"0000"}
+2023-02-01T15:21:57.809Z [gpc-api] info: GET /year
+2023-02-01T15:21:57.811Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:57.816Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:57.820Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:57.821Z [gpc-api] info: GET /year
+2023-02-01T15:21:57.854Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:57.939Z [gpc-api] info: GET /forms
+2023-02-01T15:21:57.941Z [gpc-api] info: GET /competencias
+2023-02-01T15:21:57.944Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:21:57.946Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:57.948Z [gpc-api] info: GET /forms
+2023-02-01T15:21:58.014Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:21:58.016Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:22:32.396Z [gpc-api] info: GET /forms
+2023-02-01T15:22:43.868Z [gpc-api] info: GET /year
+2023-02-01T15:22:43.869Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:22:43.870Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:22:43.872Z [gpc-api] info: GET /competencias
+2023-02-01T15:22:43.872Z [gpc-api] info: GET /forms
+2023-02-01T15:22:43.875Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:22:43.876Z [gpc-api] info: GET /year
+2023-02-01T15:22:43.879Z [gpc-api] info: GET /competencias
+2023-02-01T15:22:43.880Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:22:43.882Z [gpc-api] info: GET /forms
+2023-02-01T15:22:43.891Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:22:43.933Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:22:43.935Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:23:04.954Z [gpc-api] error: GET  - Cannot set headers after they are sent to the client
+2023-02-01T15:24:59.899Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:24:59.901Z [gpc-api] info: GET /year
+2023-02-01T15:24:59.903Z [gpc-api] info: GET /competencias
+2023-02-01T15:24:59.903Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:24:59.904Z [gpc-api] info: GET /forms
+2023-02-01T15:24:59.906Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:24:59.910Z [gpc-api] info: GET /competencias
+2023-02-01T15:24:59.912Z [gpc-api] info: GET /year
+2023-02-01T15:24:59.912Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:24:59.915Z [gpc-api] info: GET /forms
+2023-02-01T15:24:59.924Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:24:59.959Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:24:59.960Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:24.660Z [gpc-api] info: GET /year
+2023-02-01T15:25:24.661Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-01T15:25:24.663Z [gpc-api] info: GET /competencias
+2023-02-01T15:25:24.663Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:25:24.664Z [gpc-api] info: GET /forms
+2023-02-01T15:25:24.667Z [gpc-api] info: GET /year
+2023-02-01T15:25:24.667Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-01T15:25:24.669Z [gpc-api] info: GET /competencias
+2023-02-01T15:25:24.670Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:25:24.671Z [gpc-api] info: GET /forms
+2023-02-01T15:25:24.682Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-01T15:25:30.101Z [gpc-api] info: POST /avaliacao - autoavaliacao - {"formId":1,"userId":6,"bossId":3,"year":"2023"}
+2023-02-01T15:25:30.164Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:30.210Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:25:33.716Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-01T15:25:36.676Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"5","importance_level":"3","domain_level":"1"}
+2023-02-01T15:25:36.756Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:37.902Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:39.140Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"4","importance_level":"3","domain_level":"3"}
+2023-02-01T15:25:39.197Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:40.188Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:41.704Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"7","importance_level":"4","domain_level":"4"}
+2023-02-01T15:25:41.759Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:42.789Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:44.116Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"2","importance_level":"5","domain_level":"4"}
+2023-02-01T15:25:44.168Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:46.105Z [gpc-api] info: GET /year
+2023-02-01T15:25:46.109Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:46.111Z [gpc-api] info: GET /competencias
+2023-02-01T15:25:46.114Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:46.117Z [gpc-api] info: GET /year
+2023-02-01T15:25:46.158Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:46.248Z [gpc-api] info: GET /forms
+2023-02-01T15:25:46.250Z [gpc-api] info: GET /competencias
+2023-02-01T15:25:46.253Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:46.253Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:46.255Z [gpc-api] info: GET /forms
+2023-02-01T15:25:46.337Z [gpc-api] info: GET /avaliacoes
+2023-02-01T15:25:46.339Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:53.672Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:54.872Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"6","importance_level":"4","domain_level":"3"}
+2023-02-01T15:25:54.944Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:56.897Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:25:58.434Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"16","importance_level":"5","domain_level":"4"}
+2023-02-01T15:25:58.465Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:26:00.068Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:26:02.012Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"3","importance_level":"5","domain_level":"5"}
+2023-02-01T15:26:02.077Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:26:03.700Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:26:04.965Z [gpc-api] info: POST /questão - {"evaluationId":33,"competenceId":"8","importance_level":"5","domain_level":"4"}
+2023-02-01T15:26:05.026Z [gpc-api] info: GET /questões por usuário
+2023-02-01T15:31:57.046Z [gpc-api] info: API Started!
+2023-02-01T15:31:57.050Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:32:01.649Z [gpc-api] info: GET /forms
+2023-02-01T15:52:36.253Z [gpc-api] info: API Started!
+2023-02-01T15:52:36.257Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:56:15.421Z [gpc-api] info: API Started!
+2023-02-01T15:56:15.425Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T15:56:36.570Z [gpc-api] info: POST /tipologia - {"name":"Jorge Silva","username":"Jorge","password":"0000"}
+2023-02-01T16:02:36.107Z [gpc-api] info: API Started!
+2023-02-01T16:02:36.112Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T16:02:59.681Z [gpc-api] info: API Started!
+2023-02-01T16:02:59.685Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T16:03:27.878Z [gpc-api] info: POST /tipologia - {"name":"Tiago Ribeiro","username":"Tiago","password":"0000"}
+2023-02-01T16:03:40.822Z [gpc-api] info: API Started!
+2023-02-01T16:03:40.826Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T19:43:47.029Z [gpc-api] info: API Started!
+2023-02-01T19:43:47.034Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T19:59:42.122Z [gpc-api] info: API Started!
+2023-02-01T19:59:42.128Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:00:05.131Z [gpc-api] info: API Started!
+2023-02-01T20:00:05.136Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:02:27.176Z [gpc-api] info: API Started!
+2023-02-01T20:02:27.180Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:05:16.680Z [gpc-api] info: API Started!
+2023-02-01T20:05:16.685Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:10:32.750Z [gpc-api] info: API Started!
+2023-02-01T20:10:32.754Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:11:09.769Z [gpc-api] info: API Started!
+2023-02-01T20:11:09.774Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:11:57.226Z [gpc-api] info: API Started!
+2023-02-01T20:11:57.230Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:14:56.182Z [gpc-api] info: API Started!
+2023-02-01T20:14:56.187Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:15:49.636Z [gpc-api] info: API Started!
+2023-02-01T20:15:49.640Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:16:07.188Z [gpc-api] info: API Started!
+2023-02-01T20:16:07.193Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:18:24.351Z [gpc-api] info: API Started!
+2023-02-01T20:18:24.355Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:18:53.040Z [gpc-api] info: API Started!
+2023-02-01T20:18:53.045Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:32:31.324Z [gpc-api] info: API Started!
+2023-02-01T20:32:31.329Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:33:03.650Z [gpc-api] info: API Started!
+2023-02-01T20:33:03.654Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:38:31.578Z [gpc-api] info: API Started!
+2023-02-01T20:38:31.582Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:38:33.801Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:38:52.617Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:38:53.565Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:38:54.425Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:42:57.297Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:43:04.064Z [gpc-api] info: API Started!
+2023-02-01T20:43:04.069Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:43:05.801Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:45:09.218Z [gpc-api] info: API Started!
+2023-02-01T20:45:09.223Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:45:11.871Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:46:52.537Z [gpc-api] error: POST  - users.findOne is not a function
+2023-02-01T20:47:17.674Z [gpc-api] info: API Started!
+2023-02-01T20:47:17.678Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:47:18.722Z [gpc-api] error: POST  - Illegal arguments: string, undefined
+2023-02-01T20:48:09.065Z [gpc-api] info: API Started!
+2023-02-01T20:48:09.070Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:48:10.117Z [gpc-api] error: POST  - Illegal arguments: string, undefined
+2023-02-01T20:51:26.858Z [gpc-api] info: API Started!
+2023-02-01T20:51:26.863Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:52:23.946Z [gpc-api] info: API Started!
+2023-02-01T20:52:23.951Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:52:53.256Z [gpc-api] info: API Started!
+2023-02-01T20:52:53.261Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:53:25.951Z [gpc-api] info: API Started!
+2023-02-01T20:53:25.958Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:54:41.150Z [gpc-api] info: API Started!
+2023-02-01T20:54:41.154Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:58:03.288Z [gpc-api] info: API Started!
+2023-02-01T20:58:03.293Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:58:58.186Z [gpc-api] info: API Started!
+2023-02-01T20:58:58.191Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T20:59:37.186Z [gpc-api] info: API Started!
+2023-02-01T20:59:37.191Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T21:00:18.857Z [gpc-api] info: API Started!
+2023-02-01T21:00:18.862Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:24:49.691Z [gpc-api] info: API Started!
+2023-02-01T23:24:49.696Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:33:14.856Z [gpc-api] info: API Started!
+2023-02-01T23:33:14.861Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:33:57.322Z [gpc-api] info: API Started!
+2023-02-01T23:33:57.327Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:34:18.467Z [gpc-api] info: API Started!
+2023-02-01T23:34:18.472Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:35:05.144Z [gpc-api] info: API Started!
+2023-02-01T23:35:05.149Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:35:36.160Z [gpc-api] info: API Started!
+2023-02-01T23:35:36.165Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:35:41.902Z [gpc-api] info: API Started!
+2023-02-01T23:35:41.907Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:35:59.675Z [gpc-api] info: API Started!
+2023-02-01T23:35:59.680Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:36:21.874Z [gpc-api] info: API Started!
+2023-02-01T23:36:21.879Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:37:12.061Z [gpc-api] info: API Started!
+2023-02-01T23:37:12.066Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:37:43.252Z [gpc-api] info: API Started!
+2023-02-01T23:37:43.258Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:43:01.872Z [gpc-api] info: API Started!
+2023-02-01T23:43:01.877Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:44:44.403Z [gpc-api] info: API Started!
+2023-02-01T23:44:44.408Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:45:30.080Z [gpc-api] info: GET /forms
+2023-02-01T23:46:30.345Z [gpc-api] info: API Started!
+2023-02-01T23:46:30.349Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:49:00.976Z [gpc-api] info: API Started!
+2023-02-01T23:49:00.981Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:49:02.378Z [gpc-api] info: GET /forms
+2023-02-01T23:49:32.338Z [gpc-api] info: API Started!
+2023-02-01T23:49:32.342Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:50:37.651Z [gpc-api] info: API Started!
+2023-02-01T23:50:37.655Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:51:47.265Z [gpc-api] info: API Started!
+2023-02-01T23:51:47.269Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:53:48.149Z [gpc-api] info: API Started!
+2023-02-01T23:53:48.154Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:54:52.263Z [gpc-api] info: API Started!
+2023-02-01T23:54:52.269Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:55:15.677Z [gpc-api] info: API Started!
+2023-02-01T23:55:15.682Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:55:25.413Z [gpc-api] info: API Started!
+2023-02-01T23:55:25.418Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:55:59.129Z [gpc-api] info: API Started!
+2023-02-01T23:55:59.134Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:57:29.334Z [gpc-api] info: API Started!
+2023-02-01T23:57:29.339Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:58:16.350Z [gpc-api] info: API Started!
+2023-02-01T23:58:16.356Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-01T23:58:28.130Z [gpc-api] info: API Started!
+2023-02-01T23:58:28.134Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:03:08.647Z [gpc-api] info: API Started!
+2023-02-02T00:03:08.652Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:03:42.405Z [gpc-api] info: API Started!
+2023-02-02T00:03:42.410Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:04:33.610Z [gpc-api] info: API Started!
+2023-02-02T00:04:33.615Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:05:24.539Z [gpc-api] info: API Started!
+2023-02-02T00:05:24.543Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:06:23.401Z [gpc-api] info: API Started!
+2023-02-02T00:06:23.405Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:06:32.520Z [gpc-api] info: API Started!
+2023-02-02T00:06:32.525Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:06:47.712Z [gpc-api] info: API Started!
+2023-02-02T00:06:47.717Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:08:56.155Z [gpc-api] info: API Started!
+2023-02-02T00:08:56.159Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:10:11.895Z [gpc-api] info: API Started!
+2023-02-02T00:10:11.900Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:11:50.223Z [gpc-api] info: GET /forms
+2023-02-02T00:12:12.956Z [gpc-api] info: POST /tipologia - {"name":"admin","username":"admin","password":"admin"}
+2023-02-02T00:12:53.564Z [gpc-api] info: API Started!
+2023-02-02T00:12:53.569Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:12:57.927Z [gpc-api] info: GET /forms
+2023-02-02T00:13:02.240Z [gpc-api] info: POST /tipologia - {"name":"admin","username":"admin","password":"admin"}
+2023-02-02T00:14:03.091Z [gpc-api] info: POST /tipologia - {"name":"Pedro José","username":"pedro","password":"0000"}
+2023-02-02T00:16:59.512Z [gpc-api] info: API Started!
+2023-02-02T00:16:59.517Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:17:02.221Z [gpc-api] error: POST  - Validation error
+2023-02-02T00:17:18.192Z [gpc-api] info: POST /tipologia - {"name":"Maria Silva","username":"maria","password":"0000"}
+2023-02-02T00:18:08.708Z [gpc-api] info: GET /forms
+2023-02-02T00:18:31.485Z [gpc-api] info: GET /form/:id
+2023-02-02T00:18:40.569Z [gpc-api] info: GET /forms
+2023-02-02T00:20:29.394Z [gpc-api] info: GET /forms
+2023-02-02T00:21:58.651Z [gpc-api] info: POST /tipologia - {"name":"Silvana Almeida","username":"silvana","password":"0000"}
+2023-02-02T00:22:51.191Z [gpc-api] info: API Started!
+2023-02-02T00:22:51.195Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:23:10.665Z [gpc-api] info: POST /tipologia - {"name":"Yara Marinho","username":"yara","password":"0000"}
+2023-02-02T00:23:23.618Z [gpc-api] info: API Started!
+2023-02-02T00:23:23.623Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:23:24.722Z [gpc-api] info: API Started!
+2023-02-02T00:23:24.726Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:23:31.378Z [gpc-api] info: API Started!
+2023-02-02T00:23:31.382Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:23:37.852Z [gpc-api] info: GET /forms
+2023-02-02T00:23:58.585Z [gpc-api] info: GET /year
+2023-02-02T00:23:58.588Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:23:58.589Z [gpc-api] info: GET /competencias
+2023-02-02T00:23:58.594Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:23:58.596Z [gpc-api] info: GET /forms
+2023-02-02T00:23:58.601Z [gpc-api] info: GET /year
+2023-02-02T00:23:58.607Z [gpc-api] info: GET /competencias
+2023-02-02T00:23:58.609Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:23:58.613Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:23:58.616Z [gpc-api] info: GET /forms
+2023-02-02T00:23:58.618Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:23:58.653Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:23:58.655Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:22.781Z [gpc-api] info: POST /tipologia - {"name":"Roberto Castanho","username":"roberto","password":"0000"}
+2023-02-02T00:24:26.209Z [gpc-api] info: GET /year
+2023-02-02T00:24:26.211Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:26.216Z [gpc-api] info: GET /competencias
+2023-02-02T00:24:26.217Z [gpc-api] info: GET /year
+2023-02-02T00:24:26.280Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:26.282Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:26.311Z [gpc-api] info: GET /competencias
+2023-02-02T00:24:26.343Z [gpc-api] info: GET /forms
+2023-02-02T00:24:26.344Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:26.345Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:26.349Z [gpc-api] info: GET /forms
+2023-02-02T00:24:26.404Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:26.405Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:45.167Z [gpc-api] info: POST /tipologia - {"name":"Tiago Alcantara","username":"tiago","password":"0000"}
+2023-02-02T00:24:47.517Z [gpc-api] info: GET /year
+2023-02-02T00:24:47.524Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:47.529Z [gpc-api] info: GET /competencias
+2023-02-02T00:24:47.536Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:47.537Z [gpc-api] info: GET /year
+2023-02-02T00:24:47.602Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:47.636Z [gpc-api] info: GET /forms
+2023-02-02T00:24:47.670Z [gpc-api] info: GET /competencias
+2023-02-02T00:24:47.671Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:24:47.673Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:47.674Z [gpc-api] info: GET /forms
+2023-02-02T00:24:47.735Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:24:47.737Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:25:08.904Z [gpc-api] info: POST /tipologia - {"name":"Gustavo Picolo","username":"gustavo","password":"0000"}
+2023-02-02T00:25:12.396Z [gpc-api] info: GET /year
+2023-02-02T00:25:12.397Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:25:12.406Z [gpc-api] info: GET /competencias
+2023-02-02T00:25:12.414Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:25:12.416Z [gpc-api] info: GET /year
+2023-02-02T00:25:12.473Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:25:12.548Z [gpc-api] info: GET /forms
+2023-02-02T00:25:12.550Z [gpc-api] info: GET /competencias
+2023-02-02T00:25:12.583Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:25:12.583Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:25:12.585Z [gpc-api] info: GET /forms
+2023-02-02T00:25:12.635Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:25:12.638Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:25:57.732Z [gpc-api] info: POST /tipologia - {"name":"Milthede Lucien","username":"milthede","password":"0000"}
+2023-02-02T00:26:00.022Z [gpc-api] info: GET /year
+2023-02-02T00:26:00.026Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:00.028Z [gpc-api] info: GET /competencias
+2023-02-02T00:26:00.033Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:26:00.094Z [gpc-api] info: GET /year
+2023-02-02T00:26:00.126Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:00.160Z [gpc-api] info: GET /forms
+2023-02-02T00:26:00.161Z [gpc-api] info: GET /competencias
+2023-02-02T00:26:00.168Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:26:00.173Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:00.176Z [gpc-api] info: GET /forms
+2023-02-02T00:26:00.229Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:00.231Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:26:23.840Z [gpc-api] info: POST /tipologia - {"name":"George Assis","username":"george","password":"0000"}
+2023-02-02T00:26:39.558Z [gpc-api] info: POST /tipologia - {"name":"Janete Lacerda","username":"lacerda","password":"0000"}
+2023-02-02T00:26:42.351Z [gpc-api] info: GET /year
+2023-02-02T00:26:42.354Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:42.355Z [gpc-api] info: GET /competencias
+2023-02-02T00:26:42.360Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:26:42.484Z [gpc-api] info: GET /year
+2023-02-02T00:26:42.487Z [gpc-api] info: GET /forms
+2023-02-02T00:26:42.489Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:42.490Z [gpc-api] info: GET /competencias
+2023-02-02T00:26:42.492Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:26:42.495Z [gpc-api] info: GET /forms
+2023-02-02T00:26:42.496Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:42.564Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:26:42.565Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:02.003Z [gpc-api] info: POST /tipologia - {"name":"Augusta Laorel","username":"augusta","password":"0000"}
+2023-02-02T00:27:27.234Z [gpc-api] info: POST /tipologia - {"name":"Patrícia Poeta","username":"patricia","password":"0000"}
+2023-02-02T00:27:29.590Z [gpc-api] info: GET /year
+2023-02-02T00:27:29.598Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:29.604Z [gpc-api] info: GET /competencias
+2023-02-02T00:27:29.701Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:29.732Z [gpc-api] info: GET /year
+2023-02-02T00:27:29.733Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:29.735Z [gpc-api] info: GET /forms
+2023-02-02T00:27:29.737Z [gpc-api] info: GET /competencias
+2023-02-02T00:27:29.738Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:29.743Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:29.746Z [gpc-api] info: GET /forms
+2023-02-02T00:27:29.804Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:29.806Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:50.197Z [gpc-api] info: POST /tipologia - {"name":"Jorge Assis","username":"jorge","password":"0000"}
+2023-02-02T00:27:52.749Z [gpc-api] info: GET /year
+2023-02-02T00:27:52.751Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:52.753Z [gpc-api] info: GET /competencias
+2023-02-02T00:27:52.757Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:52.846Z [gpc-api] info: GET /year
+2023-02-02T00:27:52.875Z [gpc-api] info: GET /forms
+2023-02-02T00:27:52.877Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:52.880Z [gpc-api] info: GET /competencias
+2023-02-02T00:27:52.882Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:27:52.885Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:52.886Z [gpc-api] info: GET /forms
+2023-02-02T00:27:52.943Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:27:52.944Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:15.854Z [gpc-api] info: POST /tipologia - {"name":"Antunes Robs","username":"antunes","password":"0000"}
+2023-02-02T00:28:18.151Z [gpc-api] info: GET /year
+2023-02-02T00:28:18.153Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:18.156Z [gpc-api] info: GET /competencias
+2023-02-02T00:28:18.160Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:18.272Z [gpc-api] info: GET /year
+2023-02-02T00:28:18.275Z [gpc-api] info: GET /forms
+2023-02-02T00:28:18.277Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:18.278Z [gpc-api] info: GET /competencias
+2023-02-02T00:28:18.279Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:18.281Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:18.282Z [gpc-api] info: GET /forms
+2023-02-02T00:28:18.348Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:18.349Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:28.512Z [gpc-api] info: GET /year
+2023-02-02T00:28:28.513Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:28.514Z [gpc-api] info: GET /competencias
+2023-02-02T00:28:28.516Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:28.519Z [gpc-api] info: GET /forms
+2023-02-02T00:28:28.521Z [gpc-api] info: GET /year
+2023-02-02T00:28:28.525Z [gpc-api] info: GET /competencias
+2023-02-02T00:28:28.527Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:28.530Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:28:28.532Z [gpc-api] info: GET /forms
+2023-02-02T00:28:28.535Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:28.571Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:28:28.572Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:29:52.154Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-02T00:29:52.155Z [gpc-api] info: GET /year
+2023-02-02T00:29:52.157Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-02T00:29:52.159Z [gpc-api] info: GET /competencias
+2023-02-02T00:29:52.160Z [gpc-api] info: GET /forms
+2023-02-02T00:29:52.165Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-02T00:29:52.169Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-02T00:29:52.170Z [gpc-api] info: GET /year
+2023-02-02T00:29:52.171Z [gpc-api] info: GET /competencias
+2023-02-02T00:29:52.175Z [gpc-api] info: GET /forms
+2023-02-02T00:29:52.177Z [gpc-api] error: GET  - Não há evaluations cadastradas
+2023-02-02T00:30:01.125Z [gpc-api] info: POST /avaliacao - autoavaliacao - {"formId":1,"userId":6,"bossId":2,"year":"2023"}
+2023-02-02T00:30:01.173Z [gpc-api] info: GET /avaliacoes
+2023-02-02T00:30:01.213Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-02T00:30:02.553Z [gpc-api] error: GET  - Não há questões registradas para esse usuário
+2023-02-02T00:30:06.314Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"5","importance_level":"2","domain_level":"4"}
+2023-02-02T00:30:06.371Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:07.542Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:09.093Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"4","importance_level":"2","domain_level":"4"}
+2023-02-02T00:30:09.144Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:10.208Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:11.689Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"7","importance_level":"3","domain_level":"3"}
+2023-02-02T00:30:11.737Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:12.637Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:14.166Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"2","importance_level":"3","domain_level":"5"}
+2023-02-02T00:30:14.203Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:15.311Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:17.188Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"6","importance_level":"3","domain_level":"5"}
+2023-02-02T00:30:17.255Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:18.532Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:19.900Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"16","importance_level":"3","domain_level":"3"}
+2023-02-02T00:30:19.929Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:20.937Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:22.757Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"3","importance_level":"3","domain_level":"5"}
+2023-02-02T00:30:22.823Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:24.369Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:30:28.120Z [gpc-api] info: POST /questão - {"evaluationId":34,"competenceId":"8","importance_level":"5","domain_level":"5"}
+2023-02-02T00:30:28.157Z [gpc-api] info: GET /questões por usuário
+2023-02-02T00:31:37.966Z [gpc-api] info: GET /forms
+2023-02-02T00:37:50.200Z [gpc-api] info: API Started!
+2023-02-02T00:37:50.204Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:41:16.291Z [gpc-api] info: API Started!
+2023-02-02T00:41:16.296Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:41:28.006Z [gpc-api] info: API Started!
+2023-02-02T00:41:28.011Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:43:11.648Z [gpc-api] info: API Started!
+2023-02-02T00:43:11.652Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:46:17.088Z [gpc-api] info: API Started!
+2023-02-02T00:46:17.093Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:48:43.671Z [gpc-api] info: API Started!
+2023-02-02T00:48:43.676Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:49:05.057Z [gpc-api] info: API Started!
+2023-02-02T00:49:05.062Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:53:14.899Z [gpc-api] info: API Started!
+2023-02-02T00:53:14.904Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:53:38.788Z [gpc-api] info: API Started!
+2023-02-02T00:53:38.792Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:53:54.261Z [gpc-api] info: API Started!
+2023-02-02T00:53:54.266Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:55:36.235Z [gpc-api] info: API Started!
+2023-02-02T00:55:36.239Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:56:38.035Z [gpc-api] info: API Started!
+2023-02-02T00:56:38.040Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:56:57.401Z [gpc-api] info: API Started!
+2023-02-02T00:56:57.406Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:57:05.100Z [gpc-api] info: API Started!
+2023-02-02T00:57:05.105Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:57:47.649Z [gpc-api] info: API Started!
+2023-02-02T00:57:47.653Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:58:05.744Z [gpc-api] info: API Started!
+2023-02-02T00:58:05.749Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:58:23.468Z [gpc-api] info: API Started!
+2023-02-02T00:58:23.473Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T00:59:16.581Z [gpc-api] info: API Started!
+2023-02-02T00:59:16.586Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:02:43.866Z [gpc-api] info: API Started!
+2023-02-02T01:02:43.871Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:03:43.938Z [gpc-api] info: API Started!
+2023-02-02T01:03:43.943Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:05:56.350Z [gpc-api] info: API Started!
+2023-02-02T01:05:56.354Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:05:56.356Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:06:36.115Z [gpc-api] error: TypeError: permissions.standardForms is not a function - Permissões já criadas
+2023-02-02T01:06:36.125Z [gpc-api] info: API Started!
+2023-02-02T01:06:36.128Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T01:07:28.683Z [gpc-api] info: API Started!
+2023-02-02T01:07:28.689Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T12:17:25.346Z [gpc-api] info: API Started!
+2023-02-02T12:17:25.351Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Formulário já criado
+2023-02-02T12:17:25.352Z [gpc-api] error: SequelizeUniqueConstraintError: Validation error - Permissões já criadas
+2023-02-02T12:36:52.000Z [gpc-api] info: GET /forms
+2023-02-02T12:37:46.770Z [gpc-api] info: GET /forms
+2023-02-02T12:38:04.199Z [gpc-api] info: GET /forms
+2023-02-02T12:38:22.882Z [gpc-api] info: GET /forms
+2023-02-02T12:39:48.457Z [gpc-api] info: GET /forms
+2023-02-02T12:39:51.881Z [gpc-api] info: GET /forms
+2023-02-02T12:40:02.326Z [gpc-api] info: GET /forms
+2023-02-02T12:40:09.111Z [gpc-api] info: GET /forms
+2023-02-02T12:40:48.177Z [gpc-api] info: GET /forms
+2023-02-02T13:01:25.382Z [gpc-api] info: GET /forms
+2023-02-02T13:01:25.383Z [gpc-api] info: GET /year
+2023-02-02T13:01:25.385Z [gpc-api] info: GET /competencias
+2023-02-02T13:01:25.386Z [gpc-api] info: GET /avaliacoes
+2023-02-02T13:01:25.389Z [gpc-api] info: GET /questões por usuário
+2023-02-02T13:01:25.397Z [gpc-api] info: GET /forms
+2023-02-02T13:01:25.398Z [gpc-api] info: GET /year
+2023-02-02T13:01:25.399Z [gpc-api] info: GET /competencias
+2023-02-02T13:01:25.400Z [gpc-api] info: GET /avaliacoes
+2023-02-02T13:01:25.403Z [gpc-api] info: GET /questões por usuário
+2023-02-02T13:01:25.423Z [gpc-api] info: GET /avaliacoes
+2023-02-02T13:01:25.497Z [gpc-api] info: GET /avaliacoes
+2023-02-02T13:01:25.499Z [gpc-api] info: GET /questões por usuário
+2023-02-02T19:33:35.677Z [gpc-api] info: GET /tipologia
+2023-02-02T19:33:35.683Z [gpc-api] info: GET /competencias
+2023-02-02T19:33:35.838Z [gpc-api] info: GET /tipologia
+2023-02-02T19:33:35.841Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:47.104Z [gpc-api] info: GET /tipologia
+2023-02-02T20:07:47.106Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:47.125Z [gpc-api] info: GET /tipologia
+2023-02-02T20:07:47.129Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:50.299Z [gpc-api] info: GET /year
+2023-02-02T20:07:50.330Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:50.333Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:07:50.349Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:07:50.358Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:50.362Z [gpc-api] info: GET /year
+2023-02-02T20:07:50.366Z [gpc-api] info: GET /forms
+2023-02-02T20:07:50.373Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:07:50.524Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:07:50.575Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:07:50.578Z [gpc-api] info: GET /forms
+2023-02-02T20:07:50.617Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:07:50.619Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:07:53.832Z [gpc-api] info: GET /tipologia
+2023-02-02T20:07:53.835Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:53.849Z [gpc-api] info: GET /tipologia
+2023-02-02T20:07:53.851Z [gpc-api] info: GET /competencias
+2023-02-02T20:07:55.676Z [gpc-api] info: GET /competencias por tipologia/:id
+2023-02-02T20:17:39.778Z [gpc-api] info: GET /tipologia
+2023-02-02T20:17:39.782Z [gpc-api] info: GET /competencias
+2023-02-02T20:17:39.793Z [gpc-api] info: GET /tipologia
+2023-02-02T20:17:39.797Z [gpc-api] info: GET /competencias
+2023-02-02T20:17:43.210Z [gpc-api] info: GET /tipologia
+2023-02-02T20:17:43.216Z [gpc-api] info: GET /competencias
+2023-02-02T20:17:43.230Z [gpc-api] info: GET /tipologia
+2023-02-02T20:17:43.234Z [gpc-api] info: GET /competencias
+2023-02-02T20:18:08.909Z [gpc-api] info: GET /year
+2023-02-02T20:18:08.917Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:18:08.936Z [gpc-api] info: GET /competencias
+2023-02-02T20:18:08.952Z [gpc-api] info: GET /year
+2023-02-02T20:18:09.242Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:18:09.243Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:18:09.244Z [gpc-api] info: GET /forms
+2023-02-02T20:18:09.273Z [gpc-api] info: GET /competencias
+2023-02-02T20:18:09.278Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:18:09.279Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:18:09.281Z [gpc-api] info: GET /forms
+2023-02-02T20:18:09.339Z [gpc-api] info: GET /avaliacoes
+2023-02-02T20:18:09.341Z [gpc-api] info: GET /questões por usuário
+2023-02-02T20:19:14.677Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:14.681Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:14.693Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:14.846Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:27.429Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:27.431Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:27.437Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:27.439Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:29.130Z [gpc-api] info: GET /competencias por tipologia/:id
+2023-02-02T20:19:32.363Z [gpc-api] info: GET /competencias por tipologia/:id
+2023-02-02T20:19:37.542Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:37.545Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:37.559Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:37.563Z [gpc-api] info: GET /competencias
+2023-02-02T20:19:47.124Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:47.133Z [gpc-api] info: GET /tipologia
+2023-02-02T20:19:50.451Z [gpc-api] info: GET /tipologia/:id
+2023-02-02T20:19:53.130Z [gpc-api] info: GET /tipologia/:id
+2023-02-02T20:19:54.477Z [gpc-api] info: GET /tipologia/:id
+2023-02-02T20:20:01.974Z [gpc-api] info: GET /tipologia
+2023-02-02T20:20:01.983Z [gpc-api] info: GET /competencias
+2023-02-02T20:20:01.986Z [gpc-api] info: GET /tipologia
+2023-02-02T20:20:01.996Z [gpc-api] info: GET /competencias
+2023-02-02T20:20:04.031Z [gpc-api] info: GET /competencia/:id
+2023-02-02T20:20:11.935Z [gpc-api] info: GET /year
+2023-02-02T20:20:11.943Z [gpc-api] info: GET /year
+2023-02-02T20:20:18.310Z [gpc-api] info: GET /year/:id
+2023-02-02T20:20:26.316Z [gpc-api] info: PUT /year - {"yearId":"19","open":"2023-01-01","close":"2023-01-28","year":"2023"}
+2023-02-02T20:20:26.371Z [gpc-api] info: GET /year
+2023-02-02T20:20:26.512Z [gpc-api] info: GET /year
+2023-02-02T20:21:55.401Z [gpc-api] info: GET /tipologia
+2023-02-02T20:21:55.406Z [gpc-api] info: GET /competencias
+2023-02-02T20:21:55.417Z [gpc-api] info: GET /tipologia
+2023-02-02T20:21:55.421Z [gpc-api] info: GET /competencias

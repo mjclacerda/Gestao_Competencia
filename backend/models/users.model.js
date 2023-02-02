@@ -14,8 +14,13 @@ const usuarios = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    matricula: {
-      type: DataTypes.INTEGER,
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },

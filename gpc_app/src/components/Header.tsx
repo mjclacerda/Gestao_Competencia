@@ -68,7 +68,7 @@ export default function Header() {
             "aria-labelledby": "basic-button",
           }}
         >
-          <Link to="/login" style={linkStyle}>
+          <Link to="/" style={linkStyle}>
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Link>
         </Menu>
