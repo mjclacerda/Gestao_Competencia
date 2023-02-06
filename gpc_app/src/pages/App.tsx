@@ -19,8 +19,7 @@ import Boss_Evaluation from "./Boss_Evaluation";
 import Team_Evaluation from "./Team_Evaluation";
 
 function App() {
-  const { auth, token, admin, resposta } = useContext(AuthContext);
-  console.log(auth, token, resposta);
+  const { user, admin } = useContext(AuthContext);
 
   return (
     <BrowserRouter>
@@ -64,27 +63,27 @@ function App() {
         />
         <Route
           path="/pesquisa"
-          element={auth ? <User_Home /> : <Navigate to="/" />}
+          element={user ? <User_Home /> : <Navigate to="/" />}
         />
         <Route
           path="/user_relatorio"
-          element={auth ? <User_Reports /> : <Navigate to="/" />}
+          element={user ? <User_Reports /> : <Navigate to="/" />}
         />
         <Route
           path="/user_tipologia"
-          element={auth ? <User_Competence /> : <Navigate to="/" />}
+          element={user ? <User_Competence /> : <Navigate to="/" />}
         />
         <Route
           path="/self_evaluation"
-          element={auth ? <Self_Evaluation /> : <Navigate to="/" />}
+          element={user ? <Self_Evaluation /> : <Navigate to="/" />}
         />
         <Route
           path="/boss_evaluation"
-          element={auth ? <Boss_Evaluation /> : <Navigate to="/" />}
+          element={user ? <Boss_Evaluation /> : <Navigate to="/" />}
         />
         <Route
           path="/team_evaluation"
-          element={auth ? <Team_Evaluation /> : <Navigate to="/" />}
+          element={user ? <Team_Evaluation /> : <Navigate to="/" />}
         />
       </Routes>
     </BrowserRouter>

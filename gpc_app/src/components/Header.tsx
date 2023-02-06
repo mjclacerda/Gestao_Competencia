@@ -25,6 +25,8 @@ export default function Header() {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    localStorage.setItem("@PermissionYT:token", "");
+    window.location.reload();
   };
   return (
     <StyledHeader>

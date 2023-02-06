@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 import { Box, Button, Typography, Menu, MenuItem } from "@mui/material";
 import UserIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
@@ -25,11 +26,15 @@ const Adbutton = styled(Button)({
 export default function Header_user() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const { resposta } = useContext(AuthContext);
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+    localStorage.setItem("@PermissionYT:token", "");
+    window.location.reload();
   };
   return (
     <StyledHeader>
@@ -62,7 +67,7 @@ export default function Header_user() {
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
         >
-          Username
+          {resposta.name}
           <UserIcon sx={{ color: "white", fontSize: "large", marginLeft: 1 }} />
         </Adbutton>
         <Menu
@@ -74,10 +79,8 @@ export default function Header_user() {
             "aria-labelledby": "basic-button",
           }}
         >
-          <Link to="/">
-            <MenuItem onClick={handleClose} style={linkStyle}>
-              Logout
-            </MenuItem>
+          <Link to="/" style={linkStyle}>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Link>
         </Menu>
       </Box>

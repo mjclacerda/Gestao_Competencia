@@ -28,6 +28,8 @@ export default function Config_inv() {
   const [alert, setAlert] = useState<boolean | null>(null); //habilitação do alerta
   const [messagealert, setMessagealert] = useState<string>(""); //mensagem de alerta exibida
   const newinvent = DateNow(); //data atual
+  const [newSistem, setNewSistem] = useState(false);
+
   //Busca no banco todos os inventários
   useEffect(() => {
     axios
@@ -37,7 +39,8 @@ export default function Config_inv() {
         setLastInv(resp.data[0]);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
+        setNewSistem(true);
       });
   }, [alert]);
   //Captura os dados do último inventário quando o botão é clicado
@@ -73,6 +76,26 @@ export default function Config_inv() {
   };
   //Função do botão abrir inventário
   const handleButtonCreate = () => {
+    if (newSistem) {
+      axios
+        .post("http://localhost:3000/years", {
+          open: `${ano}-${mes}-01`,
+          close: `${anofinal}-${mesfinal}-28`,
+          year: ano,
+        })
+        .then((resp) => {
+          setMessagealert("Inventário criado com sucesso!!!");
+          setAlert(true);
+          selectcleaning();
+          setNewSistem(false);
+        })
+        .catch((error) => {
+          setMessagealert(
+            "Não foi possível abrir esses inventário, pois já existe um inventário aberto para o ano informado."
+          );
+          setAlert(false);
+        });
+    }
     //Função retorna true quando a data atual é maior que a data de encerramento do último inventário
     const analysinewinv = CompareDatesExact(
       newinvent.substring(5, 7),
@@ -206,37 +229,41 @@ export default function Config_inv() {
                   maxWidth: "34vw",
                 }}
               >
-                <FlexBox
-                  style={{
-                    alignItems: "center",
-                    marginTop: "60px",
-                    marginBottom: "30px",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Roboto",
-                      fontWeight: "bold",
-                      fontSize: 18,
-                    }}
-                  >
-                    Último Inventário:{" "}
-                  </Typography>
-                  <BootstrapButton
-                    style={{
-                      margin: 2,
-                      fontSize: 16,
-                      color: "black",
-                      minWidth: 100,
-                      background: "#0FEDFB",
-                    }}
-                    value={lastInv.yearId}
-                    onClick={handleInvList}
-                  >
-                    {lastInv.year}
-                  </BootstrapButton>
-                </FlexBox>
-                <List listinv={inventarios}></List>
+                {newSistem === false && (
+                  <div>
+                    <FlexBox
+                      style={{
+                        alignItems: "center",
+                        marginTop: "60px",
+                        marginBottom: "30px",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontWeight: "bold",
+                          fontSize: 18,
+                        }}
+                      >
+                        Último Inventário:{" "}
+                      </Typography>
+                      <BootstrapButton
+                        style={{
+                          margin: 2,
+                          fontSize: 16,
+                          color: "black",
+                          minWidth: 100,
+                          background: "#0FEDFB",
+                        }}
+                        value={lastInv.yearId}
+                        onClick={handleInvList}
+                      >
+                        {lastInv.year}
+                      </BootstrapButton>
+                    </FlexBox>
+                    <List listinv={inventarios}></List>
+                  </div>
+                )}
               </BoxColumn>
             </StyledBox>
           </Box>

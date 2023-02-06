@@ -1,4 +1,5 @@
 import Evaluation from "../models/evaluations.model.js";
+import Users from "../models/users.model.js";
 
 async function insertEvaluation(evaluation) {
   try {
@@ -12,7 +13,7 @@ async function insertEvaluation(evaluation) {
 
 async function getEvaluations() {
   try {
-    return await Evaluation.findAll();
+    return await Evaluation.findAll({ include: { model: Users } });
   } catch (err) {
     throw err;
   }
@@ -70,6 +71,22 @@ async function getEvaluation(id) {
   }
 }
 
+async function updateEvaluation(evaluation) {
+  try {
+    await Evaluation.update(
+      { teamId: evaluation.teamId },
+      {
+        where: {
+          evaluationId: evaluation.evaluationId,
+        },
+      }
+    );
+    return await getEvaluation(evaluation.evaluationId);
+  } catch (err) {
+    throw err;
+  }
+}
+
 export default {
   insertEvaluation,
   getEvaluations,
@@ -78,4 +95,5 @@ export default {
   getEvalUserYearForm,
   getEvalBossYear,
   getEvalTeamYear,
+  updateEvaluation,
 };

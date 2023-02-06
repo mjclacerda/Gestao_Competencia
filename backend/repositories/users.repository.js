@@ -5,8 +5,9 @@ async function insertUser(user) {
   const passhash = await pkg.hash(user.password, 8);
   const userchange = {
     name: user.name,
-    username: user.name,
+    username: user.username,
     password: passhash,
+    permissionId: user.permissionId,
   };
   try {
     return await User.create(userchange);
@@ -17,7 +18,10 @@ async function insertUser(user) {
 
 async function getUsers() {
   try {
-    return await User.findAll({ attributes: ["userId", "name", "username"] });
+    return await User.findAll({
+      attributes: ["userId", "name", "username", "permissionId"],
+      order: ["name"],
+    });
   } catch (err) {
     throw err;
   }
@@ -26,7 +30,7 @@ async function getUsers() {
 async function getUser(id) {
   try {
     return await User.findByPk(id, {
-      attributes: ["userId", "name", "username"],
+      attributes: ["userId", "name", "username", "permissionId"],
     });
   } catch (err) {
     throw err;

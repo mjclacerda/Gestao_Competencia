@@ -18,11 +18,11 @@ import {
 } from "../../components/Component";
 import { SelectChangeEvent } from "@mui/material/Select";
 import { Self_Ask } from "../../components/Self_Ask";
-import { useState, useEffect } from "react";
-import { useFetch } from "../Backend_Integration";
+import { useState, useEffect, useContext } from "react";
 import { IUser } from "../../components/Interfaces";
 import axios from "axios";
 import _ from "lodash";
+import { AuthContext } from "../../context/AuthContext";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -36,31 +36,19 @@ const MenuProps = {
 };
 
 export default function Self_Evaluation() {
-  const [evalName, setEvalName] = useState("Maria Janete Costa Lacerda"); //Pega o nome do usuário que está logado ==> rever pois ainda não há autenticação
-  const [userId, setUserId] = useState<number>(6); //Guarda o userId do usuário que está logado ==> rever essa variável depois que criar a autenticação pois ela deve armazenar o id do usuário que está logado
+  const { resposta, setSelfEval, lastInv, competencias, page } =
+    useContext(AuthContext); //Pega a informações do usuário que está logado dentre outras informações
   const [bossId, setBossId] = useState<string[] | string>(""); //Armazena o nome do chefe
-  const [lastInv, setLastInv] = useState(""); //Ano do último inventário
   const [domainLevel, setDomainLevel] = useState(""); //Guarda a opção escolhida para o nível de domínio de uma competência
   const [importanceLevel, setImportanceLevel] = useState(""); //Guarda a opção escolhida para o nível de importância de uma competência
   const [competenceId, setCompetenceId] = useState(""); //Guarda o competenceId da competência que está sendo avaliada
   const [evaluationId, setEvaluationId] = useState(""); //Armazena o competenceId da opção selecionada
   const [buttonReg, setButtonReg] = useState(true); //Controla a exibição do botão para criar uma evaluation
-  const [competencias, setCompetencias] = useState([]); //Armazena todas a competências ativas que vão compor o formulário
   const [currentPage, setCurrentPage] = useState(1); //Controla a página atual do paginador
-  const [page, setPage] = useState<number>(0); //Controla o total de páginas do paginador
   const currentItens = competencias.slice(currentPage - 1, currentPage); //Controla o total de itens que irão aparecer e cada página do paginador
   const [questions, setquestions] = useState<number>(0); //Guarda o total de questões respondidas pelo usuário
   const [ansquestion, setAnsquestion] = useState<Array<number>>([]); //Armazena o competenceId das competências respondidas
-
-  //Busca no banco o último inventário
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/years")
-      .then((resp) => {
-        setLastInv(resp.data[0].year);
-      })
-      .catch((err) => {});
-  }, []);
+  const [users, setUsers] = useState<Array<any>>([{ userId: 0, name: "" }]); //Armazena os usuários que podem ser chefe
 
   //Busca no banco se há formulários preenchidos para o usuário
   useEffect(() => {
@@ -68,8 +56,8 @@ export default function Self_Evaluation() {
       .get("http://localhost:3000/evaluations")
       .then((resp) => {
         const data: Array<object> | any = _.filter(resp.data, {
-          userId,
-          year: String(lastInv),
+          userId: resposta.userId,
+          year: lastInv.substring(4, 0),
           formId: 1,
         });
         setEvaluationId(data[0].evaluationId);
@@ -79,31 +67,34 @@ export default function Self_Evaluation() {
       .catch((err) => {});
   }, [lastInv, buttonReg]);
 
-  //Retorna todas a competências ativas;
+  //Retorna todos o usuários que podem ser chefes, retirando então o usuário logado e os administradores;
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch("http://localhost:3000/competences")
+      const result = await fetch("http://localhost:3000/users")
         .then((resp) => resp.json())
         .then((data) => data);
-      setCompetencias(result);
-      setPage(_.findLastIndex(result) + 1);
+      setUsers(
+        _.reject(_.filter(result, { permissionId: 2 }), {
+          userId: resposta.userId,
+        })
+      );
     };
     fetchData();
   }, []);
 
-  //Retorna todos o usuários;
-  const users: any = useFetch("http://localhost:3000/users");
-
   //Busca no banco as questões respondidas do usuário
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/questionsuser/${userId}`)
+      .get(`http://localhost:3000/questionsuser/${resposta.userId}`)
       .then((resp) => {
         const data: Array<object> | any = _.filter(resp.data, {
           evaluationId,
         });
         setquestions(_.findLastIndex(data) + 1);
         setAnsquestion(_.map(data, "competenceId"));
+        if (questions === page) {
+          setSelfEval(true);
+        }
       })
       .catch((err) => {});
   }, [evaluationId, competenceId]);
@@ -113,9 +104,9 @@ export default function Self_Evaluation() {
     axios
       .post("http://localhost:3000/evaluations", {
         formId: 1,
-        userId,
+        userId: resposta.userId,
         bossId,
-        year: String(lastInv),
+        year: lastInv.substring(4, 0),
       })
       .then((resp) => {
         console.log(resp);
@@ -196,7 +187,7 @@ export default function Self_Evaluation() {
                   fontWeight: "bold",
                 }}
               >
-                Avaliado: {evalName}
+                Avaliado: {resposta.name}
               </Typography>
               <FormControl sx={{ marginLeft: "10vw", width: 300 }}>
                 <InputLabel id="demo-multiple-name-label">
@@ -204,15 +195,15 @@ export default function Self_Evaluation() {
                 </InputLabel>
                 <Select
                   labelId="demo-multiple-name-label"
-                  id="boss_name"
+                  id="name"
                   value={bossId}
                   onChange={handleChange}
                   input={<OutlinedInput label="Chefe Imediato" />}
                   MenuProps={MenuProps}
                   style={{ height: 40, marginBottom: "5vh" }}
                 >
-                  {users.data &&
-                    users.data.map((name: IUser) => (
+                  {users &&
+                    users?.map((name: IUser) => (
                       <MenuItem key={name.userId} value={name.userId}>
                         {name.name}
                       </MenuItem>
@@ -220,7 +211,7 @@ export default function Self_Evaluation() {
                 </Select>
                 {questions === page && (
                   <Alert severity="success">
-                    Parabéns, seu questionário foi respondido
+                    Parabéns, seu questionário foi respondido.
                   </Alert>
                 )}
                 {buttonReg && (

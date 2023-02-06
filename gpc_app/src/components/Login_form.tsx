@@ -4,13 +4,16 @@ import { BootstrapButton, FlexBox, BoxColumn } from "./Component";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { Stack } from "@mui/system";
 
 export default function login_form() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-  const { setResposta, setAuth, setToken, setAdmin } = useContext(AuthContext);
+  const [username, setUsername] = useState(""); //Guarda o username do usuário
+  const [password, setPassword] = useState(""); //Guarda o password do usuário
+  const [alert, setAlert] = useState(false); //Controla a mensagem de erro de acesso
+  const navigate = useNavigate(); //É utilizado para redirecionamento do usuário
+  const { setResposta, setUser, setToken, setAdmin } = useContext(AuthContext); //Retorna as variáveis do contexto que são visíveis para o todo o sistema
 
+  //Função para o submit do login
   const handleSubmit = (e: any) => {
     e.preventDefault();
     axios
@@ -23,17 +26,16 @@ export default function login_form() {
         setResposta(data);
         setToken(data.token);
         localStorage.setItem("@PermissionYT:token", data.token);
-        console.log(data.name);
-        if (data.name == "admin") {
+        if (data.permissionId == 1) {
           setAdmin(true);
           navigate("/dashboard");
         } else {
-          setAuth(true);
+          setUser(true);
           navigate("/pesquisa");
         }
       })
       .catch((err) => {
-        console.log(err);
+        setAlert(true);
       });
   };
 
@@ -83,7 +85,7 @@ export default function login_form() {
           flexDirection="column"
           sx={{
             marginTop: 30,
-            maxHeight: 280,
+            maxHeight: 340,
             minWidth: 300,
             borderRadius: 4,
             backgroundColor: "#d9d9d9b4",
@@ -94,10 +96,15 @@ export default function login_form() {
               variant="h5"
               gutterBottom
               align="left"
-              style={{ margin: 25 }}
+              style={{ margin: 25, marginBottom: 60 }}
             >
               Acesso à plataforma
             </Typography>
+            {alert === true && (
+              <Stack sx={{ marginLeft: 2.5, width: "93%", marginTop: -5 }}>
+                <Alert severity="error">Usuário ou senha incorreta!</Alert>
+              </Stack>
+            )}
             <form
               style={{
                 display: "flex",

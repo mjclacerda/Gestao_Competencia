@@ -87,8 +87,22 @@ async function getEvaluation(req, res, next) {
   }
 }
 
+async function updateEvaluation(req, res, next) {
+  try {
+    let avaliacao = req.body;
+    if (!avaliacao.evaluationId || !avaliacao.teamId) {
+      throw new Error("Há campos obrigatórios não preenchidos");
+    }
+    res.send(await EvaluationService.updateEvaluation(avaliacao));
+    logger.info(`PUT /evaluation - ${JSON.stringify(competencia)}`);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   insertEvaluation,
   getEvaluations,
   getEvaluation,
+  updateEvaluation,
 };

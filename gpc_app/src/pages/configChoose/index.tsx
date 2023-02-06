@@ -38,7 +38,7 @@ export default function ConfigChoose() {
                 <BootstrapButton
                   style={{ margin: "5vh", width: 200, fontSize: 20 }}
                 >
-                  Competencias
+                  Competências
                 </BootstrapButton>
               </Link>
             </FlexBox>

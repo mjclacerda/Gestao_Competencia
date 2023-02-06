@@ -18,8 +18,8 @@ async function create(req, res, next) {
     subject: String(user.userId),
     expiresIn: "1d",
   });
-  const { userId, name } = user;
-  res.send({ name, username, userId, token });
+  const { userId, name, permissionId } = user;
+  res.send({ name, username, userId, token, permissionId });
 }
 
 export default {

@@ -5,14 +5,27 @@ import {
   FormControlLabel,
   RadioGroup,
   Radio,
+  Stack,
+  Pagination,
 } from "@mui/material";
 import { v4 as uuid } from "uuid";
 import { ISelf_Ask } from "./Self_Ask";
 
-export function Other_Ask({ list }: ISelf_Ask) {
+export function Other_Ask({
+  list,
+  chooseimp,
+  importance,
+  choosedom,
+  domain,
+  enviar,
+  page,
+  currentPage,
+  handlePagination,
+  answered,
+}: ISelf_Ask) {
   return (
     <BoxColumn style={{ width: "87vw", overflow: "auto" }}>
-      {list.map((item: any) => (
+      {list?.map((item: any) => (
         <BoxColumn
           key={uuid()}
           style={{ width: "18vw", marginLeft: "10vw", marginBottom: "6vh" }}
@@ -63,13 +76,15 @@ export function Other_Ask({ list }: ISelf_Ask) {
           <BoxColumn style={{ alignItems: "center", marginLeft: "20vw" }}>
             <Typography style={{ width: "40vw" }}>
               De 1 a 5, o quanto essa competência é importante para a realização
-              das atividades laborais do avaliado?
+              de suas atividades laborais?
             </Typography>
             <FormControl style={{ width: "20vw", marginBottom: "1vh" }}>
               <RadioGroup
                 row
                 aria-labelledby={item.competenceId}
-                name="importance_level"
+                name={String(item.competenceId)}
+                onChange={chooseimp}
+                value={importance}
               >
                 <FormControlLabel
                   value="1"
@@ -104,13 +119,15 @@ export function Other_Ask({ list }: ISelf_Ask) {
               </RadioGroup>
             </FormControl>
             <Typography style={{ width: "40vw" }}>
-              De 1 a 5, o quanto o avaliado domina essa competência?
+              De 1 a 5, o quanto você domina essa competência?
             </Typography>
             <FormControl style={{ width: "20vw" }}>
               <RadioGroup
                 row
                 aria-labelledby={item.competenceId}
                 name="domain_level"
+                onChange={choosedom}
+                value={domain}
               >
                 <FormControlLabel
                   value="1"
@@ -145,13 +162,42 @@ export function Other_Ask({ list }: ISelf_Ask) {
               </RadioGroup>
             </FormControl>
           </BoxColumn>
+          {answered.includes(item.competenceId) ? (
+            <BootstrapButton
+              style={{
+                width: "100px",
+                alignSelf: "start",
+                marginBottom: "5vh",
+                background: "green",
+              }}
+              onClick={enviar}
+              disabled
+            >
+              Enviada
+            </BootstrapButton>
+          ) : (
+            <BootstrapButton
+              style={{
+                width: "100px",
+                alignSelf: "start",
+                marginBottom: "5vh",
+              }}
+              onClick={enviar}
+            >
+              Enviar
+            </BootstrapButton>
+          )}
         </BoxColumn>
       ))}
-      <BootstrapButton
-        style={{ width: "100px", alignSelf: "center", marginBottom: "5vh" }}
-      >
-        Enviar
-      </BootstrapButton>
+      <Stack spacing={0} sx={{ marginLeft: "20vw" }}>
+        <Pagination
+          count={page}
+          page={currentPage}
+          siblingCount={0}
+          boundaryCount={1}
+          onChange={handlePagination}
+        />
+      </Stack>
     </BoxColumn>
   );
 }

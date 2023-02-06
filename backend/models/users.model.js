@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import db from "../db/db.js";
+import Permissions from "./permissions.model.js";
 
 const usuarios = db.define(
   "users",
@@ -26,5 +27,9 @@ const usuarios = db.define(
   },
   { underscored: true }
 );
+usuarios.belongsTo(Permissions, {
+  foreignKey: "permissionId",
+  allowNull: false,
+});
 
 export default usuarios;

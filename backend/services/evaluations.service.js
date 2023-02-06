@@ -110,6 +110,16 @@ async function getEvaluation(id) {
   throw new Error("A evaluation procurada não existe");
 }
 
+async function updateEvaluation(evaluations) {
+  const evaluation = await EvaluationRepository.getEvaluation(
+    evaluations.evaluationId
+  );
+  if (evaluation) {
+    return await EvaluationRepository.updateEvaluation(evaluations);
+  }
+  throw new Error("A evaluation procurada não existe");
+}
+
 export default {
   insertEvaluation,
   getEvaluations,
@@ -118,4 +128,5 @@ export default {
   getEvalBossYear,
   getEvalTeamYear,
   getEvaluation,
+  updateEvaluation,
 };
