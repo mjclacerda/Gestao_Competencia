@@ -22,6 +22,17 @@ async function create(req, res, next) {
   res.send({ name, username, userId, token, permissionId });
 }
 
+async function destroysession(req, res, next) {
+  const token = req.headers.token;
+  if (token) {
+    res.cookie("token", null, { httpOnly: true });
+  } else {
+    return res.status(401).send("Logout não autorizado");
+  }
+  return res.send("sessão finalizada");
+}
+
 export default {
   create,
+  destroysession,
 };

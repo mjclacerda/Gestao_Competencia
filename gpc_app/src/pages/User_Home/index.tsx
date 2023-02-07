@@ -13,6 +13,7 @@ import {
   FlexBox,
   StyledAvatar,
 } from "../../components/Component";
+import _ from "lodash";
 
 const buttonok = {
   textDecoration: "none",
@@ -43,8 +44,81 @@ const normal = {
 export default function Dashboard() {
   /*A variável de contexto openinvent, verifica se há algum inventário aberto no momento 
   e se houver os botões de acesso as pesquisas são liberados*/
-  const { openinvent, page, questions, boss, subEval, bossresp } =
-    useContext(AuthContext);
+  const {
+    resposta,
+    openinvent,
+    page,
+    questions,
+    boss,
+    subEval,
+    bossresp,
+    setquestions,
+    lastInv,
+    setBossresp,
+    team,
+    teamresp,
+    parEval,
+    setTeamresp,
+  } = useContext(AuthContext);
+
+  console.log(teamresp, page, parEval);
+  //Busca no banco as questões respondidas da autoavaliação do usuário que está logado
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch("http://localhost:3000/questions")
+        .then((resp) => resp.json())
+        .then((data) => data);
+      setquestions(
+        _.findLastIndex(
+          _.filter(_.map(result, "evaluation"), {
+            userId: resposta.userId,
+            formId: 1,
+            year: lastInv.substring(4, 0),
+          })
+        ) + 1
+      );
+    };
+    fetchData();
+  }, [resposta, page]);
+
+  //Busca no banco as questões respondidas como chefe pelo usuário que está logado
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch("http://localhost:3000/questions")
+        .then((resp) => resp.json())
+        .then((data) => data);
+      setBossresp(
+        _.findLastIndex(
+          _.filter(_.map(result, "evaluation"), {
+            formId: 2,
+            bossId: resposta.userId,
+            year: lastInv.substring(4, 0),
+          })
+        ) + 1
+      );
+    };
+    fetchData();
+  }, [resposta, page]);
+
+  //Busca no banco as questões respondidas como equipe pelo usuário que está logado
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch("http://localhost:3000/questions")
+        .then((resp) => resp.json())
+        .then((data) => data);
+      setTeamresp(
+        _.findLastIndex(
+          _.filter(_.map(result, "evaluation"), {
+            formId: 3,
+            teamId: resposta.userId,
+            year: lastInv.substring(4, 0),
+          })
+        ) + 1
+      );
+    };
+    fetchData();
+  }, [resposta, page]);
+
   let StyledSelf = normal;
   let StyledBoss = buttonok;
   let StyledTeam = buttonok;
@@ -63,10 +137,13 @@ export default function Dashboard() {
       linkBoss = "/pesquisa";
     }
   }
-  const team = false;
   if (team) {
     linkTeam = "/team_evaluation";
     StyledTeam = normal;
+    if (parEval * page === teamresp) {
+      StyledTeam = buttonok;
+      linkTeam = "/pesquisa";
+    }
   }
 
   return (

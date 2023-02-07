@@ -43,7 +43,7 @@ export default function login_form() {
     <BoxColumn>
       <FlexBox
         style={{
-          backgroundImage: "url(/Challenge_5.jpg)",
+          backgroundImage: "url(/Challenge.jpg)",
         }}
       >
         <BoxColumn></BoxColumn>

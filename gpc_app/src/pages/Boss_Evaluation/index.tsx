@@ -25,17 +25,6 @@ import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
 import _ from "lodash";
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
 export default function Boss_Evaluation() {
   const { competencias, page, resposta, lastInv, bossmentions } =
     useContext(AuthContext);
@@ -54,6 +43,7 @@ export default function Boss_Evaluation() {
   const [ansquestion, setAnsquestion] = useState<Array<number>>([]); //Armazena o competenceId das competências respondidas
   const [buttonReg, setButtonReg] = useState(true); //Controla a exibição do botão para criar uma evaluation
   const [bossEval, setBossEval] = useState(false);
+
   //Busca no banco se há formulários preenchidos para o usuário
   useEffect(() => {
     axios
@@ -69,7 +59,7 @@ export default function Boss_Evaluation() {
         setButtonReg(false);
       })
       .catch((err) => {});
-  }, [lastInv, buttonReg, avaliados]);
+  }, [lastInv]);
 
   //Busca no banco as questões respondidas do usuário
   useEffect(() => {
@@ -83,7 +73,6 @@ export default function Boss_Evaluation() {
         setAnsquestion(_.map(data, "competenceId"));
         if (questions === page) {
           setBossEval(true);
-          window.location.reload();
         }
       })
       .catch((err) => {});
@@ -140,6 +129,7 @@ export default function Boss_Evaluation() {
       .post("http://localhost:3000/evaluations", {
         formId: 2,
         userId: avaliados,
+        bossId: resposta.userId,
         teamId: teamName,
         year: lastInv.substring(4, 0),
       })
@@ -270,7 +260,7 @@ export default function Boss_Evaluation() {
                   </Select>
                 </FormControl>
               </FlexBox>
-              {questions === page && (
+              {page === questions && (
                 <Alert sx={{ marginLeft: "10vw" }} severity="success">
                   Parabéns, seu questionário foi respondido.
                 </Alert>

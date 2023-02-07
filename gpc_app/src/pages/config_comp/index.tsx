@@ -16,8 +16,8 @@ import {
 import { SelectChangeEvent } from "@mui/material/Select";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import { BottonList } from "../../components/BottonList";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import { v4 as uuid } from "uuid";
 
 export default function Config_comp() {
@@ -29,6 +29,17 @@ export default function Config_comp() {
   const [competenceId, setCompetenceId] = useState<number>(0); //captura somente o typologyId do botão de tipologias cadastradas quando este é clicado
   const [messagealert, setMessagealert] = useState<string>(""); //alimenta os alertas de sucesso ou falha como mensagens personalizadas
   const [typSelected, setTypSelected] = useState(""); //captura o typologyId selecionado
+  const { openinvent, setLastInv } = useContext(AuthContext);
+
+  //Busca no banco o último inventário
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/years")
+      .then((resp) => {
+        setLastInv(resp.data[0].close);
+      })
+      .catch((err) => {});
+  }, [openinvent]);
 
   //Fetch do rol de Tipologias ativas
   useEffect(() => {
@@ -40,7 +51,8 @@ export default function Config_comp() {
       .catch((err) => {
         setMessagealert(err);
       });
-  }, []);
+  }, [openinvent, alert]);
+
   //Fetch do rol de Competências ativas
   useEffect(() => {
     axios
@@ -51,7 +63,8 @@ export default function Config_comp() {
       .catch((err) => {
         setMessagealert(err);
       });
-  }, [alert]);
+  }, [alert, openinvent]);
+
   //Captura os valores do formulário de edição das competencias
   const handleChangeValues = (e: SelectChangeEvent) => {
     setCompetencedata({ ...competencedata, [e.target.name]: e.target.value });
@@ -236,16 +249,24 @@ export default function Config_comp() {
                       ))}
                   </Select>
                 </FormControl>
-                <Form
-                  label="competence"
-                  criar={handleButtonCreate}
-                  alterar={handleButtonUpdate}
-                  excluir={handleButtonExcluir}
-                  limpar={handleButtonLimpar}
-                  eventoteclado={handleChangeValues}
-                  data={competencedata}
-                  showbuttons={competenceId}
-                />
+                {openinvent === true && (
+                  <Alert severity="error">
+                    Não é possível alterar competências pois há inventário
+                    aberto!
+                  </Alert>
+                )}
+                {openinvent === false && (
+                  <Form
+                    label="competence"
+                    criar={handleButtonCreate}
+                    alterar={handleButtonUpdate}
+                    excluir={handleButtonExcluir}
+                    limpar={handleButtonLimpar}
+                    eventoteclado={handleChangeValues}
+                    data={competencedata}
+                    showbuttons={competenceId}
+                  />
+                )}
               </BoxColumn>
             </FlexBox>
           </Box>

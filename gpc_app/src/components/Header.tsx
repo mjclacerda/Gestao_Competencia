@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Button, Menu, MenuItem, styled, Typography } from "@mui/material";
 import Admin from "@mui/icons-material/AdminPanelSettings";
 import { Link } from "react-router-dom";
 import { FlexBox, StyledAvatar, StyledHeader } from "./Component";
+import axios from "axios";
+import { AuthContext } from "../context/AuthContext";
 
 export const linkStyle = {
   margin: "0",
@@ -18,6 +20,7 @@ const Adbutton = styled(Button)({
 });
 
 export default function Header() {
+  const { token } = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,9 +28,21 @@ export default function Header() {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    localStorage.setItem("@PermissionYT:token", "");
-    window.location.reload();
+    axios
+      .get("http://localhost:3000/sessions", {
+        headers: { token: `token ${token}` },
+      })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
+
   return (
     <StyledHeader>
       <Box flex="1">

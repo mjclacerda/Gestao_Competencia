@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Styled from "styled-components";
 import { linkStyle } from "./Header";
 import { FlexBox, StyledAvatar } from "./Component";
+import axios from "axios";
 
 const StyledHeader = Styled.div`
   display: flex;
@@ -26,15 +27,26 @@ const Adbutton = styled(Button)({
 export default function Header_user() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const { resposta } = useContext(AuthContext);
+  const { resposta, token } = useContext(AuthContext);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
-    localStorage.setItem("@PermissionYT:token", "");
-    window.location.reload();
+    axios
+      .get("http://localhost:3000/sessions", {
+        headers: { token: `token ${token}` },
+      })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <StyledHeader>

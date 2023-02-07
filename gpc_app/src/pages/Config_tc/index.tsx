@@ -6,7 +6,8 @@ import Form from "../../components/Form";
 import { BoxColumn, FlexBox } from "../../components/Component";
 import { BottonListT } from "../../components/BottonList";
 import { Box, Typography, Stack, Alert } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Config_tc() {
   const typObjempt = { typology: "", description: "" }; //Objeto da tipologia
@@ -15,6 +16,18 @@ export default function Config_tc() {
   const [typologydata, setTypologydata] = useState<object>(typObjempt); //typologyId, typology e description capiturados ao clic do botão de tipologias cadastradas. É necessário inicializar o objeto com os valores vazios para evitar erro Uncontrolled no react
   const [typologyId, setTypologyId] = useState<number>(0); //captura somente o typologyId do botão de tipologias cadastradas quando este é clicado
   const [messagealert, setMessagealert] = useState<string>(""); //alimenta os alertas de sucesso ou falha como mensagens personalizadas
+  const { openinvent, setLastInv } = useContext(AuthContext);
+
+  //Busca no banco o último inventário
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/years")
+      .then((resp) => {
+        setLastInv(resp.data[0].close);
+      })
+      .catch((err) => {});
+  }, [openinvent]);
+
   //Fetch do rol de tipologias ativas
   useEffect(() => {
     axios
@@ -26,6 +39,7 @@ export default function Config_tc() {
         console.log(err);
       });
   }, [alert]);
+
   //Captura os valores do formulário de edição das tipologias
   const handleChangeValues = (e: any): void => {
     setTypologydata({ ...typologydata, [e.target.name]: e.target.value });
@@ -44,6 +58,7 @@ export default function Config_tc() {
         setAlert(null);
       });
   };
+
   //Função do botão Criar
   const handleButtonCreate = () => {
     axios
@@ -63,6 +78,7 @@ export default function Config_tc() {
         setAlert(false);
       });
   };
+
   //Função do botão Alterar
   const handleButtonUpdate = () => {
     if (typologyId > 0) {
@@ -84,6 +100,7 @@ export default function Config_tc() {
         });
     }
   };
+
   //Função do botão Excluir
   const handleButtonExcluir = () => {
     if (typologyId > 0) {
@@ -104,11 +121,13 @@ export default function Config_tc() {
         });
     }
   };
+
   //Função do botão limpar
   const handleButtonLimpar = () => {
     formcleaning();
     setAlert(null);
   };
+
   //Limpar o formulário
   const formcleaning = () => {
     setTypologydata(typObjempt);
@@ -192,16 +211,24 @@ export default function Config_tc() {
                     <Alert severity="error">{messagealert}</Alert>
                   </Stack>
                 )}
-                <Form
-                  label="typology"
-                  criar={handleButtonCreate}
-                  alterar={handleButtonUpdate}
-                  excluir={handleButtonExcluir}
-                  limpar={handleButtonLimpar}
-                  eventoteclado={handleChangeValues}
-                  data={typologydata}
-                  showbuttons={typologyId}
-                />
+                {openinvent === true && (
+                  <Alert severity="error">
+                    Não é possível alterar competências pois há inventário
+                    aberto!
+                  </Alert>
+                )}
+                {openinvent === false && (
+                  <Form
+                    label="typology"
+                    criar={handleButtonCreate}
+                    alterar={handleButtonUpdate}
+                    excluir={handleButtonExcluir}
+                    limpar={handleButtonLimpar}
+                    eventoteclado={handleChangeValues}
+                    data={typologydata}
+                    showbuttons={typologyId}
+                  />
+                )}
               </BoxColumn>
             </FlexBox>
           </Box>
